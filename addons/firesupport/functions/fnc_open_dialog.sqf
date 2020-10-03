@@ -84,10 +84,10 @@ private _variables = switch (playerSide) do {
 
 
 //Fire types
-{
-	private _type = _x;
-	private _index = lbAdd [FIRING_TYPE_IDC, _type];
-} forEach ["Standard", "creeping barrage"];
+lbAdd [FIRING_TYPE_IDC, localize "STR_tun_firesupport_firemode_standard"];
+lbAdd [FIRING_TYPE_IDC, localize "STR_tun_firesupport_firemode_creeping_barrage"];
+
+
 
 lbSetCurSel [FIRING_TYPE_IDC, 0];
 

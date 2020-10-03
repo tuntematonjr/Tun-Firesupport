@@ -20,15 +20,16 @@
 if (isnull (findDisplay 22200)) exitWith { };
 private _firing_style = lbText [FIRING_TYPE_IDC,lbCurSel FIRING_TYPE_IDC];
 
-switch (tolower _firing_style) do {
-	case tolower "standard": {
+switch (_firing_style) do {
+
+	case (localize "STR_tun_firesupport_firemode_standard"): {
 		ctrlShow [EASTING_END_IDC, false];
 		ctrlShow [NORTHING_END_IDC, false];
 		ctrlShow [EASTING_END_TEXT_IDC, false];
 		ctrlShow [NORTHING_END_TEXT_IDC, false];
 	};
 
-	case tolower "creeping barrage": {
+	case (localize "STR_tun_firesupport_firemode_creeping_barrage"): {
 		ctrlShow [EASTING_END_IDC, true];
 		ctrlShow [NORTHING_END_IDC, true];
 		ctrlShow [EASTING_END_TEXT_IDC, true];

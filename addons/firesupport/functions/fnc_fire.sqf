@@ -85,7 +85,7 @@ private _offset = (100 + (1 / (_delay / 10)^2))/100 * _delay * 1.1 - _delay;
 private _delay_min = _delay - _offset;
 private _delay_max = _delay + _offset;
 
-if (_delay_min > _delay) then {
+if (_delay < 2) then {
 	_delay_min = _delay - _delay * 0.7;
 	_delay_max = _delay + _delay * 1.3;
 };
@@ -98,16 +98,20 @@ private _eta_when_done = _eta + (_count * _delay) + 10;
 private _pos = [_easting, _northing] call tun_firesupport_fnc_get_realpos;
 private _pos_end = [_easting_end, _northing_end] call tun_firesupport_fnc_get_realpos;
 
-switch (tolower _firing_style) do {
+switch (_firing_style) do {
 
-	case tolower "standard": {
+	case (localize "STR_tun_firesupport_firemode_standard"): {
+		hint "firemission";
 		[{
+			hint "splash";
+			ok = _this;
 			//Real positions
 			_this remoteExec ["BIS_fnc_fireSupportVirtual", 2];
+
 		}, [_pos, _ammo, _range, _count, [_delay_min, _delay_max], {false}, nil, 300], _eta] call CBA_fnc_waitAndExecute;
 	};
 
-	case tolower "creeping barrage": {
+	case (localize "STR_tun_firesupport_firemode_creeping_barrage"): {
 
 		private _dir = _pos getDir _pos_end;
 		private _distance = _pos distance2D _pos_end;
@@ -128,7 +132,7 @@ switch (tolower _firing_style) do {
 	};
 
 	default {
-		/* STATEMENT */
+		hint "failed to chose firemode";
 	};
 };
 

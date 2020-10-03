@@ -63,28 +63,28 @@
         <German>Delay</German>
       </Key>
       <Key ID="STR_tun_firesupport_easting_end_point">
-        <Original>EASTING</Original>
-        <English>EASTING</English>
-        <Czech>EASTING</Czech>
-        <French>EASTING</French>
-        <Spanish>EASTING</Spanish>
-        <Italian>EASTING</Italian>
-        <Polish>EASTING</Polish>
-        <Portuguese>EASTING</Portuguese>
-        <Russian>EASTING</Russian>
-        <German>EASTING</German>
+        <Original>2nd EASTING</Original>
+        <English>2nd EASTING</English>
+        <Czech>2nd EASTING</Czech>
+        <French>2nd EASTING</French>
+        <Spanish>2nd EASTING</Spanish>
+        <Italian>2nd EASTING</Italian>
+        <Polish>2nd EASTING</Polish>
+        <Portuguese>2nd EASTING</Portuguese>
+        <Russian>2nd EASTING</Russian>
+        <German>2nd EASTING</German>
       </Key>
       <Key ID="STR_tun_firesupport_northing_end_point">
-        <Original>NORTHING</Original>
-        <English>NORTHING</English>
-        <Czech>NORTHING</Czech>
-        <French>NORTHING</French>
-        <Spanish>NORTHING</Spanish>
-        <Italian>NORTHING</Italian>
-        <Polish>NORTHING</Polish>
-        <Portuguese>NORTHING</Portuguese>
-        <Russian>NORTHING</Russian>
-        <German>NORTHING</German>
+        <Original>2nd NORTHING</Original>
+        <English>2nd NORTHING</English>
+        <Czech>2nd NORTHING</Czech>
+        <French>2nd NORTHING</French>
+        <Spanish>2nd NORTHING</Spanish>
+        <Italian>2nd NORTHING</Italian>
+        <Polish>2nd NORTHING</Polish>
+        <Portuguese>2nd NORTHING</Portuguese>
+        <Russian>2nd NORTHING</Russian>
+        <German>2nd NORTHING</German>
       </Key>
       <Key ID="STR_tun_firesupport_remainign_ammo">
         <Original>Remaining Ammo</Original>
@@ -305,6 +305,94 @@
         <Portuguese>Estimated time to splash</Portuguese>
         <Russian>Estimated time to splash</Russian>
         <German>Estimated time to splash</German>
+      </Key>
+    </Container>
+    <Container name="cba">
+      <Key ID="STR_tun_firesupport_cba_is_required">
+        <Original>Is item required</Original>
+        <English>Is item required</English>
+        <Czech>Is item required</Czech>
+        <French>Is item required</French>
+        <Spanish>Is item required</Spanish>
+        <Italian>Is item required</Italian>
+        <Polish>Is item required</Polish>
+        <Portuguese>Is item required</Portuguese>
+        <Russian>Is item required</Russian>
+        <German>Is item required</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_cba_is_required_tooltip">
+        <Original>Is specifig item required</Original>
+        <English>Is specifig item required</English>
+        <Czech>Is specifig item required</Czech>
+        <French>Is specifig item required</French>
+        <Spanish>Is specifig item required</Spanish>
+        <Italian>Is specifig item required</Italian>
+        <Polish>Is specifig item required</Polish>
+        <Portuguese>Is specifig item required</Portuguese>
+        <Russian>Is specifig item required</Russian>
+        <German>Is specifig item required</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_cba_Category_main">
+        <Original>TUN Firesupport</Original>
+        <English>TUN Firesupport</English>
+        <Czech>TUN Firesupport</Czech>
+        <French>TUN Firesupport</French>
+        <Spanish>TUN Firesupport</Spanish>
+        <Italian>TUN Firesupport</Italian>
+        <Polish>TUN Firesupport</Polish>
+        <Portuguese>TUN Firesupport</Portuguese>
+        <Russian>TUN Firesupport</Russian>
+        <German>TUN Firesupport</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_cba_required_items_classnames">
+        <Original>Required items</Original>
+        <English>Required items</English>
+        <Czech>Required items</Czech>
+        <French>Required items</French>
+        <Spanish>Required items</Spanish>
+        <Italian>Required items</Italian>
+        <Polish>Required items</Polish>
+        <Portuguese>Required items</Portuguese>
+        <Russian>Required items</Russian>
+        <German>Required items</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_cba_required_items_classnames_tooltip">
+        <Original>Required items classnames. Must be strings, seperated by comas</Original>
+        <English>Required items classnames. Must be strings, seperated by comas</English>
+        <Czech>Required items classnames. Must be strings, seperated by comas</Czech>
+        <French>Required items classnames. Must be strings, seperated by comas</French>
+        <Spanish>Required items classnames. Must be strings, seperated by comas</Spanish>
+        <Italian>Required items classnames. Must be strings, seperated by comas</Italian>
+        <Polish>Required items classnames. Must be strings, seperated by comas</Polish>
+        <Portuguese>Required items classnames. Must be strings, seperated by comas</Portuguese>
+        <Russian>Required items classnames. Must be strings, seperated by comas</Russian>
+        <German>Required items classnames. Must be strings, seperated by comas</German>
+      </Key>
+    </Container>
+    <Container name="Firemodes">
+      <Key ID="STR_tun_firesupport_firemode_standard">
+        <Original>Standard</Original>
+        <English>Standard</English>
+        <Czech>Standard</Czech>
+        <French>Standard</French>
+        <Spanish>Standard</Spanish>
+        <Italian>Standard</Italian>
+        <Polish>Standard</Polish>
+        <Portuguese>Standard</Portuguese>
+        <Russian>Standard</Russian>
+        <German>Standard</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_firemode_creeping_barrage">
+        <Original>Creeping barrage</Original>
+        <English>Creeping barrage</English>
+        <Czech>Creeping barrage</Czech>
+        <French>Creeping barrage</French>
+        <Spanish>Creeping barrage</Spanish>
+        <Italian>Creeping barrage</Italian>
+        <Polish>Creeping barrage</Polish>
+        <Portuguese>Creeping barrage</Portuguese>
+        <Russian>Creeping barrage</Russian>
+        <German>Creeping barrage</German>
       </Key>
     </Container>
   </Package>
