@@ -23,17 +23,10 @@ createDialog "Firesupport_dialog";
 waitUntil {!isnull (findDisplay 22200)};
 findDisplay 22200 displayCtrl 22209 progressSetPosition 0.5;
 
-private _easting = player getVariable [QGVAR(easting), "0"];
-if ( _easting == "0" ) then { _easting = "00000"; };
-
-private _northing = player getVariable [QGVAR(northing), "0"];
-if ( _northing == "0" ) then { _northing = "00000"; };
-
-private _easting_end = player getVariable [QGVAR(easting_end), "0"];
-if ( _easting_end == "0" ) then { _easting_end = "00000"; };
-
-private _northing_end = player getVariable [QGVAR(northing_end), "0"];
-if ( _northing_end == "0" ) then { _northing_end = "00000"; };
+private _easting = player getVariable [QGVAR(easting), "00000"];
+private _northing = player getVariable [QGVAR(northing), "00000"];
+private _easting_end = player getVariable [QGVAR(easting_end), "00000"];
+private _northing_end = player getVariable [QGVAR(northing_end), "00000"];
 
 ctrlSetText [EASTING_IDC, _easting];
 ctrlSetText [NORTHING_IDC, _northing];

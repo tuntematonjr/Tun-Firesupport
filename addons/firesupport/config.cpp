@@ -2,7 +2,7 @@
 
 class CfgPatches
 {
-    class Tun_Respawn
+    class Tun_Firesupport
     {
         units[] = {};
         weapons[] = {};
@@ -15,38 +15,28 @@ class CfgPatches
 
 
 class Extended_PostInit_EventHandlers {
-    class Tun_Respawn {
+    class Tun_Firesupport {
         init = QUOTE(call COMPILE_FILE(XEH_postInit));
     };
 };
 
 class Extended_PreInit_EventHandlers {
-    class Tun_Respawn {
+    class Tun_Firesupport {
         init = QUOTE( call COMPILE_FILE(XEH_preInit) );
     };
 };
 
-class Extended_PreStart_EventHandlers {
-    class Tun_Respawn {
-        init = QUOTE( call COMPILE_FILE(XEH_preStart) );
-    };
-};
-
-
-
-class CfgWeapons {
-    class CBA_MiscItem_ItemInfo;
-    class CBA_MiscItem: itemcore {};
-
-    class TUN_firesupport_tablet: CBA_MiscItem {
-        author = "Tuntematon";
-        scope = 2;
-        displayName = "Firesupport Tablet";
-        // descriptionShort = CSTRING(itemDescription);
-        // model = QPATHTOF(data\MicroDAGR.p3d);
-        // picture = QPATHTOF(images\microDAGR_item.paa);
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 2;
+class CfgVehicles {
+    class Man;
+    class CAManBase: Man {
+        class ACE_SelfActions {
+            class Tun_Firesupport {
+                displayName = "Firesupport";
+                condition = "true"; //'tun_tablet' in items player
+                exceptions[] = {};
+                statement = "[] call tun_firesupport_fnc_open_dialog";
+                icon = "\x\Tun\addons\artycomputer_models\data\tablet_icon.paa";
+            };
         };
     };
 };
