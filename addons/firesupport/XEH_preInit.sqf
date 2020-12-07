@@ -1,6 +1,8 @@
 #include "script_component.hpp"
 #include "XEH_prep.sqf"
 
+
+
 ISNILS(GVAR(guns_west),[]);
 ISNILS(GVAR(guns_east),[]);
 ISNILS(GVAR(guns_resistance),[]);

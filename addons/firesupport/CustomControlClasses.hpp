@@ -25,7 +25,6 @@ class tun_firesupport_coordinate_preset
 	colorText[] = {1,1,1,1};
 	font = "PuristaMedium";
 	sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
-	access = 0;
 	canModify = true;
 	maxChars = 5;
 	shadow = 0;
@@ -51,7 +50,6 @@ class tun_firesupport_default_combo
 	soundExpand[] = {"\A3\ui_f\data\sound\RscCombo\soundExpand",0.1,1.0};
 	soundSelect[] = {"\A3\ui_f\data\sound\RscCombo\soundSelect",0.1,1.0};
 	wholeHeight = 0.3;
-	access = 0;
 	shadow = 0;
 	tooltipColorBox[] = {0.2,0.2,0.2,1};
 	tooltipColorShade[] = {0.2,0.2,0.2,1};

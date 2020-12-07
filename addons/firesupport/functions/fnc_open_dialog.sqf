@@ -88,7 +88,7 @@ lbSetCurSel [FIRING_TYPE_IDC, 0];
 GVAR(dialog_PFH) = [{
 	private _eta = [] call tun_firesupport_fnc_calculate_eta;
 	ctrlSetText [ETA_IDC, _eta select 1];
-}, 1] call CBA_fnc_addPerFrameHandler;
+}, 0.5] call CBA_fnc_addPerFrameHandler;
 
 
 [] call FUNC(update_firemode);

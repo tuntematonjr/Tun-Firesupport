@@ -73,7 +73,6 @@ class Firesupport_dialog
 			soundEnter[] = {"\A3\ui_f\data\sound\RscButton\soundEnter",0.09,1.0};
 			soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape",0.09,1.0};
 			soundPush[] = {"\A3\ui_f\data\sound\RscButton\soundPush",0.09,1.0};
-			access = 0;
 			action = "$STR_tun_firesupport_fire_action";
 			colorFocused2[] = {0.6,0,0,1};
 			default = false;

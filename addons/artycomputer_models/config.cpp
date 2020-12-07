@@ -5,7 +5,7 @@ class CfgPatches
 	class tun_artycomputer_models
 	{
 		requiredVersion = 1.94;
-		requiredAddons[] = {"A3_Weapons_F","cba_main","cba_xeh","cba_settings","ace_interaction","ace_interact_menu", "Tun_Firesupport"};
+		requiredAddons[] = {"A3_Weapons_F","cba_main","cba_xeh","cba_settings"};
 		units[]={};
 		weapons[]={"tun_tablet"};
 		author = "Immonen & Nurmi";
