@@ -110,6 +110,18 @@
         <Russian>ETA</Russian>
         <German>ETA</German>
       </Key>
+      <Key ID="STR_tun_firesupport_Header">
+        <Original>A.F.I: Advanced Firesupport Interface</Original>
+        <English>A.F.I: Advanced Firesupport Interface</English>
+        <Czech>A.F.I: Advanced Firesupport Interface</Czech>
+        <French>A.F.I: Advanced Firesupport Interface</French>
+        <Spanish>A.F.I: Advanced Firesupport Interface</Spanish>
+        <Italian>A.F.I: Advanced Firesupport Interface</Italian>
+        <Polish>A.F.I: Advanced Firesupport Interface</Polish>
+        <Portuguese>A.F.I: Advanced Firesupport Interface</Portuguese>
+        <Russian>A.F.I: Advanced Firesupport Interface</Russian>
+        <German>A.F.I: Advanced Firesupport Interface</German>
+      </Key>
     </Container>
     <Container name="actions">
       <Key ID="STR_tun_firesupport_fire_action">
@@ -396,18 +408,6 @@
       </Key>
     </Container>
     <Container name="module">
-      <Key ID="STR_tun_firesupport_module_gun">
-        <Original>Tun Firesupport Gun</Original>
-        <English>Tun Firesupport Gun</English>
-        <Czech>Tun Firesupport Gun</Czech>
-        <French>Tun Firesupport Gun</French>
-        <Spanish>Tun Firesupport Gun</Spanish>
-        <Italian>Tun Firesupport Gun</Italian>
-        <Polish>Tun Firesupport Gun</Polish>
-        <Portuguese>Tun Firesupport Gun</Portuguese>
-        <Russian>Tun Firesupport Gun</Russian>
-        <German>Tun Firesupport Gun</German>
-      </Key>
       <Key ID="STR_tun_firesupport_module_Ammo">
         <Original>Tun firesupport ammo</Original>
         <English>Tun firesupport ammo</English>
@@ -419,18 +419,6 @@
         <Portuguese>Tun firesupport ammo</Portuguese>
         <Russian>Tun firesupport ammo</Russian>
         <German>Tun firesupport ammo</German>
-      </Key>
-      <Key ID="STR_tun_firesupport_module_description_gun">
-        <Original>Give classname for gun which will be used.</Original>
-        <English>Give classname for gun which will be used.</English>
-        <Czech>Give classname for gun which will be used.</Czech>
-        <French>Give classname for gun which will be used.</French>
-        <Spanish>Give classname for gun which will be used.</Spanish>
-        <Italian>Give classname for gun which will be used.</Italian>
-        <Polish>Give classname for gun which will be used.</Polish>
-        <Portuguese>Give classname for gun which will be used.</Portuguese>
-        <Russian>Give classname for gun which will be used.</Russian>
-        <German>Give classname for gun which will be used.</German>
       </Key>
       <Key ID="STR_tun_firesupport_module_category">
         <Original>Tun Firesupport</Original>
@@ -492,30 +480,6 @@
         <Russian>Count</Russian>
         <German>Count</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_gun_displayname">
-        <Original>Gun Classname</Original>
-        <English>Gun Classname</English>
-        <Czech>Gun Classname</Czech>
-        <French>Gun Classname</French>
-        <Spanish>Gun Classname</Spanish>
-        <Italian>Gun Classname</Italian>
-        <Polish>Gun Classname</Polish>
-        <Portuguese>Gun Classname</Portuguese>
-        <Russian>Gun Classname</Russian>
-        <German>Gun Classname</German>
-      </Key>
-      <Key ID="STR_tun_firesupport_module_gun_description">
-        <Original>Gun Classname</Original>
-        <English>Gun Classname</English>
-        <Czech>Gun Classname</Czech>
-        <French>Gun Classname</French>
-        <Spanish>Gun Classname</Spanish>
-        <Italian>Gun Classname</Italian>
-        <Polish>Gun Classname</Polish>
-        <Portuguese>Gun Classname</Portuguese>
-        <Russian>Gun Classname</Russian>
-        <German>Gun Classname</German>
-      </Key>
       <Key ID="STR_tun_firesupport_module_descriptio_ammo">
         <Original>WIP</Original>
         <English>WIP</English>
@@ -527,6 +491,176 @@
         <Portuguese>WIP</Portuguese>
         <Russian>WIP</Russian>
         <German>WIP</German>
+      </Key>
+    </Container>
+    <Container name="module gun">
+      <Key ID="STR_tun_firesupport_module_gun_class_description">
+        <Original>Gun Classname</Original>
+        <English>Gun Classname</English>
+        <Czech>Gun Classname</Czech>
+        <French>Gun Classname</French>
+        <Spanish>Gun Classname</Spanish>
+        <Italian>Gun Classname</Italian>
+        <Polish>Gun Classname</Polish>
+        <Portuguese>Gun Classname</Portuguese>
+        <Russian>Gun Classname</Russian>
+        <German>Gun Classname</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_module_gun_class_displayname">
+        <Original>Gun Classname</Original>
+        <English>Gun Classname</English>
+        <Czech>Gun Classname</Czech>
+        <French>Gun Classname</French>
+        <Spanish>Gun Classname</Spanish>
+        <Italian>Gun Classname</Italian>
+        <Polish>Gun Classname</Polish>
+        <Portuguese>Gun Classname</Portuguese>
+        <Russian>Gun Classname</Russian>
+        <German>Gun Classname</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_module_gun">
+        <Original>Tun Firesupport Gun</Original>
+        <English>Tun Firesupport Gun</English>
+        <Czech>Tun Firesupport Gun</Czech>
+        <French>Tun Firesupport Gun</French>
+        <Spanish>Tun Firesupport Gun</Spanish>
+        <Italian>Tun Firesupport Gun</Italian>
+        <Polish>Tun Firesupport Gun</Polish>
+        <Portuguese>Tun Firesupport Gun</Portuguese>
+        <Russian>Tun Firesupport Gun</Russian>
+        <German>Tun Firesupport Gun</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_module_description_gun">
+        <Original>Give classname for gun which will be used.</Original>
+        <English>Give classname for gun which will be used.</English>
+        <Czech>Give classname for gun which will be used.</Czech>
+        <French>Give classname for gun which will be used.</French>
+        <Spanish>Give classname for gun which will be used.</Spanish>
+        <Italian>Give classname for gun which will be used.</Italian>
+        <Polish>Give classname for gun which will be used.</Polish>
+        <Portuguese>Give classname for gun which will be used.</Portuguese>
+        <Russian>Give classname for gun which will be used.</Russian>
+        <German>Give classname for gun which will be used.</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_module_gun_name_displayname">
+        <Original>Displayname</Original>
+        <English>Displayname</English>
+        <Czech>Displayname</Czech>
+        <French>Displayname</French>
+        <Spanish>Displayname</Spanish>
+        <Italian>Displayname</Italian>
+        <Polish>Displayname</Polish>
+        <Portuguese>Displayname</Portuguese>
+        <Russian>Displayname</Russian>
+        <German>Displayname</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_module_gun_name_description">
+        <Original>Unique name wich is shown in arty list. MUST BE UNIQUE</Original>
+        <English>Unique name wich is shown in arty list. MUST BE UNIQUE</English>
+        <Czech>Unique name wich is shown in arty list. MUST BE UNIQUE</Czech>
+        <French>Unique name wich is shown in arty list. MUST BE UNIQUE</French>
+        <Spanish>Unique name wich is shown in arty list. MUST BE UNIQUE</Spanish>
+        <Italian>Unique name wich is shown in arty list. MUST BE UNIQUE</Italian>
+        <Polish>Unique name wich is shown in arty list. MUST BE UNIQUE</Polish>
+        <Portuguese>Unique name wich is shown in arty list. MUST BE UNIQUE</Portuguese>
+        <Russian>Unique name wich is shown in arty list. MUST BE UNIQUE</Russian>
+        <German>Unique name wich is shown in arty list. MUST BE UNIQUE</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_module_gun_countDown_displayname">
+        <Original>Countdown</Original>
+        <English>Countdown</English>
+        <Czech>Countdown</Czech>
+        <French>Countdown</French>
+        <Spanish>Countdown</Spanish>
+        <Italian>Countdown</Italian>
+        <Polish>Countdown</Polish>
+        <Portuguese>Countdown</Portuguese>
+        <Russian>Countdown</Russian>
+        <German>Countdown</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_module_gun_countDown_description">
+        <Original>Delay until rounds are fired (calculation delay)</Original>
+        <English>Delay until rounds are fired (calculation delay)</English>
+        <Czech>Delay until rounds are fired (calculation delay)</Czech>
+        <French>Delay until rounds are fired (calculation delay)</French>
+        <Spanish>Delay until rounds are fired (calculation delay)</Spanish>
+        <Italian>Delay until rounds are fired (calculation delay)</Italian>
+        <Polish>Delay until rounds are fired (calculation delay)</Polish>
+        <Portuguese>Delay until rounds are fired (calculation delay)</Portuguese>
+        <Russian>Delay until rounds are fired (calculation delay)</Russian>
+        <German>Delay until rounds are fired (calculation delay)</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_module_gun_delayMin_displayname">
+        <Original>Min Delay</Original>
+        <English>Min Delay</English>
+        <Czech>Min Delay</Czech>
+        <French>Min Delay</French>
+        <Spanish>Min Delay</Spanish>
+        <Italian>Min Delay</Italian>
+        <Polish>Min Delay</Polish>
+        <Portuguese>Min Delay</Portuguese>
+        <Russian>Min Delay</Russian>
+        <German>Min Delay</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_module_gun_delayMin_description">
+        <Original>Min delay between shots</Original>
+        <English>Min delay between shots</English>
+        <Czech>Min delay between shots</Czech>
+        <French>Min delay between shots</French>
+        <Spanish>Min delay between shots</Spanish>
+        <Italian>Min delay between shots</Italian>
+        <Polish>Min delay between shots</Polish>
+        <Portuguese>Min delay between shots</Portuguese>
+        <Russian>Min delay between shots</Russian>
+        <German>Min delay between shots</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_module_gun_spreadMin_displayname">
+        <Original>Min Spread</Original>
+        <English>Min Spread</English>
+        <Czech>Min Spread</Czech>
+        <French>Min Spread</French>
+        <Spanish>Min Spread</Spanish>
+        <Italian>Min Spread</Italian>
+        <Polish>Min Spread</Polish>
+        <Portuguese>Min Spread</Portuguese>
+        <Russian>Min Spread</Russian>
+        <German>Min Spread</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_module_gun_spreadMin_description">
+        <Original>Min spread for rounds. default:100</Original>
+        <English>Min spread for rounds. default:100</English>
+        <Czech>Min spread for rounds. default:100</Czech>
+        <French>Min spread for rounds. default:100</French>
+        <Spanish>Min spread for rounds. default:100</Spanish>
+        <Italian>Min spread for rounds. default:100</Italian>
+        <Polish>Min spread for rounds. default:100</Polish>
+        <Portuguese>Min spread for rounds. default:100</Portuguese>
+        <Russian>Min spread for rounds. default:100</Russian>
+        <German>Min spread for rounds. default:100</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_module_gun_side_displayname">
+        <Original>Side</Original>
+        <English>Side</English>
+        <Czech>Side</Czech>
+        <French>Side</French>
+        <Spanish>Side</Spanish>
+        <Italian>Side</Italian>
+        <Polish>Side</Polish>
+        <Portuguese>Side</Portuguese>
+        <Russian>Side</Russian>
+        <German>Side</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_module_gun_side_description">
+        <Original>Which sides gun is this: west, east, resistance, civilian</Original>
+        <English>Which sides gun is this: west, east, resistance, civilian</English>
+        <Czech>Which sides gun is this: west, east, resistance, civilian</Czech>
+        <French>Which sides gun is this: west, east, resistance, civilian</French>
+        <Spanish>Which sides gun is this: west, east, resistance, civilian</Spanish>
+        <Italian>Which sides gun is this: west, east, resistance, civilian</Italian>
+        <Polish>Which sides gun is this: west, east, resistance, civilian</Polish>
+        <Portuguese>Which sides gun is this: west, east, resistance, civilian</Portuguese>
+        <Russian>Which sides gun is this: west, east, resistance, civilian</Russian>
+        <German>Which sides gun is this: west, east, resistance, civilian</German>
       </Key>
     </Container>
   </Package>

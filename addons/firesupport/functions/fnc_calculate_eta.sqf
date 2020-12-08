@@ -54,6 +54,7 @@ if ( _arty_index != -1 && _ammo_index != -1 ) then {
 	private _index_ammo = lbCurSel AMMO_TYPE_IDC;
 	private _gun_hash = _variables select _index_arty;
 	private _ammo_hash = [_gun_hash, "gun_ammo_hash"] call CBA_fnc_hashGet;
+	private _countdown = [_gun_hash, "countDown"] call CBA_fnc_hashGet;
 	private _ammo = lbData [AMMO_TYPE_IDC, _index_ammo];
 	//private _ammo = [_ammo_hash, _key] call CBA_fnc_hashGet;
 
@@ -61,12 +62,12 @@ if ( _arty_index != -1 && _ammo_index != -1 ) then {
 	private _gun = [_gun_hash, "gun"] call CBA_fnc_hashGet;
 
 	_eta = _gun getArtilleryETA [_pos, _ammo];
-	_eta_number = _eta;
+	_eta_number = _eta + _countdown;
 
 	_eta = if (_eta == -1) then {
 		"CANT FIRE";
 	} else {
-		((str round _eta)  + " s");
+		((str round (_eta + _countdown))  + " s");
 	};
 
 	if (_pos inRangeOfArtillery [[_gun], _ammo]) then {
@@ -80,8 +81,6 @@ if ( _arty_index != -1 && _ammo_index != -1 ) then {
 	if ([_gun_hash, "is_firing"] call CBA_fnc_hashGet) then {
 		_eta = "Busy";
 	};
-
-
 };
 
 [_eta_number,_eta]

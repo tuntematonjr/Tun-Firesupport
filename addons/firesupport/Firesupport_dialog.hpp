@@ -314,7 +314,7 @@ class Firesupport_dialog
 			w = safeZoneW * 0.4125;
 			h = safeZoneH * 0.05;
 			style = 32+2;
-			text = "B.L.A.H.H";
+			text = "$STR_tun_firesupport_Header";
 			shadow = 2;
 			
 		};

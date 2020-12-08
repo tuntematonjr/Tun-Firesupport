@@ -14,16 +14,23 @@
  * The return value <BOOL>
  *
  * Example:
- * ["something", player] call tun_firesupport_fnc_create_gun
+ * ["something", player] call tun_firesupport_fnc_module_gun
  */
 #include "script_component.hpp"
-params ["_name", "_classname", "_side", "_module"];
+
+private _module = param [0,objNull,[objNull]];
 
 
 private _gun_hash = [nil,0] call CBA_fnc_hashCreate;
 private _gun_ammo_hash = [nil,0] call CBA_fnc_hashCreate;
-private _min_spread = _module getVariable ["tun_firesupport_min_spread", 100];
-private _min_delay = _module getVariable ["tun_firesupport_min_delay", 1];
+
+//TODO lisää conffiin että voi muuttaa
+private _classname = _module getVariable ["className", "Missing classname"];
+private _name = _module getVariable ["displayName", "Missing name"];
+private _countdown = _module getVariable ["countDown", 60];
+private _side = _module getVariable ["side", sideLogic];
+private _min_spread = _module getVariable ["spreadMin", 100];
+private _min_delay = _module getVariable ["delayMin", 1];
 
 private _gun = _classname createVehicle position _module;
 
@@ -40,31 +47,30 @@ _agent enableSimulationGlobal false;
 
 {
 	private _obj = _x;
-	if (_obj getVariable [QGVAR(ammo_type), ""] != "" ) then {
-		private _ammo = _obj getVariable QGVAR(ammo_type);
-		private _count = _obj getVariable QGVAR(ammo_count);
-		[_gun_ammo_hash, _ammo, _count] call CBA_fnc_hashSet;
+	private _ammo = _obj getVariable "Ammo";
+	private _count = _obj getVariable "Count";
+	[_gun_ammo_hash, _ammo, _count] call CBA_fnc_hashSet;
 
-		_gun addMagazineTurret [_ammo, [0], 0];
-	};
+	_gun addMagazineTurret [_ammo, [0], 0];
+
 } forEach synchronizedObjects _module;
 
 
 
-switch (_side) do {
-	case west: {
+switch ( toLower _side) do {
+	case "west": {
 		GVAR(guns_west) pushBack _gun_hash;
 	};
 
-	case east: {
+	case "east": {
 		GVAR(guns_east) pushBack _gun_hash;
 	};
 
-	case resistance: {
+	case "resistance": {
 		GVAR(guns_resistance) pushBack _gun_hash;
 	};
 
-	case civilian: {
+	case "civilian": {
 		GVAR(guns_civilian) pushBack _gun_hash;
 	};
 
@@ -81,3 +87,4 @@ switch (_side) do {
 [_gun_hash, "is_firing", false] call CBA_fnc_hashSet;
 [_gun_hash, "min_spread", _min_spread] call CBA_fnc_hashSet;
 [_gun_hash, "min_delay", _min_delay] call CBA_fnc_hashSet;
+[_gun_hash, "countDown", _countdown] call CBA_fnc_hashSet;

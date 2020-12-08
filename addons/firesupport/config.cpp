@@ -60,7 +60,7 @@ class CfgVehicles {
         author = "Tuntematon";
         category = QGVAR(category);
         displayName = $STR_tun_firesupport_module_gun;
-        function = QFUNC(module_waitingarea);
+        function = QFUNC(module_gun);
         scope = 2;// Editor visibility; 2 will show it in the menu, 1 will hide it.
         isGlobal = 1; // 0 for server only execution, 1 for global execution, 2 for persistent global execution
         isTriggerActivated = 0;
@@ -68,11 +68,47 @@ class CfgVehicles {
         //icon = QPATHTOF(UI\Icon_Module_Slideshow_ca.paa);
         class Arguments {
             class className {
-                displayName = $STR_tun_firesupport_module_gun_displayname;
-                description = $STR_tun_firesupport_module_gun_description;
+                displayName = $STR_tun_firesupport_module_gun_class_displayname;
+                description = $STR_tun_firesupport_module_gun_class_description;
+                typeName = "STRING";
+                defaultValue = "B_Mortar_01_F";
+            };
+            
+            class displayName {
+                displayName = $STR_tun_firesupport_module_gun_name_displayname;
+                description = $STR_tun_firesupport_module_gun_name_description;
                 typeName = "STRING";
                 defaultValue = "";
             };
+            
+            class countDown {
+                displayName = $STR_tun_firesupport_module_gun_countDown_displayname;
+                description = $STR_tun_firesupport_module_gun_countDown_description;
+                typeName = "NUMBER";
+                defaultValue = 60;
+            };
+            
+            class delayMin {
+                displayName = $STR_tun_firesupport_module_gun_delayMin_displayname;
+                description = $STR_tun_firesupport_module_gun_delayMin_description;
+                typeName = "NUMBER";
+                defaultValue = 2;
+            };
+            
+            class spreadMin {
+                displayName = $STR_tun_firesupport_module_gun_spreadMin_displayname;
+                description = $STR_tun_firesupport_module_gun_spreadMin_description;
+                typeName = "NUMBER";
+                defaultValue = 50;
+            };
+            
+            class side {
+                displayName = $STR_tun_firesupport_module_gun_side_displayname;
+                description = $STR_tun_firesupport_module_gun_side_description;
+                typeName = "STRING";
+                defaultValue = "";
+            };
+
         };
         class ModuleDescription {
             description = $STR_tun_firesupport_module_description_gun;
@@ -83,7 +119,7 @@ class CfgVehicles {
         author = "Tuntematon";
         category = QGVAR(category);
         displayName = $STR_tun_firesupport_module_ammo;
-        function = QFUNC(module_waitingarea);
+        function = "";
         scope = 2;// Editor visibility; 2 will show it in the menu, 1 will hide it.
         isGlobal = 1; // 0 for server only execution, 1 for global execution, 2 for persistent global execution
         isTriggerActivated = 0;
@@ -94,7 +130,7 @@ class CfgVehicles {
                 displayName = $STR_tun_firesupport_module_ammo_displayname;
                 description = $STR_tun_firesupport_module_ammo_description;
                 typeName = "STRING";
-                defaultValue = "";
+                defaultValue = "8Rnd_82mm_Mo_shells";
             };
             class Count {
                 displayName = $STR_tun_firesupport_module_ammo_count_displayName;
