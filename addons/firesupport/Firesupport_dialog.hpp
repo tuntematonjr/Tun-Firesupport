@@ -1,9 +1,11 @@
 //Exported via Arma Dialog Creator (https://github.com/kayler-renslow/arma-dialog-creator)
 
 #include "CustomControlClasses.hpp"
+//"Default" call BIS_fnc_exportGUIBaseClasses;
+
 class Firesupport_dialog
 {
-	idd = 22200;
+	idd = MAIN_IDD;
 	movingEnable = true;
 	
 	class ControlsBackground
@@ -12,14 +14,14 @@ class Firesupport_dialog
 		{
 			type = 0;
 			idc = -1;
-			x = safeZoneX + safeZoneW * 0.29375;
-			y = safeZoneY + safeZoneH * 0.225;
-			w = safeZoneW * 0.4125;
-			h = safeZoneH * 0.55;
-			style = 0;
-			text = "";
-			colorBackground[] = {0,0,0,0.5};
-			colorText[] = {0.6902,0.9882,0.7843,1};
+			x = safeZoneX + safeZoneW * 0.04980469;
+			y = safeZoneY + safeZoneH * -0.17;
+			w = safeZoneW * 0.90039063;
+			h = safeZoneH * 1.4;
+			style =  ST_PICTURE + ST_CENTER;
+			text = "\x\Tun\addons\artycomputer_models\data\ui\tablet_ui.paa";
+			colorBackground[] = {0,0,0,1};
+			colorText[] = {1,1,1,1};
 			font = "PuristaMedium";
 			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
 			moving = true;
@@ -33,7 +35,7 @@ class Firesupport_dialog
 		class tun_firesupport_remaining_ammo_bar
 		{
 			type = 8;
-			idc = 22209;
+			idc = REMAINIG_AMMO_PROGRESBAR_IDC;
 			x = safeZoneX + safeZoneW * 0.31875;
 			y = safeZoneY + safeZoneH * 0.725;
 			w = safeZoneW * 0.0625;
@@ -43,11 +45,21 @@ class Firesupport_dialog
 			colorFrame[] = {0.4471,0.2471,0.3804,1};
 			texture = "#(argb,8,8,3)color(1,1,1,1)";
 			
+		};		
+		
+		class tun_firesupport_minimap : RscMapControl
+		{
+			idc = MINIMAP_IDC;
+			x = safeZoneX + safeZoneW * 0.53808594;
+			y = safeZoneY + safeZoneH * 0.44444445;
+			w = safeZoneW * 0.14355469;
+			h = safeZoneH * 0.23263889;
 		};
+		
 		class tun_firesupport_fire
 		{
 			type = 1;
-			idc = 22212;
+			idc = FIRE_IDC;
 			x = safeZoneX + safeZoneW * 0.61875;
 			y = safeZoneY + safeZoneH * 0.7;
 			w = safeZoneW * 0.0625;
@@ -83,7 +95,7 @@ class Firesupport_dialog
 		class tun_firesupport_artylist : tun_firesupport_default_combo 
 		{
 			type = 4;
-			idc = 22213;
+			idc = ARTY_LIST_IDC;
 			x = safeZoneX + safeZoneW * 0.31875;
 			y = safeZoneY + safeZoneH * 0.325;
 			w = safeZoneW * 0.1125;
@@ -103,7 +115,7 @@ class Firesupport_dialog
 		class tun_firesupport_firing_type : tun_firesupport_default_combo 
 		{
 			type = 4;
-			idc = 22215;
+			idc = FIRING_TYPE_IDC;
 			x = safeZoneX + safeZoneW * 0.56875;
 			y = safeZoneY + safeZoneH * 0.325;
 			w = safeZoneW * 0.1125;
@@ -123,7 +135,7 @@ class Firesupport_dialog
 		class tun_firesupport_ammo_type : tun_firesupport_default_combo 
 		{
 			type = 4;
-			idc = 22214;
+			idc = AMMO_TYPE_IDC;
 			x = safeZoneX + safeZoneW * 0.44375;
 			y = safeZoneY + safeZoneH * 0.325;
 			w = safeZoneW * 0.1125;
@@ -143,7 +155,7 @@ class Firesupport_dialog
 		class tun_firesupport_easting_value : tun_firesupport_coordinate_preset 
 		{
 			type = 2;
-			idc = 22201;
+			idc = EASTING_IDC;
 			x = safeZoneX + safeZoneW * 0.31875;
 			y = safeZoneY + safeZoneH * 0.4;
 			w = safeZoneW * 0.0625;
@@ -187,7 +199,7 @@ class Firesupport_dialog
 		class tun_firesupport_ammo_count : tun_firesupport_coordinate_preset 
 		{
 			type = 2;
-			idc = 22203;
+			idc = COUNT_IDC;
 			x = safeZoneX + safeZoneW * 0.46875;
 			y = safeZoneY + safeZoneH * 0.4;
 			w = safeZoneW * 0.0625;
@@ -222,7 +234,7 @@ class Firesupport_dialog
 		class tun_firesupport_radius_value : tun_firesupport_coordinate_preset 
 		{
 			type = 2;
-			idc = 22204;
+			idc = RANGE_IDC;
 			x = safeZoneX + safeZoneW * 0.54375;
 			y = safeZoneY + safeZoneH * 0.4;
 			w = safeZoneW * 0.0625;
@@ -246,7 +258,7 @@ class Firesupport_dialog
 		class tun_firesupport_delay_value : tun_firesupport_coordinate_preset 
 		{
 			type = 2;
-			idc = 22205;
+			idc = DELAY_IDC;
 			x = safeZoneX + safeZoneW * 0.61875;
 			y = safeZoneY + safeZoneH * 0.4;
 			w = safeZoneW * 0.0625;
@@ -271,7 +283,7 @@ class Firesupport_dialog
 		class tun_firesupport_remaining_ammo_value : tun_firesupport_coordinate_preset 
 		{
 			type = 0;
-			idc = 22208;
+			idc = REMAINIG_AMMO_IDC;
 			x = safeZoneX + safeZoneW * 0.31875;
 			y = safeZoneY + safeZoneH * 0.7;
 			w = safeZoneW * 0.0625;
@@ -295,7 +307,7 @@ class Firesupport_dialog
 		class tun_firesupport_eta_value : tun_firesupport_coordinate_preset 
 		{
 			type = 0;
-			idc = 22210;
+			idc = ETA_IDC;
 			x = safeZoneX + safeZoneW * 0.39375;
 			y = safeZoneY + safeZoneH * 0.7;
 			w = safeZoneW * 0.0625;
@@ -321,7 +333,7 @@ class Firesupport_dialog
 		class tun_firesupport_easting_end_point_text : tun_default_text 
 		{
 			type = 0;
-			idc = 22216;
+			idc = EASTING_END_TEXT_IDC;
 			x = safeZoneX + safeZoneW * 0.31875;
 			y = safeZoneY + safeZoneH * 0.45;
 			w = safeZoneW * 0.0625;
@@ -332,7 +344,7 @@ class Firesupport_dialog
 		class tun_firesupport_easting_end_point_value : tun_firesupport_coordinate_preset 
 		{
 			type = 2;
-			idc = 22206;
+			idc = EASTING_END_IDC;
 			x = safeZoneX + safeZoneW * 0.31875;
 			y = safeZoneY + safeZoneH * 0.475;
 			w = safeZoneW * 0.0625;
@@ -343,7 +355,7 @@ class Firesupport_dialog
 		class tun_firesupport_northing_end_point_value : tun_firesupport_coordinate_preset 
 		{
 			type = 2;
-			idc = 22207;
+			idc = NORTHING_END_IDC;
 			x = safeZoneX + safeZoneW * 0.39375;
 			y = safeZoneY + safeZoneH * 0.475;
 			w = safeZoneW * 0.0625;
@@ -354,7 +366,7 @@ class Firesupport_dialog
 		class tun_firesupport_northing_end_point_text : tun_default_text 
 		{
 			type = 0;
-			idc = 22217;
+			idc = NORTHING_END_TEXT_IDC;
 			x = safeZoneX + safeZoneW * 0.39375;
 			y = safeZoneY + safeZoneH * 0.45;
 			w = safeZoneW * 0.0625;
@@ -365,7 +377,7 @@ class Firesupport_dialog
 		class tun_firesupport_status : tun_default_text 
 		{
 			type = 0;
-			idc = 22211;
+			idc = STATUS_IDC;
 			x = safeZoneX + safeZoneW * 0.54375;
 			y = safeZoneY + safeZoneH * 0.7;
 			w = safeZoneW * 0.0625;
@@ -373,7 +385,117 @@ class Firesupport_dialog
 			text = "Status";
 			
 		};
-		
+		class tun_firesupport_bookmark_list : tun_firesupport_listbox 
+		{
+			type = 5;
+			idc = BOOKMARK_LIST_IDC;
+			x = safeZoneX + safeZoneW * 0.54375;
+			y = safeZoneY + safeZoneH * 0.45;
+			w = safeZoneW * 0.1375;
+			h = safeZoneH * 0.2;
+			onLBSelChanged = "$STR_tun_firesupport_bookmark_list_change";	
+		};
+		class tun_firesupport_name_bookmark_text : tun_default_text 
+		{
+			type = 0;
+			idc = BOOKMARK_NAME_TEXT_IDC;
+			x = safeZoneX + safeZoneW * 0.46875;
+			y = safeZoneY + safeZoneH * 0.45;
+			w = safeZoneW * 0.0625;
+			h = safeZoneH * 0.025;
+			text = "$STR_tun_firesupport_name_bookmark_text";
+			tooltip = "$STR_tun_firesupport_name_text_tooltip";
+			
+		};
+		class tun_firesupport_name_bookmark_value : tun_firesupport_coordinate_preset 
+		{
+			type = 2;
+			idc = BOOKMARK_NAME_VALUE_IDC;
+			x = safeZoneX + safeZoneW * 0.46875;
+			y = safeZoneY + safeZoneH * 0.475;
+			w = safeZoneW * 0.0625;
+			h = safeZoneH * 0.025;
+			text = "Name";
+			maxChars = 20;
+			tooltip = "$STR_tun_firesupport_name_text_tooltip";
+			
+		};
+		class tun_firesupport_bookmark_editbox : RscEdit 
+		{
+			type = 2;
+			idc = BOOKMARK_EDITBOX_IDC;
+			x = safeZoneX + safeZoneW * 0.29375;
+			y = safeZoneY + safeZoneH * 0.525;
+			w = safeZoneW * 0.1125;
+			h = safeZoneH * 0.125;
+			style = 16;
+			text = "";
+			tooltip = "$STR_tun_firesupport_editbox_tooltip";
+			
+		};
+		class tun_firesupport_bookmark_button : tun_firesupport_button_base 
+		{
+			type = 1;
+			idc = BOOKMARK_OPEN_BUTTON_IDC;
+			x = safeZoneX + safeZoneW * 0.46875;
+			y = safeZoneY + safeZoneH * 0.7;
+			w = safeZoneW * 0.0625;
+			h = safeZoneH * 0.05;
+			text = "$STR_tun_firesupport_bookmark";
+			action = "$STR_tun_firesupport_open_bookmark";
+			
+		};
+		class tun_firesupport_add_bookmark_button : tun_firesupport_button_base 
+		{
+			type = 1;
+			idc = BOOKMARK_ADD_BOOKMARK_IDC;
+			x = safeZoneX + safeZoneW * 0.46875;
+			y = safeZoneY + safeZoneH * 0.525;
+			w = safeZoneW * 0.0625;
+			h = safeZoneH * 0.05;
+			text = "$STR_tun_firesupport_bookmark_add";
+			action = "$STR_tun_firesupport_add_bookmark_action";
+			tooltip = "$STR_tun_firesupport_bookmark_add_tooltip";
+			
+		};
+		class tun_firesupport_remove_bookmark_button : tun_firesupport_button_base 
+		{
+			type = 1;
+			idc = BOOKMARK_REMOVE_BOOKMARK_IDC;
+			x = safeZoneX + safeZoneW * 0.46875;
+			y = safeZoneY + safeZoneH * 0.6;
+			w = safeZoneW * 0.0625;
+			h = safeZoneH * 0.05;
+			text = "$STR_tun_firesupport_remove_bookmark";
+			action = "$STR_tun_firesupport_remove_bookmark_action";
+			tooltip = "$STR_tun_firesupport_bookmark_remove_tooltip";
+			
+		};
+		class tun_firesupport_export_bookmark_button : tun_firesupport_button_base 
+		{
+			type = 1;
+			idc = BOOKMARK_EXPORT_BOOKMARK_IDC;
+			x = safeZoneX + safeZoneW * 0.409375;
+			y = safeZoneY + safeZoneH * 0.6;
+			w = safeZoneW * 0.05260417;
+			h = safeZoneH * 0.05;
+			text = "$STR_tun_firesupport_bookmark_export";
+			action = "$STR_tun_firesupport_export_bookmark_action";
+			tooltip = "$STR_tun_firesupport_bookmark_export_tooltip";
+			
+		};
+		class tun_firesupport_import_bookmark_button : tun_firesupport_button_base 
+		{
+			type = 1;
+			idc = BOOKMARK_IMPORT_BOOKMARK_IDC;
+			x = safeZoneX + safeZoneW * 0.409375;
+			y = safeZoneY + safeZoneH * 0.525;
+			w = safeZoneW * 0.05260417;
+			h = safeZoneH * 0.05;
+			text = "$STR_tun_firesupport_bookmark_import";
+			action = "$STR_tun_firesupport_import_bookmark_action";
+			tooltip = "$STR_tun_firesupport_bookmark_import_tooltip";
+			
+		};
 	};
-	
 };

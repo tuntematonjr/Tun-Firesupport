@@ -26,7 +26,7 @@ class CfgWeapons {
 		picture= "\x\Tun\addons\artycomputer_models\data\tablet_icon.paa";
 		model= "\x\Tun\addons\artycomputer_models\tablet.p3d";
 		icon= "\x\Tun\addons\artycomputer_models\data\tablet_icon.paa";
-		descriptionShort="Tablet used for AFI (Advanced Firesupport Interface";
+		descriptionShort="Tablet used to run AFI (Advanced Firesupport Interface)";
 		class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 2;
         };

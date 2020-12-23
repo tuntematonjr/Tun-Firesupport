@@ -83,4 +83,9 @@ if ( _arty_index != -1 && _ammo_index != -1 ) then {
 	};
 };
 
+if (GVAR(debug)) then {
+	_eta = 5;
+	_eta_number = 5;
+};
+
 [_eta_number,_eta]

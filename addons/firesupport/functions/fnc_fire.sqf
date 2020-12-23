@@ -67,7 +67,7 @@ private _northing_end = ctrlText NORTHING_END_IDC;
 private _firing_style = lbText [FIRING_TYPE_IDC,lbCurSel FIRING_TYPE_IDC];
 
 if ( _count <= 0 ) exitWith {
-	playSound "zoom_fail";
+	playSound "3DEN_notificationWarning";
 };
 [_gun_hash, "is_firing", true] call CBA_fnc_hashSet;
 
@@ -104,7 +104,6 @@ switch (_firing_style) do {
 		hint "firemission";
 		[{
 			hint "splash";
-			ok = _this;
 			//Real positions
 			_this remoteExec ["BIS_fnc_fireSupportVirtual", 2];
 
@@ -124,6 +123,23 @@ switch (_firing_style) do {
 			_wait = _eta + (_delay_time - _offset) + ( random (_offset * 2) );
 			ADD(_delay_time, _delay);
 			ADD(_distance_start, _distance_steps);
+
+			[{
+				_this remoteExec ["BIS_fnc_fireSupportVirtual", 2];
+			}, [_step_pos, _ammo, _range, 1, 1, {false}, nil, 300], _wait] call CBA_fnc_waitAndExecute;
+		};
+	};
+
+	case (localize "STR_tun_firesupport_firemode_wall"): {
+
+		private _dir = _pos getDir _pos_end;
+		private _distance = _pos distance2D _pos_end;
+		private _delay_time = 0;
+
+		for "_i" from 1 to _count step 1 do {
+			private _step_pos = _pos getPos [random _distance, _dir];
+			_wait = _eta + (_delay_time - _offset) + ( random (_offset * 2) );
+			ADD(_delay_time, _delay);
 
 			[{
 				_this remoteExec ["BIS_fnc_fireSupportVirtual", 2];

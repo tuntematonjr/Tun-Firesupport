@@ -18,10 +18,14 @@
  */
 #include "script_component.hpp"
 
+if (GVAR(debug)) then {
+	hint "debug mode enabled";
+};
+
 
 createDialog "Firesupport_dialog";
-waitUntil {!isnull (findDisplay 22200)};
-findDisplay 22200 displayCtrl 22209 progressSetPosition 0.5;
+waitUntil {!isnull (findDisplay MAIN_IDD)};
+findDisplay MAIN_IDD displayCtrl REMAINIG_AMMO_PROGRESBAR_IDC progressSetPosition 0.5;
 
 private _easting = player getVariable [QGVAR(easting), "00000"];
 private _northing = player getVariable [QGVAR(northing), "00000"];
@@ -79,6 +83,7 @@ private _variables = switch (playerSide) do {
 //Fire types
 lbAdd [FIRING_TYPE_IDC, localize "STR_tun_firesupport_firemode_standard"];
 lbAdd [FIRING_TYPE_IDC, localize "STR_tun_firesupport_firemode_creeping_barrage"];
+lbAdd [FIRING_TYPE_IDC, localize "STR_tun_firesupport_firemode_wall"];
 
 
 
@@ -88,11 +93,23 @@ lbSetCurSel [FIRING_TYPE_IDC, 0];
 GVAR(dialog_PFH) = [{
 	private _eta = [] call tun_firesupport_fnc_calculate_eta;
 	ctrlSetText [ETA_IDC, _eta select 1];
-}, 0.5] call CBA_fnc_addPerFrameHandler;
+}, 0.25] call CBA_fnc_addPerFrameHandler;
 
 
 [] call FUNC(update_firemode);
 
 ctrlShow [REMAINIG_AMMO_PROGRESBAR_IDC, false];
 ctrlShow [STATUS_IDC, false];
-//ctrlShow [FIRING_TYPE_IDC, false];
+
+
+//BOOKMARK STUFF
+GVAR(bookmarkOpen) = false;
+
+ctrlShow [BOOKMARK_LIST_IDC, false];
+ctrlShow [BOOKMARK_ADD_BOOKMARK_IDC, false];
+ctrlShow [BOOKMARK_NAME_TEXT_IDC, false];
+ctrlShow [BOOKMARK_NAME_VALUE_IDC, false];
+ctrlShow [BOOKMARK_REMOVE_BOOKMARK_IDC, false];
+ctrlShow [BOOKMARK_EDITBOX_IDC, false];
+ctrlShow [BOOKMARK_IMPORT_BOOKMARK_IDC, false];
+ctrlShow [BOOKMARK_EXPORT_BOOKMARK_IDC, false];

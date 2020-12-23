@@ -122,6 +122,90 @@
         <Russian>A.F.I: Advanced Firesupport Interface</Russian>
         <German>A.F.I: Advanced Firesupport Interface</German>
       </Key>
+      <Key ID="STR_tun_firesupport_bookmark">
+        <Original>Bookmarks</Original>
+        <English>Bookmarks</English>
+        <Czech>Bookmarks</Czech>
+        <French>Bookmarks</French>
+        <Spanish>Bookmarks</Spanish>
+        <Italian>Bookmarks</Italian>
+        <Polish>Bookmarks</Polish>
+        <Portuguese>Bookmarks</Portuguese>
+        <Russian>Bookmarks</Russian>
+        <German>Bookmarks</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_name_bookmark_text">
+        <Original>Name</Original>
+        <English>Name</English>
+        <Czech>Name</Czech>
+        <French>Name</French>
+        <Spanish>Name</Spanish>
+        <Italian>Name</Italian>
+        <Polish>Name</Polish>
+        <Portuguese>Name</Portuguese>
+        <Russian>Name</Russian>
+        <German>Name</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_remove_bookmark">
+        <Original>Remove</Original>
+        <English>Remove</English>
+        <Czech>Remove</Czech>
+        <French>Remove</French>
+        <Spanish>Remove</Spanish>
+        <Italian>Remove</Italian>
+        <Polish>Remove</Polish>
+        <Portuguese>Remove</Portuguese>
+        <Russian>Remove</Russian>
+        <German>Remove</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_bookmark_add">
+        <Original>Add</Original>
+        <English>Add</English>
+        <Czech>Add</Czech>
+        <French>Add</French>
+        <Spanish>Add</Spanish>
+        <Italian>Add</Italian>
+        <Polish>Add</Polish>
+        <Portuguese>Add</Portuguese>
+        <Russian>Add</Russian>
+        <German>Add</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_bookmark_import">
+        <Original>Import</Original>
+        <English>Import</English>
+        <Czech>Import</Czech>
+        <French>Import</French>
+        <Spanish>Import</Spanish>
+        <Italian>Import</Italian>
+        <Polish>Import</Polish>
+        <Portuguese>Import</Portuguese>
+        <Russian>Import</Russian>
+        <German>Import</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_bookmark_export">
+        <Original>Export</Original>
+        <English>Export</English>
+        <Czech>Export</Czech>
+        <French>Export</French>
+        <Spanish>Export</Spanish>
+        <Italian>Export</Italian>
+        <Polish>Export</Polish>
+        <Portuguese>Export</Portuguese>
+        <Russian>Export</Russian>
+        <German>Export</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_minimap">
+        <Original>Minimap</Original>
+        <English>Minimap</English>
+        <Czech>Minimap</Czech>
+        <French>Minimap</French>
+        <Spanish>Minimap</Spanish>
+        <Italian>Minimap</Italian>
+        <Polish>Minimap</Polish>
+        <Portuguese>Minimap</Portuguese>
+        <Russian>Minimap</Russian>
+        <German>Minimap</German>
+      </Key>
     </Container>
     <Container name="actions">
       <Key ID="STR_tun_firesupport_fire_action">
@@ -232,6 +316,78 @@
         <Russian>[] call tun_firesupport_fnc_update_firemode</Russian>
         <German>[] call tun_firesupport_fnc_update_firemode</German>
       </Key>
+      <Key ID="STR_tun_firesupport_open_bookmark">
+        <Original>[] call tun_firesupport_fnc_toggle_bookmarks;</Original>
+        <English>[] call tun_firesupport_fnc_toggle_bookmarks;</English>
+        <Czech>[] call tun_firesupport_fnc_toggle_bookmarks;</Czech>
+        <French>[] call tun_firesupport_fnc_toggle_bookmarks;</French>
+        <Spanish>[] call tun_firesupport_fnc_toggle_bookmarks;</Spanish>
+        <Italian>[] call tun_firesupport_fnc_toggle_bookmarks;</Italian>
+        <Polish>[] call tun_firesupport_fnc_toggle_bookmarks;</Polish>
+        <Portuguese>[] call tun_firesupport_fnc_toggle_bookmarks;</Portuguese>
+        <Russian>[] call tun_firesupport_fnc_toggle_bookmarks;</Russian>
+        <German>[] call tun_firesupport_fnc_toggle_bookmarks;</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_bookmark_list_change">
+        <Original>[] call tun_firesupport_fnc_selected_bookmark;</Original>
+        <English>[] call tun_firesupport_fnc_selected_bookmark;</English>
+        <Czech>[] call tun_firesupport_fnc_selected_bookmark;</Czech>
+        <French>[] call tun_firesupport_fnc_selected_bookmark;</French>
+        <Spanish>[] call tun_firesupport_fnc_selected_bookmark;</Spanish>
+        <Italian>[] call tun_firesupport_fnc_selected_bookmark;</Italian>
+        <Polish>[] call tun_firesupport_fnc_selected_bookmark;</Polish>
+        <Portuguese>[] call tun_firesupport_fnc_selected_bookmark;</Portuguese>
+        <Russian>[] call tun_firesupport_fnc_selected_bookmark;</Russian>
+        <German>[] call tun_firesupport_fnc_selected_bookmark;</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_import_bookmark_action">
+        <Original>[false] call tun_firesupport_fnc_save_bookmarks;</Original>
+        <English>[false] call tun_firesupport_fnc_save_bookmarks;</English>
+        <Czech>[false] call tun_firesupport_fnc_save_bookmarks;</Czech>
+        <French>[false] call tun_firesupport_fnc_save_bookmarks;</French>
+        <Spanish>[false] call tun_firesupport_fnc_save_bookmarks;</Spanish>
+        <Italian>[false] call tun_firesupport_fnc_save_bookmarks;</Italian>
+        <Polish>[false] call tun_firesupport_fnc_save_bookmarks;</Polish>
+        <Portuguese>[false] call tun_firesupport_fnc_save_bookmarks;</Portuguese>
+        <Russian>[false] call tun_firesupport_fnc_save_bookmarks;</Russian>
+        <German>[false] call tun_firesupport_fnc_save_bookmarks;</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_export_bookmark_action">
+        <Original>[true] call tun_firesupport_fnc_save_bookmarks;</Original>
+        <English>[true] call tun_firesupport_fnc_save_bookmarks;</English>
+        <Czech>[true] call tun_firesupport_fnc_save_bookmarks;</Czech>
+        <French>[true] call tun_firesupport_fnc_save_bookmarks;</French>
+        <Spanish>[true] call tun_firesupport_fnc_save_bookmarks;</Spanish>
+        <Italian>[true] call tun_firesupport_fnc_save_bookmarks;</Italian>
+        <Polish>[true] call tun_firesupport_fnc_save_bookmarks;</Polish>
+        <Portuguese>[true] call tun_firesupport_fnc_save_bookmarks;</Portuguese>
+        <Russian>[true] call tun_firesupport_fnc_save_bookmarks;</Russian>
+        <German>[true] call tun_firesupport_fnc_save_bookmarks;</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_add_bookmark_action">
+        <Original>[true] call tun_firesupport_fnc_modify_bookmarks;</Original>
+        <English>[true] call tun_firesupport_fnc_modify_bookmarks;</English>
+        <Czech>[true] call tun_firesupport_fnc_modify_bookmarks;</Czech>
+        <French>[true] call tun_firesupport_fnc_modify_bookmarks;</French>
+        <Spanish>[true] call tun_firesupport_fnc_modify_bookmarks;</Spanish>
+        <Italian>[true] call tun_firesupport_fnc_modify_bookmarks;</Italian>
+        <Polish>[true] call tun_firesupport_fnc_modify_bookmarks;</Polish>
+        <Portuguese>[true] call tun_firesupport_fnc_modify_bookmarks;</Portuguese>
+        <Russian>[true] call tun_firesupport_fnc_modify_bookmarks;</Russian>
+        <German>[true] call tun_firesupport_fnc_modify_bookmarks;</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_remove_bookmark_action">
+        <Original>[false] call tun_firesupport_fnc_modify_bookmarks;</Original>
+        <English>[false] call tun_firesupport_fnc_modify_bookmarks;</English>
+        <Czech>[false] call tun_firesupport_fnc_modify_bookmarks;</Czech>
+        <French>[false] call tun_firesupport_fnc_modify_bookmarks;</French>
+        <Spanish>[false] call tun_firesupport_fnc_modify_bookmarks;</Spanish>
+        <Italian>[false] call tun_firesupport_fnc_modify_bookmarks;</Italian>
+        <Polish>[false] call tun_firesupport_fnc_modify_bookmarks;</Polish>
+        <Portuguese>[false] call tun_firesupport_fnc_modify_bookmarks;</Portuguese>
+        <Russian>[false] call tun_firesupport_fnc_modify_bookmarks;</Russian>
+        <German>[false] call tun_firesupport_fnc_modify_bookmarks;</German>
+      </Key>
     </Container>
     <Container name="tooltips">
       <Key ID="STR_tun_firesupport_ammocount_tooltip">
@@ -318,6 +474,78 @@
         <Russian>Estimated time to splash</Russian>
         <German>Estimated time to splash</German>
       </Key>
+      <Key ID="STR_tun_firesupport_name_text_tooltip">
+        <Original>Give name for firemission to bookmark</Original>
+        <English>Give name for firemission to bookmark</English>
+        <Czech>Give name for firemission to bookmark</Czech>
+        <French>Give name for firemission to bookmark</French>
+        <Spanish>Give name for firemission to bookmark</Spanish>
+        <Italian>Give name for firemission to bookmark</Italian>
+        <Polish>Give name for firemission to bookmark</Polish>
+        <Portuguese>Give name for firemission to bookmark</Portuguese>
+        <Russian>Give name for firemission to bookmark</Russian>
+        <German>Give name for firemission to bookmark</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_editbox_tooltip">
+        <Original>To export, copy and save this array somwhere, like desktop text file.    To import bookmarks, copy your array of values here.</Original>
+        <English>To export, copy and save this array somwhere, like desktop text file.    To import bookmarks, copy your array of values here.</English>
+        <Czech>To export, copy and save this array somwhere, like desktop text file.    To import bookmarks, copy your array of values here.</Czech>
+        <French>To export, copy and save this array somwhere, like desktop text file.    To import bookmarks, copy your array of values here.</French>
+        <Spanish>To export, copy and save this array somwhere, like desktop text file.    To import bookmarks, copy your array of values here.</Spanish>
+        <Italian>To export, copy and save this array somwhere, like desktop text file.    To import bookmarks, copy your array of values here.</Italian>
+        <Polish>To export, copy and save this array somwhere, like desktop text file.    To import bookmarks, copy your array of values here.</Polish>
+        <Portuguese>To export, copy and save this array somwhere, like desktop text file.    To import bookmarks, copy your array of values here.</Portuguese>
+        <Russian>To export, copy and save this array somwhere, like desktop text file.    To import bookmarks, copy your array of values here.</Russian>
+        <German>To export, copy and save this array somwhere, like desktop text file.    To import bookmarks, copy your array of values here.</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_bookmark_import_tooltip">
+        <Original>Copy paste array of values to editbox at left and press this</Original>
+        <English>Copy paste array of values to editbox at left and press this</English>
+        <Czech>Copy paste array of values to editbox at left and press this</Czech>
+        <French>Copy paste array of values to editbox at left and press this</French>
+        <Spanish>Copy paste array of values to editbox at left and press this</Spanish>
+        <Italian>Copy paste array of values to editbox at left and press this</Italian>
+        <Polish>Copy paste array of values to editbox at left and press this</Polish>
+        <Portuguese>Copy paste array of values to editbox at left and press this</Portuguese>
+        <Russian>Copy paste array of values to editbox at left and press this</Russian>
+        <German>Copy paste array of values to editbox at left and press this</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_bookmark_export_tooltip">
+        <Original>After pressing this button. Copy paste array from editbox at left somewhere else, like text file at your desktop and save it.</Original>
+        <English>After pressing this button. Copy paste array from editbox at left somewhere else, like text file at your desktop and save it.</English>
+        <Czech>After pressing this button. Copy paste array from editbox at left somewhere else, like text file at your desktop and save it.</Czech>
+        <French>After pressing this button. Copy paste array from editbox at left somewhere else, like text file at your desktop and save it.</French>
+        <Spanish>After pressing this button. Copy paste array from editbox at left somewhere else, like text file at your desktop and save it.</Spanish>
+        <Italian>After pressing this button. Copy paste array from editbox at left somewhere else, like text file at your desktop and save it.</Italian>
+        <Polish>After pressing this button. Copy paste array from editbox at left somewhere else, like text file at your desktop and save it.</Polish>
+        <Portuguese>After pressing this button. Copy paste array from editbox at left somewhere else, like text file at your desktop and save it.</Portuguese>
+        <Russian>After pressing this button. Copy paste array from editbox at left somewhere else, like text file at your desktop and save it.</Russian>
+        <German>After pressing this button. Copy paste array from editbox at left somewhere else, like text file at your desktop and save it.</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_bookmark_remove_tooltip">
+        <Original>Remove currently selected bookmark</Original>
+        <English>Remove currently selected bookmark</English>
+        <Czech>Remove currently selected bookmark</Czech>
+        <French>Remove currently selected bookmark</French>
+        <Spanish>Remove currently selected bookmark</Spanish>
+        <Italian>Remove currently selected bookmark</Italian>
+        <Polish>Remove currently selected bookmark</Polish>
+        <Portuguese>Remove currently selected bookmark</Portuguese>
+        <Russian>Remove currently selected bookmark</Russian>
+        <German>Remove currently selected bookmark</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_bookmark_add_tooltip">
+        <Original>Save currently added settings as bookmakr</Original>
+        <English>Save currently added settings as bookmakr</English>
+        <Czech>Save currently added settings as bookmakr</Czech>
+        <French>Save currently added settings as bookmakr</French>
+        <Spanish>Save currently added settings as bookmakr</Spanish>
+        <Italian>Save currently added settings as bookmakr</Italian>
+        <Polish>Save currently added settings as bookmakr</Polish>
+        <Portuguese>Save currently added settings as bookmakr</Portuguese>
+        <Russian>Save currently added settings as bookmakr</Russian>
+        <German>Save currently added settings as bookmakr</German>
+      </Key>
     </Container>
     <Container name="cba">
       <Key ID="STR_tun_firesupport_cba_is_required">
@@ -380,6 +608,18 @@
         <Russian>Required items classnames. Must be strings, seperated by comas</Russian>
         <German>Required items classnames. Must be strings, seperated by comas</German>
       </Key>
+      <Key ID="STR_tun_firesupport_cba_debug">
+        <Original>Debug mode</Original>
+        <English>Debug mode</English>
+        <Czech>Debug mode</Czech>
+        <French>Debug mode</French>
+        <Spanish>Debug mode</Spanish>
+        <Italian>Debug mode</Italian>
+        <Polish>Debug mode</Polish>
+        <Portuguese>Debug mode</Portuguese>
+        <Russian>Debug mode</Russian>
+        <German>Debug mode</German>
+      </Key>
     </Container>
     <Container name="Firemodes">
       <Key ID="STR_tun_firesupport_firemode_standard">
@@ -405,6 +645,18 @@
         <Portuguese>Creeping barrage</Portuguese>
         <Russian>Creeping barrage</Russian>
         <German>Creeping barrage</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_firemode_wall">
+        <Original>The Wall (WIP)</Original>
+        <English>The Wall (WIP)</English>
+        <Czech>The Wall (WIP)</Czech>
+        <French>The Wall (WIP)</French>
+        <Spanish>The Wall (WIP)</Spanish>
+        <Italian>The Wall (WIP)</Italian>
+        <Polish>The Wall (WIP)</Polish>
+        <Portuguese>The Wall (WIP)</Portuguese>
+        <Russian>The Wall (WIP)</Russian>
+        <German>The Wall (WIP)</German>
       </Key>
     </Container>
     <Container name="module">

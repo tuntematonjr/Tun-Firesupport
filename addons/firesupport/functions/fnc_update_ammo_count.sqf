@@ -18,7 +18,9 @@
  */
 #include "script_component.hpp"
 
-if (isnull (findDisplay 22200)) exitWith { };
+if (isnull (findDisplay MAIN_IDD)) exitWith { };
+
+ctrlSetText [COUNT_IDC, "0"];
 
 private _variables = switch (playerSide) do {
 

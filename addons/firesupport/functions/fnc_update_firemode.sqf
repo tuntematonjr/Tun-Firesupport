@@ -17,7 +17,7 @@
  * ["something", player] call tun_firesupport_fnc_update_firemode
  */
 #include "script_component.hpp"
-if (isnull (findDisplay 22200)) exitWith { };
+if (isnull (findDisplay MAIN_IDD)) exitWith { };
 private _firing_style = lbText [FIRING_TYPE_IDC,lbCurSel FIRING_TYPE_IDC];
 
 switch (_firing_style) do {
@@ -29,7 +29,8 @@ switch (_firing_style) do {
 		ctrlShow [NORTHING_END_TEXT_IDC, false];
 	};
 
-	case (localize "STR_tun_firesupport_firemode_creeping_barrage"): {
+	case (localize "STR_tun_firesupport_firemode_creeping_barrage");
+	case (localize "STR_tun_firesupport_firemode_wall"): {
 		ctrlShow [EASTING_END_IDC, true];
 		ctrlShow [NORTHING_END_IDC, true];
 		ctrlShow [EASTING_END_TEXT_IDC, true];
@@ -37,6 +38,6 @@ switch (_firing_style) do {
 	};
 
 	default {
-		hint "moi";
+		hint "Missing Update firemode";
 	};
 };

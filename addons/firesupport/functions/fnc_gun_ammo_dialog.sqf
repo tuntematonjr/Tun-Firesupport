@@ -52,13 +52,11 @@ private _index = lbCurSel ARTY_LIST_IDC;
 private _gun_hash = _variables select _index;
 private _ammo_hash = [_gun_hash, "gun_ammo_hash"] call CBA_fnc_hashGet;
 
-
-
 {
 	private _ammo = _x;
 	private _count = [_ammo_hash, _ammo] call CBA_fnc_hashGet;
 	private _name = getText (configFile >> "CfgMagazines" >> _ammo >> "displayName");
 	_index = lbAdd [AMMO_TYPE_IDC, _name];
 	lbSetData [AMMO_TYPE_IDC, _index, _ammo];
-
 } forEach ([_ammo_hash] call CBA_fnc_hashKeys);
+

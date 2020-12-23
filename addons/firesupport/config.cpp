@@ -48,6 +48,7 @@ class CfgVehicles {
                     displayName = "Firesupport";
                     condition = QUOTE('tun_tablet' in items _player);
                     statement = QUOTE([] call FUNC(open_dialog));
+                    exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                     icon = "\x\Tun\addons\artycomputer_models\data\tablet_icon.paa";
                 };
             };

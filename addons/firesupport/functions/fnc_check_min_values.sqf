@@ -82,3 +82,4 @@ switch (_dialog) do {
 		/* STATEMENT */
 	};
 };
+

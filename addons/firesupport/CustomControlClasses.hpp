@@ -3,10 +3,19 @@
 #define HG_CustomControlClasseshpp 1
 //Create a header guard to prevent duplicate include.
 
+#include "GUIBaseClasses.hpp"
+#include "Firesupport_idc.hpp"
+
 class tun_default_text
 {
 	style = 2;
-	colorBackground[] = {0,0.102,0.502,1};
+	colorBackground[] =
+	{
+		"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.13])",
+		"(profilenamespace getvariable ['GUI_BCG_RGB_G',0.54])",
+		"(profilenamespace getvariable ['GUI_BCG_RGB_B',0.21])",
+		1
+	};
 	colorText[] = {1,1,1,1};
 	font = "PuristaMedium";
 	sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
@@ -58,6 +67,16 @@ class tun_firesupport_default_combo
 	{
 		
 	};
+	
+};
+
+class tun_firesupport_button_base : RscButton
+{
+	
+};
+
+class tun_firesupport_listbox : RscListBox
+{
 	
 };
 #endif
