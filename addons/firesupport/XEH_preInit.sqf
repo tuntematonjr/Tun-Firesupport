@@ -1,16 +1,18 @@
 #include "script_component.hpp"
 #include "XEH_prep.sqf"
 
-
-
 ISNILS(GVAR(guns_west),[]);
 ISNILS(GVAR(guns_east),[]);
 ISNILS(GVAR(guns_resistance),[]);
 ISNILS(GVAR(guns_civilian),[]);
 ISNILS(GVAR(bookmarkValues),[]);
 ISNILS(GVAR(bookmarkOpen),false);
+ISNILS(GVAR(BookmarkSkip),false);
 
-
+if (isServer) then {
+    GVAR(namespace) = true call CBA_fnc_createNamespace;
+    publicVariable QGVAR(namespace);  
+};
 
 
 //Main settings
@@ -36,13 +38,3 @@ ISNILS(GVAR(bookmarkOpen),false);
     {}, // Script to execute when setting is changed. (optional) <CODE>
     false //Setting will be marked as needing mission restart after being changed. (optional, default false) <BOOL>
 ] call CBA_Settings_fnc_init;
-
-// "mp_groundsupport_45_artillery_BHQ_0"
-// mp_groundsupport_45_artillery_BHQ_1
-// mp_groundsupport_45_artillery_BHQ_2
-// mp_groundsupport_45_artillery_IHQ_0
-// mp_groundsupport_45_artillery_IHQ_1
-// mp_groundsupport_45_artillery_IHQ_2
-// mp_groundsupport_45_artillery_OHQ_0
-// mp_groundsupport_45_artillery_OHQ_1
-// mp_groundsupport_45_artillery_OHQ_2

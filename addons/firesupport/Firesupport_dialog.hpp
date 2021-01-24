@@ -265,6 +265,8 @@ class Firesupport_dialog
 			h = safeZoneH * 0.025;
 			text = "1";
 			onKillFocus = "$STR_tun_firesupport_check_min_values_delay";
+			onMouseEnter = "$STR_tun_firesupport_check_min_values_delay";
+			onMouseExit = "$STR_tun_firesupport_check_min_values_delay";
 			tooltip = "$STR_tun_firesupport_delay_tooltip";
 			
 		};

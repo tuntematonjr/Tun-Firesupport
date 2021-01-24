@@ -18,6 +18,7 @@
  */
 #include "script_component.hpp"
 
+GVAR(BookmarkSkip) = true;
 
 private _values = GVAR(bookmarkValues) select lbCurSel BOOKMARK_LIST_IDC;
 
@@ -28,10 +29,6 @@ ctrlSetText [EASTING_IDC, _eastin];
 ctrlSetText [NORTHING_IDC, _northing];
 ctrlSetText [EASTING_END_IDC, _eastin2];
 ctrlSetText [NORTHING_END_IDC, _northing2];
-
-ctrlSetText [COUNT_IDC, _count];
-ctrlSetText [RANGE_IDC, _radius];
-ctrlSetText [DELAY_IDC, _delay];
 
 private _errorText = "";
 
@@ -56,3 +53,12 @@ if (_modeText == lbText [FIRING_TYPE_IDC, _mode]) then {
 if (count _errorText > 0) then {
 	hint  _errorText;
 };
+
+ctrlSetText [RANGE_IDC, _radius];
+ctrlSetText [DELAY_IDC, _delay];
+ctrlSetText [COUNT_IDC, _count];
+
+
+/*
+
+[["Name [041:049]","041","049","00000","00000",0,"Mortart 1",0,"HE Mortar Shells",0,"Standard","11","51","1"]]

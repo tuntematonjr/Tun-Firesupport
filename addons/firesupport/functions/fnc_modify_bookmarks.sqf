@@ -31,9 +31,9 @@ if (_value) then {
 	private _ammoText = lbText [AMMO_TYPE_IDC, _ammo];
 	private _mode = lbCurSel FIRING_TYPE_IDC;
 	private _modeText = lbText [FIRING_TYPE_IDC,_mode];
-	private _count = parseNumber ctrlText COUNT_IDC;
-	private _radius = parseNumber ctrlText RANGE_IDC;
-	private _delay = parseNumber ctrlText DELAY_IDC;
+	private _count = ctrlText COUNT_IDC;
+	private _radius = ctrlText RANGE_IDC;
+	private _delay = ctrlText DELAY_IDC;
 
 	_name = format["%1 [%2:%3]",_name, _easting, _northing];
 	GVAR(bookmarkValues) pushBackUnique [_name, _easting, _northing, _easting2, _northing2, _gun, _gunText, _ammo, _ammoText, _mode, _modeText, _count, _radius, _delay];

@@ -64,19 +64,18 @@ private _variables = switch (playerSide) do {
 
 //Add batteries
 {
-	private _hash = _x;
+	private _module = _x;
 
-	private _gun_name = [_hash,"gun_name"] call CBA_fnc_hashGet;
-	private _gun_classname = [_hash,"gun_classname"] call CBA_fnc_hashGet;
+	private _gun_name = _module getVariable ["displayName", "Missing name"];;
+	private _gun_classname = _module getVariable ["className", "Missing classname"];
 
 	private _index = lbAdd [ARTY_LIST_IDC, _gun_name];
 
 	private _gunicon = getText (configFile >> "CfgVehicles" >> _gun_classname >> "picture");
 	lbSetPicture [ARTY_LIST_IDC, _index, _gunicon];
 
-	private _min_spread = [_hash,"min_spread"] call CBA_fnc_hashGet;
+	private _min_spread = _module getVariable ["spreadMin", 100];
 	lbSetValue [ARTY_LIST_IDC, _index, _min_spread];
-
 } forEach _variables;
 
 

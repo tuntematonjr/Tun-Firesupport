@@ -19,17 +19,15 @@
 #include "script_component.hpp"
 
 params ["_value"];
-ok = "moi";
+
 if (_value) then {
 	//export
 	ctrlSetText [BOOKMARK_EDITBOX_IDC, str GVAR(bookmarkValues)];
 } else {
 	//import
-	ok = (ctrlText BOOKMARK_EDITBOX_IDC);
 	{
 		GVAR(bookmarkValues) pushBackUnique _x;
 	} forEach (call compile ctrlText BOOKMARK_EDITBOX_IDC);
 
 	[] call FUNC(update_bookmarks);
 };
-// [["kaikkea [00000:00000]","00000","00000","00000","00000",0,"Mortart 1",0,"HE Mortar Shells",0,"Standard",0,50,1],["sitä [1:01]","1","01","00000","00000",0,"Mortart 1",0,"HE Mortar Shells",0,"Standard",0,50,1],["tulee [12:012]","12","012","00000","00000",0,"Mortart 1",0,"HE Mortar Shells",0,"Standard",0,50,1],["luvattua [123:0125]","123","0125","00000","00000",0,"Mortart 1",0,"HE Mortar Shells",0,"Standard",0,50,1],["ennen [123:0125]","123","0125","00000","00000",0,"Mortart 1",0,"HE Mortar Shells",0,"Standard",0,50,1],["joulua [12354:01255]","12354","01255","00000","00000",0,"Mortart 1",0,"HE Mortar Shells",0,"Standard",0,50,1]]

@@ -14,7 +14,7 @@ class CfgPatches
 };
 
 #include "Firesupport_dialog.hpp"
-
+#include "CfgSounds.hpp"
 
 class CfgFactionClasses
 {
@@ -108,6 +108,27 @@ class CfgVehicles {
                 description = $STR_tun_firesupport_module_gun_side_description;
                 typeName = "STRING";
                 defaultValue = "";
+            };
+            
+            class minRange {
+                displayName = $STR_tun_firesupport_module_gun_minRange_displayname;
+                description = $STR_tun_firesupport_module_gun_minRange_description;
+                typeName = "NUMBER";
+                defaultValue = 0;
+            };
+            
+            class maxRange {
+                displayName = $STR_tun_firesupport_module_gun_maxRange_displayname;
+                description = $STR_tun_firesupport_module_gun_maxRange_description;
+                typeName = "NUMBER";
+                defaultValue = 10000;
+            };
+            
+            class marker {
+                displayName = $STR_tun_firesupport_module_gun_markerToggle_displayname;
+                description = $STR_tun_firesupport_module_gun_markerToggle_description;
+                typeName = "BOOL";
+                defaultValue = true;
             };
 
         };

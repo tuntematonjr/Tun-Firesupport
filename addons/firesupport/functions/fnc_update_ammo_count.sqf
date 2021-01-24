@@ -18,9 +18,14 @@
  */
 #include "script_component.hpp"
 
-if (isnull (findDisplay MAIN_IDD)) exitWith { };
+private _index = lbCurSel AMMO_TYPE_IDC;
+if (isnull (findDisplay MAIN_IDD) || _index == -1 ) exitWith { };
 
-ctrlSetText [COUNT_IDC, "0"];
+if (GVAR(BookmarkSkip)) then {
+	GVAR(BookmarkSkip) = false;
+} else {
+	ctrlSetText [COUNT_IDC, "0"];
+};
 
 private _variables = switch (playerSide) do {
 
@@ -47,11 +52,8 @@ private _variables = switch (playerSide) do {
 };
 
 private _index = lbCurSel ARTY_LIST_IDC;
+private _gun_module = _variables select _index;
+private _ammoModule = (synchronizedObjects _gun_module) select lbCurSel AMMO_TYPE_IDC;
 
-private _gun_hash = _variables select _index;
-private _ammo_hash = [_gun_hash, "gun_ammo_hash"] call CBA_fnc_hashGet;
-
-private _key = lbData [AMMO_TYPE_IDC, lbCurSel AMMO_TYPE_IDC];
-
-private _count = [_ammo_hash, _key] call CBA_fnc_hashGet;
+private _count = _ammoModule getVariable ["currentCount", 0];
 ctrlSetText [REMAINIG_AMMO_IDC, str _count];

@@ -21,7 +21,7 @@
 ["radius", true] call FUNC(check_min_values);
 ["ammo", true] call FUNC(check_min_values);
 
-private _variables = switch (playerSide) do {
+private _modules = switch (playerSide) do {
 
 	case west: {
 		GVAR(guns_west)
@@ -49,14 +49,13 @@ lbClear AMMO_TYPE_IDC;
 lbSetCurSel [AMMO_TYPE_IDC, -1];
 
 private _index = lbCurSel ARTY_LIST_IDC;
-private _gun_hash = _variables select _index;
-private _ammo_hash = [_gun_hash, "gun_ammo_hash"] call CBA_fnc_hashGet;
+private _gun_module = _modules select _index;
 
 {
-	private _ammo = _x;
-	private _count = [_ammo_hash, _ammo] call CBA_fnc_hashGet;
+	private _obj = _x;
+	private _ammo = _obj getVariable "Ammo";
+	private _count = _obj getVariable "currentCount";
 	private _name = getText (configFile >> "CfgMagazines" >> _ammo >> "displayName");
 	_index = lbAdd [AMMO_TYPE_IDC, _name];
 	lbSetData [AMMO_TYPE_IDC, _index, _ammo];
-} forEach ([_ammo_hash] call CBA_fnc_hashKeys);
-
+} forEach synchronizedObjects _gun_module;

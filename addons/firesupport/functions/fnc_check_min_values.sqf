@@ -20,6 +20,11 @@
 
 params ["_dialog", ["_force", false, [false]]];
 
+if (GVAR(BookmarkSkip)) then {
+	_force = false;
+	GVAR(BookmarkSkip) = false;
+};
+
 private _variables = switch (playerSide) do {
 
 	case west: {
@@ -44,14 +49,22 @@ private _variables = switch (playerSide) do {
 	};
 };
 
+
 private _index = lbCurSel ARTY_LIST_IDC;
 if (_index == -1 ) exitWith { };
 
-private _gun_hash = _variables select _index;
+private _gun_module= _variables select _index;
+
+private _classname = _gun_module getVariable ["className", "Missing classname"];
+private _name = _gun_module getVariable ["displayName", "Missing name"];
+private _countdown = _gun_module getVariable ["countDown", 60];
+private _side = _gun_module getVariable ["side", sideLogic];
+private _min_spread = _gun_module getVariable ["spreadMin", 100];
+private _min_delay = _gun_module getVariable ["delayMin", 1];
 
 switch (_dialog) do {
 	case "radius": {
-		private _min_spread = [_gun_hash, "min_spread"] call CBA_fnc_hashGet;
+		private _min_spread = _gun_module getVariable ["spreadMin", 100];
 		private _range = parseNumber ctrlText RANGE_IDC;
 		if (_min_spread > _range || _force) then {
 			ctrlSetText [RANGE_IDC, str _min_spread];
@@ -59,7 +72,7 @@ switch (_dialog) do {
 	};
 
 	case "delay": {
-		private _min_delay = [_gun_hash, "min_delay"] call CBA_fnc_hashGet;
+		private _min_delay = _gun_module getVariable ["delayMin", 1];
 		private _delay = parseNumber ctrlText DELAY_IDC;
 		if (_min_delay > _delay || _force) then {
 			ctrlSetText [DELAY_IDC, str _min_delay];
@@ -68,13 +81,17 @@ switch (_dialog) do {
 
 
 	case "ammo": {
-		private _ammo_hash = [_gun_hash, "gun_ammo_hash"] call CBA_fnc_hashGet;
-		private _key = lbData [AMMO_TYPE_IDC, lbCurSel AMMO_TYPE_IDC];
-		private _count_remaining = [_ammo_hash, _key] call CBA_fnc_hashGet;
-		private _count = parseNumber ctrlText COUNT_IDC;
+		private _index = lbCurSel AMMO_TYPE_IDC;
+		if (_index != -1 ) then { 
+			private _ammo_module = (synchronizedObjects _gun_module) select lbCurSel AMMO_TYPE_IDC;
+			private _count_remaining = _ammo_module getVariable "currentCount";
+			private _count = parseNumber ctrlText COUNT_IDC;
 
-		if (_count > _count_remaining || _force) then {
-			ctrlSetText [COUNT_IDC, str _count_remaining];
+			if (_count > _count_remaining || _force) then {
+				ctrlSetText [COUNT_IDC, str _count_remaining];
+			};
+		} else {
+			ctrlSetText [COUNT_IDC, " "];
 		};
 	};
 

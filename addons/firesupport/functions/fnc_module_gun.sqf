@@ -16,30 +16,24 @@
  * Example:
  * ["something", player] call tun_firesupport_fnc_module_gun
  */
+if (!isServer) exitWith { };
 #include "script_component.hpp"
 
-private _module = param [0,objNull,[objNull]];
+private _gun_module = param [0,objNull,[objNull]];
 
-
-private _gun_hash = [nil,0] call CBA_fnc_hashCreate;
-private _gun_ammo_hash = [nil,0] call CBA_fnc_hashCreate;
 
 //TODO lisää conffiin että voi muuttaa
-private _classname = _module getVariable ["className", "Missing classname"];
-private _name = _module getVariable ["displayName", "Missing name"];
-private _countdown = _module getVariable ["countDown", 60];
-private _side = _module getVariable ["side", sideLogic];
-private _min_spread = _module getVariable ["spreadMin", 100];
-private _min_delay = _module getVariable ["delayMin", 1];
-
-private _gun = _classname createVehicle position _module;
-
-private _agent = createAgent ["C_man_1", getPosATL _gun, [], 0, "NONE"];
-_agent moveInGunner _gun;
-hideObjectGlobal _gun;
-hideObjectGlobal _agent;
-_gun enableSimulationGlobal false;
-_agent enableSimulationGlobal false;
+private _classname = _gun_module getVariable ["className", "Missing classname"];
+private _name = _gun_module getVariable ["displayName", "Missing name"];
+private _countdown = _gun_module getVariable ["countDown", 60];
+private _side = _gun_module getVariable ["side", sideLogic];
+private _min_spread = _gun_module getVariable ["spreadMin", 100];
+private _min_delay = _gun_module getVariable ["delayMin", 1];
+private _minRange= _gun_module getVariable ["minRange", 0];
+private _maxRange = _gun_module getVariable ["maxRange", 10000];
+private _markerConditio = _gun_module getVariable ["marker", true];
+private _icon = "n_art";
+private _color = "colorCivilian";
 
 
 //tun_firesupport_ammo_type "Sh_82mm_AMOS",
@@ -49,29 +43,43 @@ _agent enableSimulationGlobal false;
 	private _obj = _x;
 	private _ammo = _obj getVariable "Ammo";
 	private _count = _obj getVariable "Count";
-	[_gun_ammo_hash, _ammo, _count] call CBA_fnc_hashSet;
-
-	_gun addMagazineTurret [_ammo, [0], 0];
-
-} forEach synchronizedObjects _module;
+	_obj setVariable ["currentCount", _count, true];
+} forEach synchronizedObjects _gun_module;
 
 
+_gun_module setVariable [QGVAR(is_firing), false];
 
 switch ( toLower _side) do {
 	case "west": {
-		GVAR(guns_west) pushBack _gun_hash;
+		GVAR(guns_west) pushBack _gun_module;
+		publicVariable QGVAR(guns_west);
+		_side = west;
+		_icon = "b_art";
+		_color = "colorBLUFOR";
 	};
 
 	case "east": {
-		GVAR(guns_east) pushBack _gun_hash;
+		GVAR(guns_east) pushBack _gun_module;
+		publicVariable QGVAR(guns_east);
+		_side = east;
+		_icon = "o_art";
+		_color = "colorOPFOR";
 	};
 
 	case "resistance": {
-		GVAR(guns_resistance) pushBack _gun_hash;
+		GVAR(guns_resistance) pushBack _gun_module;
+		publicVariable QGVAR(guns_resistance);
+		_side = resistance;
+		_icon = "n_art";
+		_color = "colorIndependent";
 	};
 
 	case "civilian": {
-		GVAR(guns_civilian) pushBack _gun_hash;
+		GVAR(guns_civilian) pushBack _gun_module;
+		publicVariable QGVAR(guns_civilian);
+		_side = civilian;
+		_icon = "n_art";
+		_color = "colorCivilian";
 	};
 
 	default {
@@ -79,12 +87,7 @@ switch ( toLower _side) do {
 	};
 };
 
-
-[_gun_hash, "gun", _gun] call CBA_fnc_hashSet;
-[_gun_hash, "gun_name", _name] call CBA_fnc_hashSet;
-[_gun_hash, "gun_classname", _classname] call CBA_fnc_hashSet;
-[_gun_hash, "gun_ammo_hash", _gun_ammo_hash] call CBA_fnc_hashSet;
-[_gun_hash, "is_firing", false] call CBA_fnc_hashSet;
-[_gun_hash, "min_spread", _min_spread] call CBA_fnc_hashSet;
-[_gun_hash, "min_delay", _min_delay] call CBA_fnc_hashSet;
-[_gun_hash, "countDown", _countdown] call CBA_fnc_hashSet;
+if (_markerConditio) then {
+	private _pos = getpos _gun_module;
+	[_name, _pos, "ICON", [1, 1], "TYPE:", _icon, "COLOR:", _color, "TEXT:", _name] remoteExecCall ["CBA_fnc_createMarker", _side, true];
+};

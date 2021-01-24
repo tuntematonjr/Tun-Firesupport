@@ -647,16 +647,16 @@
         <German>Creeping barrage</German>
       </Key>
       <Key ID="STR_tun_firesupport_firemode_wall">
-        <Original>The Wall (WIP)</Original>
-        <English>The Wall (WIP)</English>
-        <Czech>The Wall (WIP)</Czech>
-        <French>The Wall (WIP)</French>
-        <Spanish>The Wall (WIP)</Spanish>
-        <Italian>The Wall (WIP)</Italian>
-        <Polish>The Wall (WIP)</Polish>
-        <Portuguese>The Wall (WIP)</Portuguese>
-        <Russian>The Wall (WIP)</Russian>
-        <German>The Wall (WIP)</German>
+        <Original>The Wall</Original>
+        <English>The Wall</English>
+        <Czech>The Wall</Czech>
+        <French>The Wall</French>
+        <Spanish>The Wall</Spanish>
+        <Italian>The Wall</Italian>
+        <Polish>The Wall</Polish>
+        <Portuguese>The Wall</Portuguese>
+        <Russian>The Wall</Russian>
+        <German>The Wall</German>
       </Key>
     </Container>
     <Container name="module">
@@ -819,28 +819,28 @@
         <German>Unique name wich is shown in arty list. MUST BE UNIQUE</German>
       </Key>
       <Key ID="STR_tun_firesupport_module_gun_countDown_displayname">
-        <Original>Countdown</Original>
-        <English>Countdown</English>
-        <Czech>Countdown</Czech>
-        <French>Countdown</French>
-        <Spanish>Countdown</Spanish>
-        <Italian>Countdown</Italian>
-        <Polish>Countdown</Polish>
-        <Portuguese>Countdown</Portuguese>
-        <Russian>Countdown</Russian>
-        <German>Countdown</German>
+        <Original>Countdown (Seconds)</Original>
+        <English>Countdown (Seconds)</English>
+        <Czech>Countdown (Seconds)</Czech>
+        <French>Countdown (Seconds)</French>
+        <Spanish>Countdown (Seconds)</Spanish>
+        <Italian>Countdown (Seconds)</Italian>
+        <Polish>Countdown (Seconds)</Polish>
+        <Portuguese>Countdown (Seconds)</Portuguese>
+        <Russian>Countdown (Seconds)</Russian>
+        <German>Countdown (Seconds)</German>
       </Key>
       <Key ID="STR_tun_firesupport_module_gun_countDown_description">
-        <Original>Delay until rounds are fired (calculation delay)</Original>
-        <English>Delay until rounds are fired (calculation delay)</English>
-        <Czech>Delay until rounds are fired (calculation delay)</Czech>
-        <French>Delay until rounds are fired (calculation delay)</French>
-        <Spanish>Delay until rounds are fired (calculation delay)</Spanish>
-        <Italian>Delay until rounds are fired (calculation delay)</Italian>
-        <Polish>Delay until rounds are fired (calculation delay)</Polish>
-        <Portuguese>Delay until rounds are fired (calculation delay)</Portuguese>
-        <Russian>Delay until rounds are fired (calculation delay)</Russian>
-        <German>Delay until rounds are fired (calculation delay)</German>
+        <Original>Delay until rounds are fired (calculation delay. Seconds)</Original>
+        <English>Delay until rounds are fired (calculation delay. Seconds)</English>
+        <Czech>Delay until rounds are fired (calculation delay. Seconds)</Czech>
+        <French>Delay until rounds are fired (calculation delay. Seconds)</French>
+        <Spanish>Delay until rounds are fired (calculation delay. Seconds)</Spanish>
+        <Italian>Delay until rounds are fired (calculation delay. Seconds)</Italian>
+        <Polish>Delay until rounds are fired (calculation delay. Seconds)</Polish>
+        <Portuguese>Delay until rounds are fired (calculation delay. Seconds)</Portuguese>
+        <Russian>Delay until rounds are fired (calculation delay. Seconds)</Russian>
+        <German>Delay until rounds are fired (calculation delay. Seconds)</German>
       </Key>
       <Key ID="STR_tun_firesupport_module_gun_delayMin_displayname">
         <Original>Min Delay</Original>
@@ -855,16 +855,16 @@
         <German>Min Delay</German>
       </Key>
       <Key ID="STR_tun_firesupport_module_gun_delayMin_description">
-        <Original>Min delay between shots</Original>
-        <English>Min delay between shots</English>
-        <Czech>Min delay between shots</Czech>
-        <French>Min delay between shots</French>
-        <Spanish>Min delay between shots</Spanish>
-        <Italian>Min delay between shots</Italian>
-        <Polish>Min delay between shots</Polish>
-        <Portuguese>Min delay between shots</Portuguese>
-        <Russian>Min delay between shots</Russian>
-        <German>Min delay between shots</German>
+        <Original>Min delay between shots (Seconds)</Original>
+        <English>Min delay between shots (Seconds)</English>
+        <Czech>Min delay between shots (Seconds)</Czech>
+        <French>Min delay between shots (Seconds)</French>
+        <Spanish>Min delay between shots (Seconds)</Spanish>
+        <Italian>Min delay between shots (Seconds)</Italian>
+        <Polish>Min delay between shots (Seconds)</Polish>
+        <Portuguese>Min delay between shots (Seconds)</Portuguese>
+        <Russian>Min delay between shots (Seconds)</Russian>
+        <German>Min delay between shots (Seconds)</German>
       </Key>
       <Key ID="STR_tun_firesupport_module_gun_spreadMin_displayname">
         <Original>Min Spread</Original>
@@ -879,16 +879,16 @@
         <German>Min Spread</German>
       </Key>
       <Key ID="STR_tun_firesupport_module_gun_spreadMin_description">
-        <Original>Min spread for rounds. default:100</Original>
-        <English>Min spread for rounds. default:100</English>
-        <Czech>Min spread for rounds. default:100</Czech>
-        <French>Min spread for rounds. default:100</French>
-        <Spanish>Min spread for rounds. default:100</Spanish>
-        <Italian>Min spread for rounds. default:100</Italian>
-        <Polish>Min spread for rounds. default:100</Polish>
-        <Portuguese>Min spread for rounds. default:100</Portuguese>
-        <Russian>Min spread for rounds. default:100</Russian>
-        <German>Min spread for rounds. default:100</German>
+        <Original>Min spread for rounds. default:100m</Original>
+        <English>Min spread for rounds. default:100m</English>
+        <Czech>Min spread for rounds. default:100m</Czech>
+        <French>Min spread for rounds. default:100m</French>
+        <Spanish>Min spread for rounds. default:100m</Spanish>
+        <Italian>Min spread for rounds. default:100m</Italian>
+        <Polish>Min spread for rounds. default:100m</Polish>
+        <Portuguese>Min spread for rounds. default:100m</Portuguese>
+        <Russian>Min spread for rounds. default:100m</Russian>
+        <German>Min spread for rounds. default:100m</German>
       </Key>
       <Key ID="STR_tun_firesupport_module_gun_side_displayname">
         <Original>Side</Original>
@@ -913,6 +913,78 @@
         <Portuguese>Which sides gun is this: west, east, resistance, civilian</Portuguese>
         <Russian>Which sides gun is this: west, east, resistance, civilian</Russian>
         <German>Which sides gun is this: west, east, resistance, civilian</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_module_gun_minRange_displayname">
+        <Original>Min Range</Original>
+        <English>Min Range</English>
+        <Czech>Min Range</Czech>
+        <French>Min Range</French>
+        <Spanish>Min Range</Spanish>
+        <Italian>Min Range</Italian>
+        <Polish>Min Range</Polish>
+        <Portuguese>Min Range</Portuguese>
+        <Russian>Min Range</Russian>
+        <German>Min Range</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_module_gun_minRange_description">
+        <Original>Minium range where this artillery unit can shoot</Original>
+        <English>Minium range where this artillery unit can shoot</English>
+        <Czech>Minium range where this artillery unit can shoot</Czech>
+        <French>Minium range where this artillery unit can shoot</French>
+        <Spanish>Minium range where this artillery unit can shoot</Spanish>
+        <Italian>Minium range where this artillery unit can shoot</Italian>
+        <Polish>Minium range where this artillery unit can shoot</Polish>
+        <Portuguese>Minium range where this artillery unit can shoot</Portuguese>
+        <Russian>Minium range where this artillery unit can shoot</Russian>
+        <German>Minium range where this artillery unit can shoot</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_module_gun_maxRange_displayname">
+        <Original>Max Range</Original>
+        <English>Max Range</English>
+        <Czech>Max Range</Czech>
+        <French>Max Range</French>
+        <Spanish>Max Range</Spanish>
+        <Italian>Max Range</Italian>
+        <Polish>Max Range</Polish>
+        <Portuguese>Max Range</Portuguese>
+        <Russian>Max Range</Russian>
+        <German>Max Range</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_module_gun_maxRange_description">
+        <Original>Max Range where this artillery can shoot.</Original>
+        <English>Max Range where this artillery can shoot.</English>
+        <Czech>Max Range where this artillery can shoot.</Czech>
+        <French>Max Range where this artillery can shoot.</French>
+        <Spanish>Max Range where this artillery can shoot.</Spanish>
+        <Italian>Max Range where this artillery can shoot.</Italian>
+        <Polish>Max Range where this artillery can shoot.</Polish>
+        <Portuguese>Max Range where this artillery can shoot.</Portuguese>
+        <Russian>Max Range where this artillery can shoot.</Russian>
+        <German>Max Range where this artillery can shoot.</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_module_gun_markerToggle_displayname">
+        <Original>Create marker</Original>
+        <English>Create marker</English>
+        <Czech>Create marker</Czech>
+        <French>Create marker</French>
+        <Spanish>Create marker</Spanish>
+        <Italian>Create marker</Italian>
+        <Polish>Create marker</Polish>
+        <Portuguese>Create marker</Portuguese>
+        <Russian>Create marker</Russian>
+        <German>Create marker</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_module_gun_markerToggle_description">
+        <Original>Create marker to map.</Original>
+        <English>Create marker to map.</English>
+        <Czech>Create marker to map.</Czech>
+        <French>Create marker to map.</French>
+        <Spanish>Create marker to map.</Spanish>
+        <Italian>Create marker to map.</Italian>
+        <Polish>Create marker to map.</Polish>
+        <Portuguese>Create marker to map.</Portuguese>
+        <Russian>Create marker to map.</Russian>
+        <German>Create marker to map.</German>
       </Key>
     </Container>
   </Package>

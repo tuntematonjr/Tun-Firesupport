@@ -26,7 +26,7 @@ private _eta = "NONE";
 private _eta_number = -1;
 if ( _arty_index != -1 && _ammo_index != -1 ) then {
 
-	private _variables = switch (playerSide) do {
+private _variables = switch (playerSide) do {
 
 		case west: {
 			GVAR(guns_west)
@@ -50,18 +50,21 @@ if ( _arty_index != -1 && _ammo_index != -1 ) then {
 		};
 	};
 
-	private _index_arty = lbCurSel ARTY_LIST_IDC;
-	private _index_ammo = lbCurSel AMMO_TYPE_IDC;
-	private _gun_hash = _variables select _index_arty;
-	private _ammo_hash = [_gun_hash, "gun_ammo_hash"] call CBA_fnc_hashGet;
-	private _countdown = [_gun_hash, "countDown"] call CBA_fnc_hashGet;
-	private _ammo = lbData [AMMO_TYPE_IDC, _index_ammo];
-	//private _ammo = [_ammo_hash, _key] call CBA_fnc_hashGet;
+	private _index = lbCurSel ARTY_LIST_IDC;
+	private _gun_module = _variables select _index;
 
-	private _pos = [_easting, _northing] call tun_firesupport_fnc_get_realpos;
-	private _gun = [_gun_hash, "gun"] call CBA_fnc_hashGet;
+	private _magazine = lbData [AMMO_TYPE_IDC, lbCurSel AMMO_TYPE_IDC];
+	private _initSpeed = getNumber (configfile >> "CfgMagazines" >> _magazine >> "initSpeed");
 
-	_eta = _gun getArtilleryETA [_pos, _ammo];
+	private _pos = [_easting, _northing] call FUNC(get_realpos);
+	private _countdown = _gun_module getVariable ["countDown", 60];
+
+	private _distance = _gun_module distance _pos;
+
+	private _minRange= _gun_module getVariable ["minRange", 0];
+	private _maxRange = _gun_module getVariable ["maxRange", 10000];
+
+	_eta = 10 +  (_distance / _initSpeed)  * 2;
 	_eta_number = _eta + _countdown;
 
 	_eta = if (_eta == -1) then {
@@ -70,7 +73,7 @@ if ( _arty_index != -1 && _ammo_index != -1 ) then {
 		((str round (_eta + _countdown))  + " s");
 	};
 
-	if (_pos inRangeOfArtillery [[_gun], _ammo]) then {
+	if (_distance < _minRange || _distance > _maxRange  ) then {
 		_eta = "Out of Range";
 	};
 
@@ -78,7 +81,7 @@ if ( _arty_index != -1 && _ammo_index != -1 ) then {
 		_eta = "Out of Ammo";
 	};
 
-	if ([_gun_hash, "is_firing"] call CBA_fnc_hashGet) then {
+	if (_gun_module getVariable [QGVAR(is_firing), false]) then {
 		_eta = "Busy";
 	};
 };

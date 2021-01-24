@@ -50,10 +50,7 @@ private _variables = switch (playerSide) do {
 };
 
 private _index = lbCurSel ARTY_LIST_IDC;
-private _gun_hash = _variables select _index;
-private _ammo_hash = [_gun_hash, "gun_ammo_hash"] call CBA_fnc_hashGet;
-
-
+private _gun_module = _variables select _index;
 
 
 private _easting = ctrlText EASTING_IDC;
@@ -69,7 +66,8 @@ private _firing_style = lbText [FIRING_TYPE_IDC,lbCurSel FIRING_TYPE_IDC];
 if ( _count <= 0 ) exitWith {
 	playSound "3DEN_notificationWarning";
 };
-[_gun_hash, "is_firing", true] call CBA_fnc_hashSet;
+
+_gun_module setVariable [QGVAR(is_firing), true];
 
 private _ammo = getText (configFile >> "CfgMagazines" >> _type >> "ammo");
 
@@ -92,18 +90,20 @@ if (_delay < 2) then {
 
 
 
-private _eta = ([] call tun_firesupport_fnc_calculate_eta) select 0;
+private _eta = ([] call FUNC(calculate_eta)) select 0;
 private _eta_when_done = _eta + (_count * _delay) + 10;
 
-private _pos = [_easting, _northing] call tun_firesupport_fnc_get_realpos;
-private _pos_end = [_easting_end, _northing_end] call tun_firesupport_fnc_get_realpos;
+private _pos = [_easting, _northing] call FUNC(get_realpos);
+private _pos_end = [_easting_end, _northing_end] call FUNC(get_realpos);
 
 switch (_firing_style) do {
 
 	case (localize "STR_tun_firesupport_firemode_standard"): {
-		hint "firemission";
+
+		playSound "tun_targetlocation";
+
 		[{
-			hint "splash";
+			playSound "tun_splash";
 			//Real positions
 			_this remoteExec ["BIS_fnc_fireSupportVirtual", 2];
 
@@ -117,6 +117,8 @@ switch (_firing_style) do {
 		private _distance_steps = _distance / _count;
 		private _delay_time = 0;
 		private _distance_start = 0;
+		private _first = true;
+		playSound "tun_targetlocation";
 
 		for "_i" from 1 to _count step 1 do {
 			private _step_pos = _pos getPos [_distance_start, _dir];
@@ -127,6 +129,13 @@ switch (_firing_style) do {
 			[{
 				_this remoteExec ["BIS_fnc_fireSupportVirtual", 2];
 			}, [_step_pos, _ammo, _range, 1, 1, {false}, nil, 300], _wait] call CBA_fnc_waitAndExecute;
+
+			if (_first) then {
+				_first = false;
+				[{
+					playSound "tun_splash";
+				}, [], _wait] call CBA_fnc_waitAndExecute;
+			};
 		};
 	};
 
@@ -135,6 +144,8 @@ switch (_firing_style) do {
 		private _dir = _pos getDir _pos_end;
 		private _distance = _pos distance2D _pos_end;
 		private _delay_time = 0;
+		private _first = true;
+		playSound "tun_targetlocation";
 
 		for "_i" from 1 to _count step 1 do {
 			private _step_pos = _pos getPos [random _distance, _dir];
@@ -144,6 +155,13 @@ switch (_firing_style) do {
 			[{
 				_this remoteExec ["BIS_fnc_fireSupportVirtual", 2];
 			}, [_step_pos, _ammo, _range, 1, 1, {false}, nil, 300], _wait] call CBA_fnc_waitAndExecute;
+
+			if (_first) then {
+				_first = false;
+				[{
+					playSound "tun_splash";
+				}, [], _wait] call CBA_fnc_waitAndExecute;
+			};
 		};
 	};
 
@@ -153,15 +171,24 @@ switch (_firing_style) do {
 };
 
 
+private _ammoModule = (synchronizedObjects _gun_module) select lbCurSel AMMO_TYPE_IDC;
+
 [{
-	private _gun_hash = _this select 0;
+	private _gun_module = _this select 0;
 	private _count = _this select 1;
-	private _type = _this select 2;
-	private _ammo_hash = [_gun_hash, "gun_ammo_hash"] call CBA_fnc_hashGet;
-	private _count_original = [_ammo_hash, _type] call CBA_fnc_hashGet;
+	private _ammoModule = _this select 2;
+
+	private _count_original = _ammoModule getVariable "currentCount";
 	_count = _count_original - _count;
-	[_gun_hash, "is_firing", false] call CBA_fnc_hashSet;
-	[_ammo_hash, _type, _count] call CBA_fnc_hashSet;
+	_gun_module setVariable [QGVAR(is_firing), false];
+	_ammoModule setVariable ["currentCount", _count, true];
 
 	[] call FUNC(update_ammo_count);
-}, [_gun_hash, _count, _type], _eta_when_done] call CBA_fnc_waitAndExecute;
+
+	playSound "tun_firemissionDone";
+	if (_count == 0) then {
+		[{
+			playSound "tun_outOfAmmo";
+		}, [], 10] call CBA_fnc_waitAndExecute;
+	};
+}, [_gun_module, _count, _ammoModule], _eta_when_done] call CBA_fnc_waitAndExecute;
