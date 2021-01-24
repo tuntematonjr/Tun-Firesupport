@@ -1,0 +1,15 @@
+name = "Tun Advanced Firesupport Interface v0.1.0";
+picture = "Data\afilogo.paa";
+actionName = "Community Website";
+action = "https://armafinland.fi/";
+description = "Firesupport system";
+logo = "Data\afilogo.paa";
+logoOver = "Data\afilogo.paa";
+logoSmall = "Data\afilogo.paa";
+tooltip = "Firesupport system";
+tooltipOwned = "Tun Advanced Firesupport Interface";
+overview = "Tun Advanced Firesupport Interface v0.1.0";
+author = "Tuntematon, Immonen & Nurmi";
+//overviewPicture = "";
+overviewText = "Tun Advanced Firesupport Interface v0.1.0";
+//overviewFootnote = "<br /><br /><t color='#999999'>Teksti<t />";
