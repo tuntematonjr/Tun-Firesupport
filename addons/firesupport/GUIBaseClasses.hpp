@@ -126,7 +126,6 @@ class ScrollBar
 };
 class RscObject
 {
-	access = 0;
 	type = CT_OBJECT;
 	scale = 1;
 	direction[] = {0,0,1};
@@ -137,7 +136,6 @@ class RscText
 {
 	deletable = 0;
 	fade = 0;
-	access = 0;
 	type = CT_STATIC;
 	idc = -1;
 	colorBackground[] = {0,0,0,0};
@@ -191,7 +189,6 @@ class RscProgress
 {
 	deletable = 0;
 	fade = 0;
-	access = 0;
 	type = CT_PROGRESS;
 	style = ST_HORIZONTAL;
 	colorFrame[] = {0,0,0,0};
@@ -213,7 +210,6 @@ class RscPicture
 {
 	deletable = 0;
 	fade = 0;
-	access = 0;
 	type = CT_STATIC;
 	idc = -1;
 	style = ST_MULTI + ST_TITLE_BAR;
@@ -246,7 +242,6 @@ class RscHTML
 {
 	deletable = 0;
 	fade = 0;
-	access = 0;
 	type = CT_HTML;
 	idc = -1;
 	style = ST_LEFT;
@@ -325,7 +320,6 @@ class RscButton
 {
 	deletable = 0;
 	fade = 0;
-	access = 0;
 	type = CT_BUTTON;
 	text = "";
 	colorText[] = {1,1,1,1};
@@ -495,7 +489,6 @@ class RscEdit
 {
 	deletable = 0;
 	fade = 0;
-	access = 0;
 	type = CT_EDIT;
 	x = 0;
 	y = 0;
@@ -527,7 +520,6 @@ class RscCombo
 {
 	deletable = 0;
 	fade = 0;
-	access = 0;
 	type = CT_COMBO;
 	colorSelect[] = {0,0,0,1};
 	colorText[] = {1,1,1,1};
@@ -587,7 +579,6 @@ class RscListBox
 {
 	deletable = 0;
 	fade = 0;
-	access = 0;
 	type = CT_LISTBOX;
 	rowHeight = 0;
 	colorText[] = {1,1,1,1};
@@ -642,7 +633,6 @@ class RscListNBox
 {
 	deletable = 0;
 	fade = 0;
-	access = 0;
 	type = CT_LISTNBOX;
 	rowHeight = 0;
 	colorText[] = {1,1,1,1};
@@ -731,7 +721,6 @@ class RscTree
 {
 	deletable = 0;
 	fade = 0;
-	access = 0;
 	type = CT_TREE;
 	colorBackground[] = {0,0,0,0};
 	colorSelect[] = {1,1,1,0.7};
@@ -781,7 +770,6 @@ class RscSlider
 {
 	deletable = 0;
 	fade = 0;
-	access = 0;
 	type = CT_SLIDER;
 	style = SL_HORZ;
 	color[] = {1,1,1,0.8};
@@ -819,7 +807,6 @@ class RscActiveText
 {
 	deletable = 0;
 	fade = 0;
-	access = 0;
 	type = CT_ACTIVETEXT;
 	style = ST_CENTER;
 	color[] = {0,0,0,1};
@@ -878,7 +865,6 @@ class RscStructuredText
 {
 	deletable = 0;
 	fade = 0;
-	access = 0;
 	type = CT_STRUCTURED_TEXT;
 	idc = -1;
 	style = ST_LEFT;
@@ -903,7 +889,6 @@ class RscToolbox
 {
 	deletable = 0;
 	fade = 0;
-	access = 0;
 	type = CT_TOOLBOX;
 	style = ST_CENTER;
 	colorText[] = {0.95,0.95,0.95,1};
@@ -1133,7 +1118,6 @@ class RscMapControl
 {
 	deletable = 0;
 	fade = 0;
-	access = 0;
 	type = CT_MAP_MAIN;
 	idc = 51;
 	style = ST_MULTI + ST_TITLE_BAR;

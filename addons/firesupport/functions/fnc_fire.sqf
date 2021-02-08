@@ -43,16 +43,13 @@ private _variables = switch (playerSide) do {
 		GVAR(guns_civilian)
 	};
 
-	default
-	{
+	default {
 		/* STATEMENT */
 	};
 };
 
 private _index = lbCurSel ARTY_LIST_IDC;
 private _gun_module = _variables select _index;
-
-
 private _easting = ctrlText EASTING_IDC;
 private _northing = ctrlText NORTHING_IDC;
 private _type = lbData [AMMO_TYPE_IDC, lbCurSel AMMO_TYPE_IDC];
@@ -87,8 +84,6 @@ if (_delay < 2) then {
 	_delay_min = _delay - _delay * 0.7;
 	_delay_max = _delay + _delay * 1.3;
 };
-
-
 
 private _eta = ([] call FUNC(calculate_eta)) select 0;
 private _eta_when_done = _eta + (_count * _delay) + 10;
@@ -169,7 +164,6 @@ switch (_firing_style) do {
 		hint "failed to chose firemode";
 	};
 };
-
 
 private _ammoModule = (synchronizedObjects _gun_module) select lbCurSel AMMO_TYPE_IDC;
 

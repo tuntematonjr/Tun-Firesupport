@@ -1,10 +1,10 @@
 #define COMPONENT artycomputer_models
 #define PREFIX Tun
 
-#define MAJOR 0
-#define MINOR 4
-#define PATCHLVL 1
-#define BUILD 24012021
+#define MAJOR 1
+#define MINOR 0
+#define PATCHLVL 0
+#define BUILD 08022021
 
 #define VERSION MAJOR.MINOR.PATCHLVL.BUILD
 #define VERSION_AR MAJOR,MINOR,PATCHLVL,BUILD

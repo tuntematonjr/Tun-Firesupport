@@ -25,7 +25,7 @@ if (GVAR(debug)) then {
 
 createDialog "Firesupport_dialog";
 waitUntil {!isnull (findDisplay MAIN_IDD)};
-findDisplay MAIN_IDD displayCtrl REMAINIG_AMMO_PROGRESBAR_IDC progressSetPosition 0.5;
+//findDisplay MAIN_IDD displayCtrl REMAINIG_AMMO_PROGRESBAR_IDC progressSetPosition 0.5;
 
 private _easting = player getVariable [QGVAR(easting), "00000"];
 private _northing = player getVariable [QGVAR(northing), "00000"];
