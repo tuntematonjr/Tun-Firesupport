@@ -8,3 +8,7 @@
 *.paa
 *.png
 *.ogg
+README.md
+mod.cpp
+LICENSE
+.gitattributes
