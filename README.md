@@ -1,4 +1,4 @@
-<a href="https://armafinland.fi/"><img src="https://armafinland.fi/logot/armafin-logo-200px.png" title="FVCproductions" alt="FVCproductions"></a>
+<a href="https://armafinland.fi/"><img src="https://i.gyazo.com/183657f73a8905792c0e1fbb5df33fe6.jpg" title="FVCproductions" alt="FVCproductions"></a>
 
 # Tun Advanced Firesupport Interface
 ![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/tuntematonjr/Tun-Firesupport?include_prereleases&style=for-the-badge)![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/tuntematonjr/Tun-Firesupport?style=for-the-badge)
