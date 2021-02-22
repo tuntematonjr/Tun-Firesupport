@@ -987,5 +987,55 @@
         <German>Create marker to map.</German>
       </Key>
     </Container>
+    <Container name="notifications">
+      <Key ID="STR_tun_firesupport_NoGunSelected">
+        <Original>No gun selected</Original>
+        <English>No gun selected</English>
+        <Czech>No gun selected</Czech>
+        <French>No gun selected</French>
+        <Spanish>No gun selected</Spanish>
+        <Italian>No gun selected</Italian>
+        <Polish>No gun selected</Polish>
+        <Portuguese>No gun selected</Portuguese>
+        <Russian>No gun selected</Russian>
+        <German>No gun selected</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_NoAmmoSelected">
+        <Original>No ammo selected</Original>
+        <English>No ammo selected</English>
+        <Czech>No ammo selected</Czech>
+        <French>No ammo selected</French>
+        <Spanish>No ammo selected</Spanish>
+        <Italian>No ammo selected</Italian>
+        <Polish>No ammo selected</Polish>
+        <Portuguese>No ammo selected</Portuguese>
+        <Russian>No ammo selected</Russian>
+        <German>No ammo selected</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_AlreadyFiring">
+        <Original>Gun is bussy</Original>
+        <English>Gun is bussy</English>
+        <Czech>Gun is bussy</Czech>
+        <French>Gun is bussy</French>
+        <Spanish>Gun is bussy</Spanish>
+        <Italian>Gun is bussy</Italian>
+        <Polish>Gun is bussy</Polish>
+        <Portuguese>Gun is bussy</Portuguese>
+        <Russian>Gun is bussy</Russian>
+        <German>Gun is bussy</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_NoShells">
+        <Original>Shell count is 0</Original>
+        <English>Shell count is 0</English>
+        <Czech>Shell count is 0</Czech>
+        <French>Shell count is 0</French>
+        <Spanish>Shell count is 0</Spanish>
+        <Italian>Shell count is 0</Italian>
+        <Polish>Shell count is 0</Polish>
+        <Portuguese>Shell count is 0</Portuguese>
+        <Russian>Shell count is 0</Russian>
+        <German>Shell count is 0</German>
+      </Key>
+    </Container>
   </Package>
 </Project>

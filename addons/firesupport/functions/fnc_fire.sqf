@@ -22,7 +22,14 @@
 
 if ( (ctrlText STATUS_IDC) in ["CANT FIRE", "Out of Range", "Out of Ammo", "Busy"] ) exitWith {
 	hintSilent (ctrlText STATUS_IDC);
-	playSound "zoom_fail";
+	playSound "3DEN_notificationWarning";
+};
+
+private _index = lbCurSel ARTY_LIST_IDC;
+//No gun selected
+if (_index == -1) exitWith {
+	playSound "3DEN_notificationWarning";
+	hintSilent localize "STR_tun_firesupport_NoGunSelected";
 };
 
 private _variables = switch (playerSide) do {
@@ -48,11 +55,23 @@ private _variables = switch (playerSide) do {
 	};
 };
 
-private _index = lbCurSel ARTY_LIST_IDC;
 private _gun_module = _variables select _index;
+//Gun is firing
+if (_gun_module getVariable [QGVAR(is_firing), false]) exitWith {
+	playSound "3DEN_notificationWarning";
+	hintSilent localize "STR_tun_firesupport_AlreadyFiring";
+};
+
+private _ammoIndex = lbCurSel AMMO_TYPE_IDC;
+//No ammo selected
+if (_ammoIndex == -1) exitWith {
+	playSound "3DEN_notificationWarning";
+	hintSilent localize "STR_tun_firesupport_NoAmmoSelected";
+};
+
 private _easting = ctrlText EASTING_IDC;
 private _northing = ctrlText NORTHING_IDC;
-private _type = lbData [AMMO_TYPE_IDC, lbCurSel AMMO_TYPE_IDC];
+private _type = lbData [AMMO_TYPE_IDC, _ammoIndex];
 private _count = parseNumber ctrlText COUNT_IDC;
 private _range = parseNumber ctrlText RANGE_IDC;
 private _delay = parseNumber ctrlText DELAY_IDC;
@@ -62,6 +81,7 @@ private _firing_style = lbText [FIRING_TYPE_IDC,lbCurSel FIRING_TYPE_IDC];
 
 if ( _count <= 0 ) exitWith {
 	playSound "3DEN_notificationWarning";
+	hintSilent localize "STR_tun_firesupport_NoShells";
 };
 
 _gun_module setVariable [QGVAR(is_firing), true];
