@@ -26,27 +26,11 @@ class Firesupport_dialog
 			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
 			moving = true;
 			onDestroy = "$STR_tun_firesupport_on_close_action";
-			
 		};
 		
 	};
 	class Controls
-	{
-		class tun_firesupport_remaining_ammo_bar
-		{
-			type = 8;
-			idc = REMAINIG_AMMO_PROGRESBAR_IDC;
-			x = safeZoneX + safeZoneW * 0.31875;
-			y = safeZoneY + safeZoneH * 0.725;
-			w = safeZoneW * 0.0625;
-			h = safeZoneH * 0.025;
-			style = 0;
-			colorBar[] = {1,0,0,1};
-			colorFrame[] = {0.4471,0.2471,0.3804,1};
-			texture = "#(argb,8,8,3)color(1,1,1,1)";
-			
-		};		
-		
+	{		
 		class tun_firesupport_minimap : RscMapControl
 		{
 			idc = MINIMAP_IDC;
@@ -56,7 +40,7 @@ class Firesupport_dialog
 			h = safeZoneH * 0.23263889;
 		};
 		
-		class tun_firesupport_fire
+		class tun_firesupport_fire : RscButton
 		{
 			type = 1;
 			idc = FIRE_IDC;
@@ -80,17 +64,11 @@ class Firesupport_dialog
 			offsetPressedY = 0.01;
 			offsetX = 0.01;
 			offsetY = 0.01;
-			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
-			soundClick[] = {"\A3\ui_f\data\sound\RscButton\soundClick",0.09,1.0};
-			soundEnter[] = {"\A3\ui_f\data\sound\RscButton\soundEnter",0.09,1.0};
-			soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape",0.09,1.0};
-			soundPush[] = {"\A3\ui_f\data\sound\RscButton\soundPush",0.09,1.0};
 			action = "$STR_tun_firesupport_fire_action";
 			colorFocused2[] = {0.6,0,0,1};
 			default = false;
 			onMouseEnter = "$STR_tun_firesupport_update_everything";
 			shadow = 1;
-			
 		};
 		class tun_firesupport_artylist : tun_firesupport_default_combo 
 		{
@@ -101,16 +79,6 @@ class Firesupport_dialog
 			w = safeZoneW * 0.1125;
 			h = safeZoneH * 0.02962963;
 			onLBSelChanged = "$STR_tun_firesupport_artylist_selection_action";
-			class ComboScrollBar
-			{
-				color[] = {1,1,1,1};
-				thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
-				arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
-				arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
-				border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
-				
-			};
-			
 		};
 		class tun_firesupport_firing_type : tun_firesupport_default_combo 
 		{
@@ -120,17 +88,7 @@ class Firesupport_dialog
 			y = safeZoneY + safeZoneH * 0.325;
 			w = safeZoneW * 0.1125;
 			h = safeZoneH * 0.02962963;
-			onLBSelChanged = "$STR_tun_firesupport_firemode_changed_action";
-			class ComboScrollBar
-			{
-				color[] = {1,1,1,1};
-				thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
-				arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
-				arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
-				border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
-				
-			};
-			
+			onLBSelChanged = "$STR_tun_firesupport_firemode_changed_action";			
 		};
 		class tun_firesupport_ammo_type : tun_firesupport_default_combo 
 		{
@@ -141,16 +99,6 @@ class Firesupport_dialog
 			w = safeZoneW * 0.1125;
 			h = safeZoneH * 0.02962963;
 			onLBSelChanged = "$STR_tun_firesupport_ammotype_lb_change_action";
-			class ComboScrollBar
-			{
-				color[] = {1,1,1,1};
-				thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
-				arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
-				arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
-				border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
-				
-			};
-			
 		};
 		class tun_firesupport_easting_value : tun_firesupport_coordinate_preset 
 		{
@@ -279,7 +227,6 @@ class Firesupport_dialog
 			w = safeZoneW * 0.0625;
 			h = safeZoneH * 0.025;
 			text = "$STR_tun_firesupport_remainign_ammo";
-			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.75);
 			
 		};
 		class tun_firesupport_remaining_ammo_value : tun_firesupport_coordinate_preset 
@@ -387,7 +334,7 @@ class Firesupport_dialog
 			text = "Status";
 			
 		};
-		class tun_firesupport_bookmark_list : tun_firesupport_listbox 
+		class tun_firesupport_bookmark_list : RscListBox 
 		{
 			type = 5;
 			idc = BOOKMARK_LIST_IDC;
@@ -435,7 +382,7 @@ class Firesupport_dialog
 			tooltip = "$STR_tun_firesupport_editbox_tooltip";
 			
 		};
-		class tun_firesupport_bookmark_button : tun_firesupport_button_base 
+		class tun_firesupport_bookmark_button : RscButton 
 		{
 			type = 1;
 			idc = BOOKMARK_OPEN_BUTTON_IDC;
@@ -447,7 +394,7 @@ class Firesupport_dialog
 			action = "$STR_tun_firesupport_open_bookmark";
 			
 		};
-		class tun_firesupport_add_bookmark_button : tun_firesupport_button_base 
+		class tun_firesupport_add_bookmark_button : RscButton 
 		{
 			type = 1;
 			idc = BOOKMARK_ADD_BOOKMARK_IDC;
@@ -460,7 +407,7 @@ class Firesupport_dialog
 			tooltip = "$STR_tun_firesupport_bookmark_add_tooltip";
 			
 		};
-		class tun_firesupport_remove_bookmark_button : tun_firesupport_button_base 
+		class tun_firesupport_remove_bookmark_button : RscButton 
 		{
 			type = 1;
 			idc = BOOKMARK_REMOVE_BOOKMARK_IDC;
@@ -473,7 +420,7 @@ class Firesupport_dialog
 			tooltip = "$STR_tun_firesupport_bookmark_remove_tooltip";
 			
 		};
-		class tun_firesupport_export_bookmark_button : tun_firesupport_button_base 
+		class tun_firesupport_export_bookmark_button : RscButton 
 		{
 			type = 1;
 			idc = BOOKMARK_EXPORT_BOOKMARK_IDC;
@@ -486,7 +433,7 @@ class Firesupport_dialog
 			tooltip = "$STR_tun_firesupport_bookmark_export_tooltip";
 			
 		};
-		class tun_firesupport_import_bookmark_button : tun_firesupport_button_base 
+		class tun_firesupport_import_bookmark_button : RscButton 
 		{
 			type = 1;
 			idc = BOOKMARK_IMPORT_BOOKMARK_IDC;
