@@ -97,9 +97,6 @@ GVAR(dialog_PFH) = [{
 
 [] call FUNC(update_firemode);
 
-ctrlShow [REMAINIG_AMMO_PROGRESBAR_IDC, false];
-ctrlShow [STATUS_IDC, false];
-
 
 //BOOKMARK STUFF
 GVAR(bookmarkOpen) = false;
