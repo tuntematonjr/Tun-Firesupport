@@ -1,20 +1,15 @@
 ﻿/*
  * Author: [Tuntematon]
  * [Description]
- *
+ * Firing thing
  * Arguments:
- * 0: The first argument <STRING>
- * 1: The second argument <OBJECT>
- * 2: Multiple input types <STRING|ARRAY|CODE>
- * 3: Optional input <BOOL> (default: true)
- * 4: Optional input with multiple types <CODE|STRING> (default: {true})
- * 5: Not mandatory input <STRING> (default: nil)
+ * None
  *
  * Return Value:
- * The return value <BOOL>
+ * None
  *
  * Example:
- * ["something", player] call tun_firesupport_fnc_fire
+ * [] call tun_firesupport_fnc_fire
  */
 #include "script_component.hpp"
 
@@ -55,22 +50,9 @@ private _variables = switch (playerSide) do {
 	};
 };
 
-private _gun_module = _variables select _index;
-//Gun is firing
-if (_gun_module getVariable [QGVAR(is_firing), false]) exitWith {
-	playSound "3DEN_notificationWarning";
-	hintSilent localize "STR_tun_firesupport_AlreadyFiring";
-};
-
-private _ammoIndex = lbCurSel AMMO_TYPE_IDC;
-//No ammo selected
-if (_ammoIndex == -1) exitWith {
-	playSound "3DEN_notificationWarning";
-	hintSilent localize "STR_tun_firesupport_NoAmmoSelected";
-};
-
 private _easting = ctrlText EASTING_IDC;
 private _northing = ctrlText NORTHING_IDC;
+private _ammoIndex = lbCurSel AMMO_TYPE_IDC;
 private _type = lbData [AMMO_TYPE_IDC, _ammoIndex];
 private _count = parseNumber ctrlText COUNT_IDC;
 private _range = parseNumber ctrlText RANGE_IDC;
@@ -79,6 +61,35 @@ private _easting_end = ctrlText EASTING_END_IDC;
 private _northing_end = ctrlText NORTHING_END_IDC;
 private _firing_style = lbText [FIRING_TYPE_IDC,lbCurSel FIRING_TYPE_IDC];
 
+private _pos = [_easting, _northing] call FUNC(get_realpos);
+private _pos_end = [_easting_end, _northing_end] call FUNC(get_realpos);
+
+private _gun_module = _variables select _index;
+
+//Gun is firing
+if (_gun_module getVariable [QGVAR(is_firing), false]) exitWith {
+	playSound "3DEN_notificationWarning";
+	hintSilent localize "STR_tun_firesupport_AlreadyFiring";
+};
+
+//No ammo selected
+if (_ammoIndex == -1) exitWith {
+	playSound "3DEN_notificationWarning";
+	hintSilent localize "STR_tun_firesupport_NoAmmoSelected";
+};
+
+//Out of range
+private _distanceRange = _gun_module distance _pos;
+
+private _minRange = _gun_module getVariable ["minRange", 0];
+private _maxRange = _gun_module getVariable ["maxRange", 10000];
+if (_distanceRange < _minRange || _distanceRange > _maxRange ) exitWith {
+	playSound "3DEN_notificationWarning";
+	hintSilent localize "STR_tun_firesupport_OutOfRange";
+};
+
+
+//out of ammo
 if ( _count <= 0 ) exitWith {
 	playSound "3DEN_notificationWarning";
 	hintSilent localize "STR_tun_firesupport_NoShells";
@@ -107,9 +118,6 @@ if (_delay < 2) then {
 
 private _eta = ([] call FUNC(calculate_eta)) select 0;
 private _eta_when_done = _eta + (_count * _delay) + 10;
-
-private _pos = [_easting, _northing] call FUNC(get_realpos);
-private _pos_end = [_easting_end, _northing_end] call FUNC(get_realpos);
 
 switch (_firing_style) do {
 
