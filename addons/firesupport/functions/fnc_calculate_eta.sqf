@@ -87,7 +87,7 @@ private _variables = switch (playerSide) do {
 };
 
 if (GVAR(debug)) then {
-	_eta = 5;
+	_eta = "5";
 	_eta_number = 5;
 };
 
