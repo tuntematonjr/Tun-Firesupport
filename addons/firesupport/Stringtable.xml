@@ -1036,6 +1036,18 @@
         <Russian>Shell count is 0</Russian>
         <German>Shell count is 0</German>
       </Key>
+      <Key ID="STR_tun_firesupport_OutOfRange">
+        <Original>Out of range</Original>
+        <English>Out of range</English>
+        <Czech>Out of range</Czech>
+        <French>Out of range</French>
+        <Spanish>Out of range</Spanish>
+        <Italian>Out of range</Italian>
+        <Polish>Out of range</Polish>
+        <Portuguese>Out of range</Portuguese>
+        <Russian>Out of range</Russian>
+        <German>Out of range</German>
+      </Key>
     </Container>
   </Package>
 </Project>
