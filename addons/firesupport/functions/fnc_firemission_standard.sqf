@@ -26,7 +26,7 @@ params [
 	["_position", [0,0,0], [[]], [3]],
 	["_radius", 100, [999]],
 	["_shellCount", 0, [999]],
-	["_delays", 10, [999,[]]],
+	["_delays", nil, [[]]],
 	["_volley", false, [false]]
 ];
 
@@ -37,11 +37,9 @@ private _magazineClass = _ammoModule getVariable "Ammo";
 private _ammoClass = getText (configFile >> "CfgMagazines" >> _magazineClass >> "ammo");
 private _minDelay = _delays select 0;
 private _maxDelay = _delays select 1;
-private _delay = _delays select 2;
 private _finalDelay = _minDelay + (random (_maxDelay - _minDelay));
 private _firemissions = _gunModule getVariable [QGVAR(firemissions), [[""]]];
 private _nameList = (_firemissions select 0 ) select 0;
-
 
 private _altitude = 300;
 private _velocity = 150;
@@ -73,8 +71,6 @@ if (_shellCount > 0 && _ammoCount > 0 && _nameList isEqualTo  _name) then {
 	_ammoModule setVariable ["reservedCount", _reservedCount, true];
 };
 
-
-
 [{
 	_this params
 	[
@@ -104,5 +100,3 @@ if (_shellCount > 0 && _ammoCount > 0 && _nameList isEqualTo  _name) then {
 		[_gunModule, _player, _ammoModule, _name] call FUNC(firemission_end);
 	};
 }, [_player, _name, _gunModule, _ammoModule, _position, _radius, _shellCount, _delays, _volley], ( _finalDelay )] call CBA_fnc_waitAndExecute;
-
-

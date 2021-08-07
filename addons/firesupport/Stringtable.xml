@@ -1082,8 +1082,6 @@
         <Russian>Shell count is 0</Russian>
         <German>Shell count is 0</German>
       </Key>
-<<<<<<< Updated upstream
-=======
       <Key ID="STR_tun_firesupport_OutOfRange">
         <Original>Out of Range</Original>
         <English>Out of Range</English>
@@ -1107,6 +1105,18 @@
         <Portuguese>Can't add timed barrage to queue.</Portuguese>
         <Russian>Can't add timed barrage to queue.</Russian>
         <German>Can't add timed barrage to queue.</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_NoTrpSelected">
+        <Original>No TRP selected.</Original>
+        <English>No TRP selected.</English>
+        <Czech>No TRP selected.</Czech>
+        <French>No TRP selected.</French>
+        <Spanish>No TRP selected.</Spanish>
+        <Italian>No TRP selected.</Italian>
+        <Polish>No TRP selected.</Polish>
+        <Portuguese>No TRP selected.</Portuguese>
+        <Russian>No TRP selected.</Russian>
+        <German>No TRP selected.</German>
       </Key>
     </Container>
     <Container name="status">
@@ -1194,7 +1204,6 @@
         <Russian>Add queue</Russian>
         <German>Add queue</German>
       </Key>
->>>>>>> Stashed changes
     </Container>
   </Package>
 </Project>

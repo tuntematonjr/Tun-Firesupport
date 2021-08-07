@@ -17,7 +17,6 @@
  * ["something", player] call tun_firesupport_fnc_firemission_wall
  */
 #include "script_component.hpp"
-
 params [
 	["_player", objNull, [objNull]],
 	["_name", "", [""]],
@@ -26,7 +25,7 @@ params [
 	["_position", [[0,0,0],[0,0,0]], [[]]],
 	["_radius", 100, [999]],
 	["_shellCount", 0, [999]],
-	["_delays", 10, [999,[]]],
+	["_delays", nil, [[]]],
 	["_volley", false, [false]],
 	["_dir", 0, [0]],
 	["_distance", 0, [0]]
@@ -39,7 +38,6 @@ private _magazineClass = _ammoModule getVariable "Ammo";
 private _ammoClass = getText (configFile >> "CfgMagazines" >> _magazineClass >> "ammo");
 private _minDelay = _delays select 0;
 private _maxDelay = _delays select 1;
-private _delay = _delays select 2;
 private _finalDelay = _minDelay + (random (_maxDelay - _minDelay));
 
 private _altitude = 300;
@@ -82,7 +80,7 @@ _ammoModule setVariable ["reservedCount", _reservedCount, true];
 		["_position", [[0,0,0],[0,0,0]], [[]]],
 		["_radius", 100, [999]],
 		["_shellCount", 0, [999]],
-		["_delays", 10, [999,[]]],
+		["_delays", nil, [[]]],
 		["_volley", false, [false]],
 		["_dir", 0, [0]],
 		["_distance", 0, [0]]
@@ -103,5 +101,3 @@ _ammoModule setVariable ["reservedCount", _reservedCount, true];
 		[_gunModule, _player, _ammoModule, _name] call FUNC(firemission_end);
 	};
 }, [_player, _name, _gunModule, _ammoModule, _position, _radius, _shellCount, _delays, _volley, _dir, _distance], ( _finalDelay )] call CBA_fnc_waitAndExecute;
-
-

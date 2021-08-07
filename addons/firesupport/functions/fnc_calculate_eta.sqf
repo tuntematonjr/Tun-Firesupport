@@ -27,6 +27,20 @@ if ( count _listArray isEqualTo  2 ) then {
 	private _magazineClass = _ammoModule getVariable "Ammo";
 
 	private _initSpeed = getNumber (configfile >> "CfgMagazines" >> _magazineClass >> "initSpeed");
+
+	private _trp1Toggle = cbChecked (findDisplay MAIN_IDD displayCtrl TRP1);
+	private _trp1Index = lbCurSel TRP1_LIST;
+	if (_trp1Toggle) then {
+		if (_trp1Index != -1) then {
+			private _trp1Values = GVAR(trpValues) select _trp1Index;
+			_easting = _trp1Values select 1;
+			_northing = _trp1Values select 2;
+		} else {
+			_easting = "000";
+			_northing = "000";
+		};
+	};
+
 	private _pos = [[_easting, _northing], true] call CBA_fnc_mapGridToPos;
 	private _countdown = _gunModule getVariable ["countDown", 60];
 	private _distance = _gunModule distance _pos;
@@ -61,7 +75,6 @@ if ( count _listArray isEqualTo  2 ) then {
 		};
 	};
 
-
 	_etaNumber = _etaText;
 
 	_etaText = if (_etaText isEqualTo  -1) then {
@@ -77,16 +90,15 @@ if ( count _listArray isEqualTo  2 ) then {
 	if (parseNumber ctrlText REMAINIG_AMMO_IDC isEqualTo  "0") then {
 		_etaText = "Out of Ammo";
 	};
+
+	if (_trp1Index == -1) then {
+		_etaText = "No TRP selected";
+	};
 };
 
 if (GVAR(debug)) then {
-<<<<<<< Updated upstream
-	_eta = 5;
-	_eta_number = 5;
-=======
 	_etaText = "5";
 	_etaNumber = 5;
->>>>>>> Stashed changes
 };
 
 [_etaNumber,_etaText, _minEta]

@@ -17,7 +17,6 @@
  * ["something", player] call tun_firesupport_fnc_firemission_creepingBarrage
  */
 #include "script_component.hpp"
-
 params [
 	["_player", objNull, [objNull]],
 	["_name", "", [""]],
@@ -26,10 +25,11 @@ params [
 	["_position", [[0,0,0],[0,0,0]], [[]]],
 	["_radius", 100, [999]],
 	["_shellCount", 0, [999]],
-	["_delays", 10, [999,[]]],
+	["_delays", nil, [[]]],
 	["_volley", false, [false]],
 	["_dir", nil, [0]],
-	["_distance_start", 0, [0]]
+	["_distance_start", 0, [0]],
+	["_distance_steps", 0, [0]]
 ];
 
 private _ammoCount = _ammoModule getVariable ["currentCount", 0];
@@ -39,12 +39,10 @@ private _magazineClass = _ammoModule getVariable "Ammo";
 private _ammoClass = getText (configFile >> "CfgMagazines" >> _magazineClass >> "ammo");
 private _minDelay = _delays select 0;
 private _maxDelay = _delays select 1;
-private _delay = _delays select 2;
 private _finalDelay = _minDelay + (random (_maxDelay - _minDelay));
 
 private _altitude = 300;
 private _velocity = 150;
-
 if (_shellCount > 0 && _ammoCount > 0) then {
 	if (_volley) then {
 		for "_i" from 1 to _gunCount do {
@@ -70,7 +68,6 @@ if (_shellCount > 0 && _ammoCount > 0) then {
 		DEC(_reservedCount);
 	};
 };
-
 //Update ammocount
 _ammoModule setVariable ["currentCount", _ammoCount, true];
 _ammoModule setVariable ["reservedCount", _reservedCount, true];
@@ -87,7 +84,8 @@ _ammoModule setVariable ["reservedCount", _reservedCount, true];
 		["_delays", 10, [999,[]]],
 		["_volley", false, [false]],
 		["_dir", nil, [0]],
-		["_distance_start", 0, [0]]
+		["_distance_start", 0, [0]],
+		["_distance_steps", 0, [0]]
 	];
 	
 	private _isFiring = _gunModule getVariable [QGVAR(is_firing), false];
@@ -95,7 +93,7 @@ _ammoModule setVariable ["reservedCount", _reservedCount, true];
 	private _nameList = (_firemissions select 0 ) select 0;
 
 	if (_shellCount > 0 && _isFiring && _nameList isEqualTo _name) then {
-		_this call FUNC(creepingBarrage);
+		_this call FUNC(firemission_creepingBarrage);
 	} else {
 		if (_shellCount > 0) then {
 			private _reservedCount = _ammoModule getVariable ["reservedCount", 0];
@@ -104,4 +102,4 @@ _ammoModule setVariable ["reservedCount", _reservedCount, true];
 		};
 		[_gunModule, _player, _ammoModule, _name] call FUNC(firemission_end);
 	};
-}, [_name, _player, _gunModule, _ammoModule, _position, _radius, _shellCount, _delays, _volley, _dir, _distance_start], ( _finalDelay )] call CBA_fnc_waitAndExecute;
+}, [_player, _name, _gunModule, _ammoModule, _position, _radius, _shellCount, _delays, _volley, _dir, _distance_start, _distance_steps], ( _finalDelay )] call CBA_fnc_waitAndExecute;

@@ -1,20 +1,15 @@
 ﻿/*
  * Author: [Tuntematon]
  * [Description]
- *
+ * Firing thing
  * Arguments:
- * 0: The first argument <STRING>
- * 1: The second argument <OBJECT>
- * 2: Multiple input types <STRING|ARRAY|CODE>
- * 3: Optional input <BOOL> (default: true)
- * 4: Optional input with multiple types <CODE|STRING> (default: {true})
- * 5: Not mandatory input <STRING> (default: nil)
+ * None
  *
  * Return Value:
- * The return value <BOOL>
+ * None
  *
  * Example:
- * ["something", player] call tun_firesupport_fnc_fire
+ * [] call tun_firesupport_fnc_fire
  */
 #include "script_component.hpp"
 
@@ -32,11 +27,6 @@ if (count _listArray < 2) exitWith {
 	hintSilent localize "STR_tun_firesupport_NoAmmoSelected";
 };
 
-<<<<<<< Updated upstream
-private _gun_module = _variables select _index;
-//Gun is firing
-if (_gun_module getVariable [QGVAR(is_firing), false]) exitWith {
-=======
 private _gunModuleID = (tvData [ARTY_LIST_IDC, [(_listArray select 0)]]);
 private _ammoModuleID = (tvData [ARTY_LIST_IDC, _listArray]);
 private _gunModule = _gunModuleID call BIS_fnc_objectFromNetId;
@@ -61,49 +51,34 @@ private _firing_style = lbText [FIRING_TYPE_IDC,lbCurSel FIRING_TYPE_IDC];
 
 //Due to shit desing, no timed strikes to queue.
 if (_gunModule getVariable [QGVAR(is_firing), false] && _timeToggle) exitWith {
->>>>>>> Stashed changes
 	playSound "3DEN_notificationWarning";
 	hintSilent localize "STR_tun_firesupport_NoTimedStrikesQueue";
 };
 
-<<<<<<< Updated upstream
-private _ammoIndex = lbCurSel AMMO_TYPE_IDC;
-//No ammo selected
-if (_ammoIndex == -1) exitWith {
+private _trp1Index = lbCurSel TRP1_LIST;
+private _trp2Index = lbCurSel TRP2_LIST;
+
+//No trp selected
+if (((_trp1Index == -1) && _trp1Toggle) || ((_trp2Index == -1) && _trp2Toggle))exitWith {
 	playSound "3DEN_notificationWarning";
-	hintSilent localize "STR_tun_firesupport_NoAmmoSelected";
+	hintSilent localize "STR_tun_firesupport_NoTrpSelected";
 };
-
-private _easting = ctrlText EASTING_IDC;
-private _northing = ctrlText NORTHING_IDC;
-private _type = lbData [AMMO_TYPE_IDC, _ammoIndex];
-private _count = parseNumber ctrlText COUNT_IDC;
-private _range = parseNumber ctrlText RANGE_IDC;
-private _delay = parseNumber ctrlText DELAY_IDC;
-private _easting_end = ctrlText EASTING_END_IDC;
-private _northing_end = ctrlText NORTHING_END_IDC;
-private _firing_style = lbText [FIRING_TYPE_IDC,lbCurSel FIRING_TYPE_IDC];
-
-if ( _count <= 0 ) exitWith {
-=======
 
 //TRP & positions
 if (_trp1Toggle) then {
-	private _trp1Index = lbCurSel TRP1_LIST;
 	private _trp1Values = GVAR(trpValues) select _trp1Index;
 	_easting = _trp1Values select 1;
 	_northing = _trp1Values select 2;
 };
 
 if (_trp2Toggle) then {
-	private _trp2Index = lbCurSel TRP1_LIST;
 	private _trp2Values = GVAR(trpValues) select _trp2Index;
-	_easting = _trp2Values select 1;
-	_northing = _trp2Values select 2;
+	_easting_end = _trp2Values select 1;
+	_northing_end = _trp2Values select 2;
 };
 
 private _position = [[_easting, _northing], true] call CBA_fnc_mapGridToPos;
-private _positionEnd = [[_easting, _northing], true] call CBA_fnc_mapGridToPos;
+private _positionEnd = [[_easting_end, _northing_end], true] call CBA_fnc_mapGridToPos;
 
 //Out of range
 private _distanceRange = _gunModule distance _position;
@@ -117,7 +92,6 @@ if (_distanceRange < _minRange || _distanceRange > _maxRange ) exitWith {
 
 //out of ammo
 if ( _shellCount <= 0 || _remainingAmmo <= 0) exitWith {
->>>>>>> Stashed changes
 	playSound "3DEN_notificationWarning";
 	hintSilent localize "STR_tun_firesupport_NoShells";
 };
@@ -139,16 +113,9 @@ private _values = [] call FUNC(calculate_eta);
 private _eta = _values select 0;
 private _etaMin = _values select 2;
 
-<<<<<<< Updated upstream
-private _pos = [_easting, _northing] call FUNC(get_realpos);
-private _pos_end = [_easting_end, _northing_end] call FUNC(get_realpos);
-
-switch (_firing_style) do {
-=======
 if (_timeToggle) then {
 	_eta = _eta + cba_missiontime;
 };
->>>>>>> Stashed changes
 
 private _firemissionCount = _gunModule getVariable QGVAR(firemissionCount);
 private _ammoName = getText (configFile >> "CfgMagazines" >> _magazineClass >> "displayName");
@@ -163,7 +130,7 @@ _ammoModule setVariable ["reservedCount", _reservedCount, true];
 switch (_firing_style) do {
 
 	case (localize "STR_tun_firesupport_firemode_standard"): {
-		[true, _gunModule, [_name, _firing_style, [_eta, _etaMin], player, _timeToggle, [player, _name, _gunModule, _ammoModule, _position, _radius, _shellCount, [_delay_min, _delay_max, _delay], _volleyToggle]]] remoteExec [QFUNC(firemission_queue), 2];
+		[true, _gunModule, [_name, _firing_style, [_eta, _etaMin], player, _timeToggle, [player, _name, _gunModule, _ammoModule, _position, _radius, _shellCount, [_delay_min, _delay_max], _volleyToggle]]] remoteExec [QFUNC(firemission_queue), 2];
 	};
 
 	case (localize "STR_tun_firesupport_firemode_creeping_barrage"): {
@@ -171,9 +138,9 @@ switch (_firing_style) do {
 		private _dir = _position getDir _positionEnd;
 		private _distance = _position distance2D _positionEnd;
 		private _distance_steps = _distance / _shellCount;
-		private _distance_start = 0;
 
-		[true, _gunModule, [_name, _firing_style, [_eta, _etaMin], player, _timeToggle, [player, _name, _gunModule, _ammoModule, _position, _radius, _shellCount, [_delay_min, _delay_max, _delay], _volleyToggle, _dir, _distance_start ]]] remoteExec [QFUNC(firemission_queue), 2];
+		private _distance_start = 0;
+		[true, _gunModule, [_name, _firing_style, [_eta, _etaMin], player, _timeToggle, [player, _name, _gunModule, _ammoModule, _position, _radius, _shellCount, [_delay_min, _delay_max], _volleyToggle, _dir, _distance_start, _distance_steps]]] remoteExec [QFUNC(firemission_queue), 2];
 
 	};
 
@@ -181,7 +148,7 @@ switch (_firing_style) do {
 
 		private _dir = _position getDir _positionEnd;
 		private _distance = _position distance2D _positionEnd;
-		[true, _gunModule, [_name, _firing_style, [_eta, _etaMin], player, _timeToggle, [player, _name, _gunModule, _ammoModule, _position, _radius, _shellCount, [_delay_min, _delay_max, _delay], _volleyToggle, _dir, _distance] ]] remoteExec [QFUNC(firemission_queue), 2];
+		[true, _gunModule, [_name, _firing_style, [_eta, _etaMin], player, _timeToggle, [player, _name, _gunModule, _ammoModule, _position, _radius, _shellCount, [_delay_min, _delay_max], _volleyToggle, _dir, _distance]]] remoteExec [QFUNC(firemission_queue), 2];
 	};
 
 	default {

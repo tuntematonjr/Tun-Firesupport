@@ -14,10 +14,6 @@ PREP(save_bookmarks);
 PREP(selected_bookmark);
 PREP(toggle_mode);
 PREP(update_bookmarks);
-<<<<<<< Updated upstream
-PREP(update_everything);
-PREP(update_firemode);
-=======
 PREP(update_firemode);
 PREP(trpCheckbox);
 PREP(timeCheckbox);
@@ -33,4 +29,3 @@ PREP(firemission_creepingBarrage);
 PREP(firemission_wall);
 PREP(playSound);
 
->>>>>>> Stashed changes

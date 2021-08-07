@@ -90,7 +90,7 @@ if (!_isFiring && count _firemissions > 0) then {
 				if (_nameList isEqualTo  _name) then {
 					private _player = _params select 0;
 					"tun_splash" remoteExec [QFUNC(playSound), _player];
-					_this call FUNC(firemission_wall);
+					_params call FUNC(firemission_wall);
 					_gunModule setVariable [QGVAR(status), "STR_tun_firesupport_status_firing" call BIS_fnc_localize, true];
 				};
 			}, [_eta, _params]] call CBA_fnc_waitUntilAndExecute;

@@ -1,20 +1,16 @@
 ﻿/*
  * Author: [Tuntematon]
  * [Description]
+ * Open firesupport dialog
  *
  * Arguments:
- * 0: The first argument <STRING>
- * 1: The second argument <OBJECT>
- * 2: Multiple input types <STRING|ARRAY|CODE>
- * 3: Optional input <BOOL> (default: true)
- * 4: Optional input with multiple types <CODE|STRING> (default: {true})
- * 5: Not mandatory input <STRING> (default: nil)
+ * None
  *
  * Return Value:
- * The return value <BOOL>
+ * None
  *
  * Example:
- * ["something", player] call tun_firesupport_fnc_open_dialog
+ * [] call tun_firesupport_fnc_open_dialog
  */
 #include "script_component.hpp"
 
@@ -22,27 +18,17 @@ if (GVAR(debug)) then {
 	hint "debug mode enabled";
 };
 
-
 createDialog "Firesupport_dialog";
 waitUntil {!isnull (findDisplay MAIN_IDD)};
-//findDisplay MAIN_IDD displayCtrl REMAINIG_AMMO_PROGRESBAR_IDC progressSetPosition 0.5;
 
-private _easting = player getVariable [QGVAR(easting), "00000"];
-private _northing = player getVariable [QGVAR(northing), "00000"];
-private _easting_end = player getVariable [QGVAR(easting_end), "00000"];
-private _northing_end = player getVariable [QGVAR(northing_end), "00000"];
-
-<<<<<<< Updated upstream
-ctrlSetText [EASTING_IDC, _easting];
-ctrlSetText [NORTHING_IDC, _northing];
-ctrlSetText [EASTING_END_IDC, _easting_end];
-ctrlSetText [NORTHING_END_IDC, _northing_end];
-=======
 [true, true] call FUNC(trpCheckbox);
 
 private _oldCoordinates = player getVariable [QGVAR(oldCoordinates),["00000","00000","00000","00000"]];
->>>>>>> Stashed changes
 
+ctrlSetText [EASTING_IDC, (_oldCoordinates select 0) ];
+ctrlSetText [NORTHING_IDC, (_oldCoordinates select 1) ];
+ctrlSetText [EASTING_END_IDC, (_oldCoordinates select 2) ];
+ctrlSetText [NORTHING_END_IDC, (_oldCoordinates select 3) ];
 
 private _variables = switch (playerSide) do {
 	case west: {
@@ -57,15 +43,7 @@ private _variables = switch (playerSide) do {
 	case civilian: {
 		GVAR(guns_civilian)
 	};
-<<<<<<< Updated upstream
-
-	default
-	{
-		/* STATEMENT */
-	};
-=======
 	default { };
->>>>>>> Stashed changes
 };
 
 //Add batteries
@@ -100,13 +78,10 @@ lbAdd [FIRING_TYPE_IDC, localize "STR_tun_firesupport_firemode_standard"];
 lbAdd [FIRING_TYPE_IDC, localize "STR_tun_firesupport_firemode_creeping_barrage"];
 lbAdd [FIRING_TYPE_IDC, localize "STR_tun_firesupport_firemode_wall"];
 
-
-
 lbSetCurSel [FIRING_TYPE_IDC, 0];
 
-
 GVAR(dialog_PFH) = [{
-	private _eta = [] call tun_firesupport_fnc_calculate_eta;
+	private _eta = [] call FUNC(calculate_eta);
 	ctrlSetText [ETA_IDC, _eta select 1];
 	[] call FUNC(updateStatus);
 }, 0.1] call CBA_fnc_addPerFrameHandler;
@@ -124,17 +99,8 @@ sliderSetSpeed [SLIDER_DELAY, 0.1, 0.1];
 
 (findDisplay MAIN_IDD displayCtrl TOGGLEVOLLEY) cbSetChecked true;
 
-<<<<<<< Updated upstream
-ctrlShow [REMAINIG_AMMO_PROGRESBAR_IDC, false];
-ctrlShow [STATUS_IDC, false];
-
-
-//BOOKMARK STUFF
-GVAR(bookmarkOpen) = false;
-=======
 [] call FUNC(update_firemode);
 [] call FUNC(timeCheckbox);
->>>>>>> Stashed changes
 
 //Start layout
 ctrlShow [BOOKMARK_LIST_IDC, false];
