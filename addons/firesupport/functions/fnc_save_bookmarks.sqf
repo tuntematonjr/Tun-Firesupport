@@ -3,18 +3,13 @@
  * [Description]
  *
  * Arguments:
- * 0: The first argument <STRING>
- * 1: The second argument <OBJECT>
- * 2: Multiple input types <STRING|ARRAY|CODE>
- * 3: Optional input <BOOL> (default: true)
- * 4: Optional input with multiple types <CODE|STRING> (default: {true})
- * 5: Not mandatory input <STRING> (default: nil)
+ * 0: True to export. False to import <BOOL>
  *
  * Return Value:
- * The return value <BOOL>
+ * None
  *
  * Example:
- * [] call tun_firesupport_fnc_save_bookmarks
+ * [false] call tun_firesupport_fnc_save_bookmarks
  */
 #include "script_component.hpp"
 
@@ -22,12 +17,15 @@ params ["_value"];
 
 if (_value) then {
 	//export
-	ctrlSetText [BOOKMARK_EDITBOX_IDC, str GVAR(bookmarkValues)];
+	ctrlSetText [BOOKMARK_EDITBOX_IDC, str [GVAR(bookmarkValues), GVAR(trpValues)]];
 } else {
 	//import
-	{
-		GVAR(bookmarkValues) pushBackUnique _x;
-	} forEach (call compile ctrlText BOOKMARK_EDITBOX_IDC);
+	private _value = (call compile ctrlText BOOKMARK_EDITBOX_IDC);
+	GVAR(bookmarkValues) append (_value select 0);
+	GVAR(trpValues) append (_value select 1);
+
+	UNIQUE(GVAR(bookmarkValues));
+	UNIQUE(GVAR(trpValues));
 
 	[] call FUNC(update_bookmarks);
 };

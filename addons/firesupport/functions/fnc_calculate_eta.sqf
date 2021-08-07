@@ -1,94 +1,92 @@
 ﻿/*
  * Author: [Tuntematon]
  * [Description]
+ * Update eta values
  *
  * Arguments:
- * 0: The first argument <STRING>
- * 1: The second argument <OBJECT>
- * 2: Multiple input types <STRING|ARRAY|CODE>
- * 3: Optional input <BOOL> (default: true)
- * 4: Optional input with multiple types <CODE|STRING> (default: {true})
- * 5: Not mandatory input <STRING> (default: nil)
+ * None
  *
  * Return Value:
- * The return value <BOOL>
+ * [eta number, eta text] number, string
  *
  * Example:
- * ["something", player] call tun_firesupport_fnc_calculate_eta
+ * [] call tun_firesupport_fnc_calculate_eta
  */
 #include "script_component.hpp"
 
-private _arty_index = lbCurSel ARTY_LIST_IDC;
-private _ammo_index = lbCurSel AMMO_TYPE_IDC;
+private _listArray = tvCurSel ARTY_LIST_IDC;
 private _easting = ctrlText EASTING_IDC;
 private _northing = ctrlText NORTHING_IDC;
-private _eta = "NONE";
-private _eta_number = -1;
-if ( _arty_index != -1 && _ammo_index != -1 ) then {
+private _etaText = "NONE";
+private _etaNumber = -1;
+private _minEta = -1;
 
-private _variables = switch (playerSide) do {
+if ( count _listArray isEqualTo  2 ) then {
+	private _gunModule = (tvData [ARTY_LIST_IDC, [(_listArray select 0)]]) call BIS_fnc_objectFromNetId;
+	private _ammoModule = (tvData [ARTY_LIST_IDC, _listArray]) call BIS_fnc_objectFromNetId;
+	private _magazineClass = _ammoModule getVariable "Ammo";
 
-		case west: {
-			GVAR(guns_west)
-		};
+	private _initSpeed = getNumber (configfile >> "CfgMagazines" >> _magazineClass >> "initSpeed");
+	private _pos = [[_easting, _northing], true] call CBA_fnc_mapGridToPos;
+	private _countdown = _gunModule getVariable ["countDown", 60];
+	private _distance = _gunModule distance _pos;
+	private _minRange= _gunModule getVariable ["minRange", 0];
+	private _maxRange = _gunModule getVariable ["maxRange", 10000];
 
-		case east: {
-			GVAR(guns_east)
-		};
+	private _timeToggle  = cbChecked (findDisplay MAIN_IDD displayCtrl TOGGLETIME);
+	private _clockTimeAddition = 0;
 
-		case resistance: {
-			GVAR(guns_resistance)
-		};
+	_etaText = round (10 +  (_distance / _initSpeed)  * 2  + _countdown);
+	_minEta = _etaText;
+	if (_timeToggle) then {
+		private _daytime = daytime;
+		private _hoursIngame = floor _daytime;
+		private _minutesIngame = floor ((_daytime - _hoursIngame) * 60);
+		private _secondsIngame = floor ((((_daytime - _hoursIngame) * 60) - _minutesIngame) * 60);
+		private _totalSecondsIngame = (_hoursIngame * 60 * 60) + (_minutesIngame * 60) + _secondsIngame;
 
-		case civilian: {
-			GVAR(guns_civilian)
-		};
+		private _hours = parseNumber ctrlText TIMEHOURS;
+		private _minutes = parseNumber ctrlText TIMEMINUTES;
+		private _seconds = parseNumber ctrlText TIMESECONDS;
+		private _totalSeconds = (_hours * 60 * 60) + (_minutes * 60) + _seconds;
 
-		default
-		{
-			/* STATEMENT */
+		if (_totalSeconds > _totalSecondsIngame) then { 
+			_clockTimeAddition = _totalSeconds - _totalSecondsIngame; 
+		} else { 
+			_clockTimeAddition = 86400 - _totalSecondsIngame + _totalSeconds; 
+		}; 
+
+		if (_clockTimeAddition > _etaText) then {
+			_etaText = _clockTimeAddition;
 		};
 	};
 
-	private _index = lbCurSel ARTY_LIST_IDC;
-	private _gun_module = _variables select _index;
 
-	private _magazine = lbData [AMMO_TYPE_IDC, lbCurSel AMMO_TYPE_IDC];
-	private _initSpeed = getNumber (configfile >> "CfgMagazines" >> _magazine >> "initSpeed");
+	_etaNumber = _etaText;
 
-	private _pos = [_easting, _northing] call FUNC(get_realpos);
-	private _countdown = _gun_module getVariable ["countDown", 60];
-
-	private _distance = _gun_module distance _pos;
-
-	private _minRange= _gun_module getVariable ["minRange", 0];
-	private _maxRange = _gun_module getVariable ["maxRange", 10000];
-
-	_eta = 10 +  (_distance / _initSpeed)  * 2;
-	_eta_number = _eta + _countdown;
-
-	_eta = if (_eta == -1) then {
+	_etaText = if (_etaText isEqualTo  -1) then {
 		"CANT FIRE";
 	} else {
-		((str round (_eta + _countdown))  + " s");
+		[_etaNumber, "MM:SS"] call BIS_fnc_secondsToString;
 	};
 
 	if (_distance < _minRange || _distance > _maxRange  ) then {
-		_eta = "Out of Range";
+		_etaText = "Out of Range";
 	};
 
-	if (ctrlText REMAINIG_AMMO_IDC == "0") then {
-		_eta = "Out of Ammo";
-	};
-
-	if (_gun_module getVariable [QGVAR(is_firing), false]) then {
-		_eta = "Busy";
+	if (parseNumber ctrlText REMAINIG_AMMO_IDC isEqualTo  "0") then {
+		_etaText = "Out of Ammo";
 	};
 };
 
 if (GVAR(debug)) then {
+<<<<<<< Updated upstream
 	_eta = 5;
 	_eta_number = 5;
+=======
+	_etaText = "5";
+	_etaNumber = 5;
+>>>>>>> Stashed changes
 };
 
-[_eta_number,_eta]
+[_etaNumber,_etaText, _minEta]

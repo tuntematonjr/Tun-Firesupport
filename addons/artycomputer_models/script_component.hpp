@@ -1,10 +1,10 @@
 #define COMPONENT artycomputer_models
 #define PREFIX Tun
 
-#define MAJOR 1
+#define MAJOR 2
 #define MINOR 0
 #define PATCHLVL 0
-#define BUILD 08022021
+#define BUILD 07082021
 
 #define VERSION MAJOR.MINOR.PATCHLVL.BUILD
 #define VERSION_AR MAJOR,MINOR,PATCHLVL,BUILD
@@ -29,4 +29,9 @@
 #define DEFAULT_VERSIONING_LEVEL 2
 
 //AAR update macro
+<<<<<<< Updated upstream
 #define AAR_UPDATE(OBJ,VARNAME,VALUE) if ( !isnil "afi_aar2" ) then { [OBJ, VARNAME, VALUE] call afi_aar2_fnc_addcustomdata; };
+=======
+#define AAR_UPDATE(OBJ,VARNAME,VALUE) if ( !isnil "afi_aar2" ) then { [OBJ, VARNAME, VALUE] call afi_aar2_fnc_addcustomdata; };
+#define AAR_FOLLOWPROJECTILE(PROJECTILECLASSNAME,PROJECTILEOBJ)	if ( !isnil "afi_aar2" ) then { [objNull, "", PROJECTILECLASSNAME, PROJECTILEOBJ, objNull] call afi_aar2_fnc_add_projectile; };
+>>>>>>> Stashed changes

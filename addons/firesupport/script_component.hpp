@@ -1,10 +1,10 @@
 #define COMPONENT firesupport
 #define PREFIX Tun
 
-#define MAJOR 1
+#define MAJOR 2
 #define MINOR 0
-#define PATCHLVL 1
-#define BUILD 22022021
+#define PATCHLVL 0
+#define BUILD 07082021
 
 #define VERSION MAJOR.MINOR.PATCHLVL.BUILD
 #define VERSION_AR MAJOR,MINOR,PATCHLVL,BUILD

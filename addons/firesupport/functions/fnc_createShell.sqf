@@ -14,13 +14,15 @@
  * The return value <BOOL>
  *
  * Example:
- * ["something", player] call tun_firesupport_fnc_update_everything
+ * ["something", player] call tun_firesupport_fnc_createShell
  */
 #include "script_component.hpp"
 
+params ["_targetPos", "_radius", "_altitude", "_ammo", "_velocity"];
 
+_finalPos = [_targetPos, random _radius, random 360] call BIS_fnc_relPos;
+_shell = _ammo createVehicle [_finalPos select 0, _finalPos select 1, _altitude];
+_shell setVectorUp [0,0,-1];
+_shell setVelocity [0,0,-(abs _velocity)];
 
-["ammo"] call FUNC(check_min_values);
-["radius"] call FUNC(check_min_values);
-["delay"] call FUNC(check_min_values);
-[] call FUNC(calculate_eta);
+AAR_FOLLOWPROJECTILE(_ammo,_shell);

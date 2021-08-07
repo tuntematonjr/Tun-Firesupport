@@ -1,0 +1,14 @@
+added
+- Gun module has now max delay variable. Default 500m
+- Gun module has now max spread variable. Default 500m
+- Gun module has now gun count variable. Default 1
+- TRP system
+- Firemission queue
+	- Ability to remove then and cancel.
+- Volley fire mode
+- Timed barrages to ingame clock.
+
+modified
+- Delay between shots has renamed to firerate, due this now simulating multiple guns.
+- Updated bookmarksystem, now supports TRP. (Old bookmarks wont work anymore)
+- UI overhaul

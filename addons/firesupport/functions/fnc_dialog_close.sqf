@@ -18,6 +18,7 @@
  */
 #include "script_component.hpp"
 
+<<<<<<< Updated upstream
 
 
 player setVariable [QGVAR(easting), ctrlText EASTING_IDC];
@@ -29,5 +30,10 @@ player setVariable [QGVAR(easting_end), ctrlText EASTING_END_IDC];
 player setVariable [QGVAR(northing_end), ctrlText NORTHING_END_IDC];
 
 
+=======
+private _values = [ctrlText EASTING_IDC,  ctrlText NORTHING_IDC, ctrlText EASTING_END_IDC, ctrlText NORTHING_END_IDC];
+
+player setVariable [QGVAR(oldCoordinates), _values];
+>>>>>>> Stashed changes
 
 [GVAR(dialog_PFH)] call CBA_fnc_removePerFrameHandler;

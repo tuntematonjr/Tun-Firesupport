@@ -5,6 +5,7 @@
 
 #include "GUIBaseClasses.hpp"
 #include "Firesupport_idc.hpp"
+<<<<<<< Updated upstream
 
 class tun_default_text
 {
@@ -24,52 +25,44 @@ class tun_default_text
 	
 };
 class tun_firesupport_coordinate_preset
+=======
+class RscListBox;
+class RscButtonMenu;
+class RscButton;
+class RscMapControl;
+class RscEdit;
+class RscText;
+class RscTree;
+class RscCombo;
+class RscXSliderH;
+class RscCheckBox;
+
+#define GUI_USER_COLORBACKGROUND	{ 		"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.13])", 		"(profilenamespace getvariable ['GUI_BCG_RGB_G',0.54])", 		"(profilenamespace getvariable ['GUI_BCG_RGB_B',0.21])", 		1 	}
+
+class tun_default_editBox : RscEdit
+>>>>>>> Stashed changes
 {
-	style = 0+2;
-	text = "000";
 	autocomplete = "";
-	colorBackground[] = {0.2,0.2,0.2,1};
+	borderSize = 0.01;
+	colorBorder[] = GUI_USER_COLORBACKGROUND;
+	colorBackground[] = {0.2,0.2,0.2,0.2};
 	colorDisabled[] = {0,0,0,0};
-	colorSelection[] = {0,0,0,0};
+	colorSelection[] = GUI_USER_COLORBACKGROUND;
 	colorText[] = {1,1,1,1};
-	font = "PuristaMedium";
-	sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
 	canModify = true;
-	maxChars = 5;
 	shadow = 0;
-	tooltipColorBox[] = {0.6,0,0,1};
-	tooltipColorShade[] = {0,0,0,0};
-	tooltipColorText[] = {1,1,1,1};
-	
-};
-class tun_firesupport_default_combo
-{
-	style = 16;
-	arrowEmpty = "\A3\ui_f\data\GUI\RscCommon\rsccombo\arrow_combo_ca.paa";
-	arrowFull = "\A3\ui_f\data\GUI\RscCommon\rsccombo\arrow_combo_active_ca.paa";
-	colorBackground[] = {0.4,0.4,0.4,1};
-	colorDisabled[] = {0,0,0,1};
-	colorSelect[] = {1,1,1,1};
-	colorSelectBackground[] = {0.8,0.502,0.2,1};
-	colorText[] = {1,1,1,1};
-	font = "PuristaSemiBold";
-	maxHistoryDelay = 0;
-	sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
-	soundCollapse[] = {"\A3\ui_f\data\sound\RscCombo\soundCollapse",0.1,1.0};
-	soundExpand[] = {"\A3\ui_f\data\sound\RscCombo\soundExpand",0.1,1.0};
-	soundSelect[] = {"\A3\ui_f\data\sound\RscCombo\soundSelect",0.1,1.0};
-	wholeHeight = 0.3;
-	shadow = 0;
-	tooltipColorBox[] = {0.2,0.2,0.2,1};
-	tooltipColorShade[] = {0.2,0.2,0.2,1};
-	tooltipColorText[] = {1,1,1,1};
-	class ComboScrollBar
-	{
-		
-	};
-	
 };
 
+
+class tun_firesupport_coordinate_preset : tun_default_editBox
+{
+	text = "000";
+	maxChars = 5;
+	w = safeZoneW * 0.0625;
+	h = safeZoneH * 0.025;
+};
+
+<<<<<<< Updated upstream
 class tun_firesupport_button_base : RscButton
 {
 	
@@ -79,4 +72,18 @@ class tun_firesupport_listbox : RscListBox
 {
 	
 };
+=======
+class tun_default_text : RscText
+{
+	colorBackground[] = GUI_USER_COLORBACKGROUND;
+	colorText[] = {1,1,1,1};	
+};
+
+class tun_default_CheckBox : RscCheckBox
+{
+	w = safeZoneW * 0.015;
+	h = safeZoneH * 0.025;	
+};
+
+>>>>>>> Stashed changes
 #endif

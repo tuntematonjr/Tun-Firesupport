@@ -93,7 +93,14 @@ class CfgVehicles {
                 displayName = $STR_tun_firesupport_module_gun_delayMin_displayname;
                 description = $STR_tun_firesupport_module_gun_delayMin_description;
                 typeName = "NUMBER";
-                defaultValue = 2;
+                defaultValue = 1;
+            };
+            
+            class delayMax {
+                displayName = $STR_tun_firesupport_module_gun_delayMax_displayname;
+                description = $STR_tun_firesupport_module_gun_delayMax_description;
+                typeName = "NUMBER";
+                defaultValue = 60;
             };
             
             class spreadMin {
@@ -101,6 +108,13 @@ class CfgVehicles {
                 description = $STR_tun_firesupport_module_gun_spreadMin_description;
                 typeName = "NUMBER";
                 defaultValue = 50;
+            };
+            
+            class spreadMAX {
+                displayName = $STR_tun_firesupport_module_gun_spreadMAX_displayname;
+                description = $STR_tun_firesupport_module_gun_spreadMAX_description;
+                typeName = "NUMBER";
+                defaultValue = 500;
             };
             
             class side {
@@ -122,6 +136,13 @@ class CfgVehicles {
                 description = $STR_tun_firesupport_module_gun_maxRange_description;
                 typeName = "NUMBER";
                 defaultValue = 10000;
+            };
+            
+            class gunCount {
+                displayName = $STR_tun_firesupport_module_gun_gunCount_displayname;
+                description = $STR_tun_firesupport_module_gun_gunCount_description;
+                typeName = "NUMBER";
+                defaultValue = 1;
             };
             
             class marker {
