@@ -18,7 +18,6 @@ private _index = lbCurSel BOOKMARK_LIST_IDC;
 if ((count GVAR(bookmarkValues)-1) < _index) exitWith { };
 
 private _values = GVAR(bookmarkValues) select lbCurSel BOOKMARK_LIST_IDC;
-
 _values params ["_name", "_easting", "_northing", "_easting2", "_northing2", "_gun", "_gunText", "_ammoText", "_mode", "_modeText", "_count", "_radius", "_delay", "_trp1", "_trp2", "_timeCheck", "_hours", "_minutes", "_seconds", "_volley", "_trpList1", "_trpList2", "_trpList1Text", "_trpList2text"];
 private _trpList1TextConfirm = lbText [TRP1_LIST, _trpList1];
 private _trpList2textConfirm = lbText [TRP2_LIST, _trpList2];
@@ -33,7 +32,7 @@ ctrlSetText [NORTHING_END_IDC, _northing2];
 (findDisplay MAIN_IDD displayCtrl TOGGLETIME) cbSetChecked _timeCheck;
 (findDisplay MAIN_IDD displayCtrl TOGGLEVOLLEY) cbSetChecked _volley;
 
-[_trpList1, _trpList2] call FUNC(trpCheckbox);
+[_trp1, _trp2] call FUNC(trpCheckbox);
 [] call FUNC(timeCheckbox);
 
 private _errorText = "";

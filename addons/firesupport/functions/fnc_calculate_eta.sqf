@@ -31,7 +31,7 @@ if ( count _listArray isEqualTo  2 ) then {
 	private _trp1Toggle = cbChecked (findDisplay MAIN_IDD displayCtrl TRP1);
 	private _trp1Index = lbCurSel TRP1_LIST;
 	if (_trp1Toggle) then {
-		if (_trp1Index != -1) then {
+		if (_trp1Index != -1 && (count GVAR(trpValues)) isNotEqualTo 0) then {
 			private _trp1Values = GVAR(trpValues) select _trp1Index;
 			_easting = _trp1Values select 1;
 			_northing = _trp1Values select 2;
