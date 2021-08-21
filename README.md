@@ -18,7 +18,7 @@ Immersive way for players call firesupport and mission makkers to set up.
 ---
 ## Fetures/Settings
 
-[Video](https://youtu.be/bUZKOQp-nfs)
+[Video](https://youtu.be/9p8C84hZdGw)
 
 **Firesupport system for player**
 - Ability to use call different types of firemissions.
