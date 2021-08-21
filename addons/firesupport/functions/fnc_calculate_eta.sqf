@@ -91,7 +91,7 @@ if ( count _listArray isEqualTo  2 ) then {
 		_etaText = "Out of Ammo";
 	};
 
-	if (_trp1Index == -1) then {
+	if (_trp1Index == -1 && _trp1Toggle) then {
 		_etaText = "No TRP selected";
 	};
 };
