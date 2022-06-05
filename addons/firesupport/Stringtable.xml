@@ -266,6 +266,30 @@
         <Russian>Remove</Russian>
         <German>Remove</German>
       </Key>
+      <Key ID="STR_tun_firesupport_correctionDistance">
+        <Original>Distance</Original>
+        <English>Distance</English>
+        <Czech>Distance</Czech>
+        <French>Distance</French>
+        <Spanish>Distance</Spanish>
+        <Italian>Distance</Italian>
+        <Polish>Distance</Polish>
+        <Portuguese>Distance</Portuguese>
+        <Russian>Distance</Russian>
+        <German>Distance</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_correctionDirection">
+        <Original>Direction</Original>
+        <English>Direction</English>
+        <Czech>Direction</Czech>
+        <French>Direction</French>
+        <Spanish>Direction</Spanish>
+        <Italian>Direction</Italian>
+        <Polish>Direction</Polish>
+        <Portuguese>Direction</Portuguese>
+        <Russian>Direction</Russian>
+        <German>Direction</German>
+      </Key>
     </Container>
     <Container name="tooltips">
       <Key ID="STR_tun_firesupport_ammocount_tooltip">
@@ -508,6 +532,42 @@
         <Russian>Toggle volley fire. All guns will fire same time, othervise they will keep constant barrage going on.</Russian>
         <German>Toggle volley fire. All guns will fire same time, othervise they will keep constant barrage going on.</German>
       </Key>
+      <Key ID="STR_tun_firesupport_correctionDistance_tooltip">
+        <Original>Corrected distance from given coordinates. In meters.</Original>
+        <English>Corrected distance from given coordinates. In meters.</English>
+        <Czech>Corrected distance from given coordinates. In meters.</Czech>
+        <French>Corrected distance from given coordinates. In meters.</French>
+        <Spanish>Corrected distance from given coordinates. In meters.</Spanish>
+        <Italian>Corrected distance from given coordinates. In meters.</Italian>
+        <Polish>Corrected distance from given coordinates. In meters.</Polish>
+        <Portuguese>Corrected distance from given coordinates. In meters.</Portuguese>
+        <Russian>Corrected distance from given coordinates. In meters.</Russian>
+        <German>Corrected distance from given coordinates. In meters.</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_correctionDirection_tooltip">
+        <Original>Correction direction for given coordinates.</Original>
+        <English>Correction direction for given coordinates.</English>
+        <Czech>Correction direction for given coordinates.</Czech>
+        <French>Correction direction for given coordinates.</French>
+        <Spanish>Correction direction for given coordinates.</Spanish>
+        <Italian>Correction direction for given coordinates.</Italian>
+        <Polish>Correction direction for given coordinates.</Polish>
+        <Portuguese>Correction direction for given coordinates.</Portuguese>
+        <Russian>Correction direction for given coordinates.</Russian>
+        <German>Correction direction for given coordinates.</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_toggleMoveMap_tooltip">
+        <Original>Toggle auto move map to target coordinates</Original>
+        <English>Toggle auto move map to target coordinates</English>
+        <Czech>Toggle auto move map to target coordinates</Czech>
+        <French>Toggle auto move map to target coordinates</French>
+        <Spanish>Toggle auto move map to target coordinates</Spanish>
+        <Italian>Toggle auto move map to target coordinates</Italian>
+        <Polish>Toggle auto move map to target coordinates</Polish>
+        <Portuguese>Toggle auto move map to target coordinates</Portuguese>
+        <Russian>Toggle auto move map to target coordinates</Russian>
+        <German>Toggle auto move map to target coordinates</German>
+      </Key>
     </Container>
     <Container name="cba">
       <Key ID="STR_tun_firesupport_cba_is_required">
@@ -581,6 +641,114 @@
         <Portuguese>Debug mode</Portuguese>
         <Russian>Debug mode</Russian>
         <German>Debug mode</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_cba_firePosMarker">
+        <Original>Show marker on firing pos</Original>
+        <English>Show marker on firing pos</English>
+        <Czech>Show marker on firing pos</Czech>
+        <French>Show marker on firing pos</French>
+        <Spanish>Show marker on firing pos</Spanish>
+        <Italian>Show marker on firing pos</Italian>
+        <Polish>Show marker on firing pos</Polish>
+        <Portuguese>Show marker on firing pos</Portuguese>
+        <Russian>Show marker on firing pos</Russian>
+        <German>Show marker on firing pos</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_cba_firePosMarker_tooltip">
+        <Original>If enabled, there will be marker where you are calling firesupport in firesupport interface.</Original>
+        <English>If enabled, there will be marker where you are calling firesupport in firesupport interface.</English>
+        <Czech>If enabled, there will be marker where you are calling firesupport in firesupport interface.</Czech>
+        <French>If enabled, there will be marker where you are calling firesupport in firesupport interface.</French>
+        <Spanish>If enabled, there will be marker where you are calling firesupport in firesupport interface.</Spanish>
+        <Italian>If enabled, there will be marker where you are calling firesupport in firesupport interface.</Italian>
+        <Polish>If enabled, there will be marker where you are calling firesupport in firesupport interface.</Polish>
+        <Portuguese>If enabled, there will be marker where you are calling firesupport in firesupport interface.</Portuguese>
+        <Russian>If enabled, there will be marker where you are calling firesupport in firesupport interface.</Russian>
+        <German>If enabled, there will be marker where you are calling firesupport in firesupport interface.</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_cba_alwaysShowTRPmarkers">
+        <Original>Always show TRP markers</Original>
+        <English>Always show TRP markers</English>
+        <Czech>Always show TRP markers</Czech>
+        <French>Always show TRP markers</French>
+        <Spanish>Always show TRP markers</Spanish>
+        <Italian>Always show TRP markers</Italian>
+        <Polish>Always show TRP markers</Polish>
+        <Portuguese>Always show TRP markers</Portuguese>
+        <Russian>Always show TRP markers</Russian>
+        <German>Always show TRP markers</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_cba_enableShowTRPmarkers">
+        <Original>Enable TRP markers</Original>
+        <English>Enable TRP markers</English>
+        <Czech>Enable TRP markers</Czech>
+        <French>Enable TRP markers</French>
+        <Spanish>Enable TRP markers</Spanish>
+        <Italian>Enable TRP markers</Italian>
+        <Polish>Enable TRP markers</Polish>
+        <Portuguese>Enable TRP markers</Portuguese>
+        <Russian>Enable TRP markers</Russian>
+        <German>Enable TRP markers</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_cba_alwaysShowTRPmarkers_tooltip">
+        <Original>If enabled, TRP markers are always shown in map, not only when interface is opened.</Original>
+        <English>If enabled, TRP markers are always shown in map, not only when interface is opened.</English>
+        <Czech>If enabled, TRP markers are always shown in map, not only when interface is opened.</Czech>
+        <French>If enabled, TRP markers are always shown in map, not only when interface is opened.</French>
+        <Spanish>If enabled, TRP markers are always shown in map, not only when interface is opened.</Spanish>
+        <Italian>If enabled, TRP markers are always shown in map, not only when interface is opened.</Italian>
+        <Polish>If enabled, TRP markers are always shown in map, not only when interface is opened.</Polish>
+        <Portuguese>If enabled, TRP markers are always shown in map, not only when interface is opened.</Portuguese>
+        <Russian>If enabled, TRP markers are always shown in map, not only when interface is opened.</Russian>
+        <German>If enabled, TRP markers are always shown in map, not only when interface is opened.</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_cba_enableShowTRPmarkerss_tooltip">
+        <Original>If enabled, TRP markers will be created</Original>
+        <English>If enabled, TRP markers will be created</English>
+        <Czech>If enabled, TRP markers will be created</Czech>
+        <French>If enabled, TRP markers will be created</French>
+        <Spanish>If enabled, TRP markers will be created</Spanish>
+        <Italian>If enabled, TRP markers will be created</Italian>
+        <Polish>If enabled, TRP markers will be created</Polish>
+        <Portuguese>If enabled, TRP markers will be created</Portuguese>
+        <Russian>If enabled, TRP markers will be created</Russian>
+        <German>If enabled, TRP markers will be created</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_cba_trpMarkerType">
+        <Original>TRP marker type</Original>
+        <English>TRP marker type</English>
+        <Czech>TRP marker type</Czech>
+        <French>TRP marker type</French>
+        <Spanish>TRP marker type</Spanish>
+        <Italian>TRP marker type</Italian>
+        <Polish>TRP marker type</Polish>
+        <Portuguese>TRP marker type</Portuguese>
+        <Russian>TRP marker type</Russian>
+        <German>TRP marker type</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_cba_trpMarkerType_value">
+        <Original>mil_destroy_noShadow</Original>
+        <English>mil_destroy_noShadow</English>
+        <Czech>mil_destroy_noShadow</Czech>
+        <French>mil_destroy_noShadow</French>
+        <Spanish>mil_destroy_noShadow</Spanish>
+        <Italian>mil_destroy_noShadow</Italian>
+        <Polish>mil_destroy_noShadow</Polish>
+        <Portuguese>mil_destroy_noShadow</Portuguese>
+        <Russian>mil_destroy_noShadow</Russian>
+        <German>mil_destroy_noShadow</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_cba_trpMarkerType_tooltip">
+        <Original>classname for marker used in TRPs</Original>
+        <English>classname for marker used in TRPs</English>
+        <Czech>classname for marker used in TRPs</Czech>
+        <French>classname for marker used in TRPs</French>
+        <Spanish>classname for marker used in TRPs</Spanish>
+        <Italian>classname for marker used in TRPs</Italian>
+        <Polish>classname for marker used in TRPs</Polish>
+        <Portuguese>classname for marker used in TRPs</Portuguese>
+        <Russian>classname for marker used in TRPs</Russian>
+        <German>classname for marker used in TRPs</German>
       </Key>
     </Container>
     <Container name="Firemodes">
@@ -1203,6 +1371,82 @@
         <Portuguese>Add queue</Portuguese>
         <Russian>Add queue</Russian>
         <German>Add queue</German>
+      </Key>
+    </Container>
+    <Container name="converter">
+      <Key ID="STR_tun_firesupport_converter_header">
+        <Original>SWT and Firesupport array converter</Original>
+        <English>SWT and Firesupport array converter</English>
+        <Czech>SWT and Firesupport array converter</Czech>
+        <French>SWT and Firesupport array converter</French>
+        <Spanish>SWT and Firesupport array converter</Spanish>
+        <Italian>SWT and Firesupport array converter</Italian>
+        <Polish>SWT and Firesupport array converter</Polish>
+        <Portuguese>SWT and Firesupport array converter</Portuguese>
+        <Russian>SWT and Firesupport array converter</Russian>
+        <German>SWT and Firesupport array converter</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_converter_swtEditBoxText">
+        <Original>Put sweet marker array here</Original>
+        <English>Put sweet marker array here</English>
+        <Czech>Put sweet marker array here</Czech>
+        <French>Put sweet marker array here</French>
+        <Spanish>Put sweet marker array here</Spanish>
+        <Italian>Put sweet marker array here</Italian>
+        <Polish>Put sweet marker array here</Polish>
+        <Portuguese>Put sweet marker array here</Portuguese>
+        <Russian>Put sweet marker array here</Russian>
+        <German>Put sweet marker array here</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_converter_firesupportEditBoxText">
+        <Original>Put firesupport array here</Original>
+        <English>Put firesupport array here</English>
+        <Czech>Put firesupport array here</Czech>
+        <French>Put firesupport array here</French>
+        <Spanish>Put firesupport array here</Spanish>
+        <Italian>Put firesupport array here</Italian>
+        <Polish>Put firesupport array here</Polish>
+        <Portuguese>Put firesupport array here</Portuguese>
+        <Russian>Put firesupport array here</Russian>
+        <German>Put firesupport array here</German>
+      </Key>
+    </Container>
+    <Container name="briefing">
+      <Key ID="STR_tun_firesupport_briefing_subject">
+        <Original>Tun - Firesupport</Original>
+        <English>Tun - Firesupport</English>
+        <Czech>Tun - Firesupport</Czech>
+        <French>Tun - Firesupport</French>
+        <Spanish>Tun - Firesupport</Spanish>
+        <Italian>Tun - Firesupport</Italian>
+        <Polish>Tun - Firesupport</Polish>
+        <Portuguese>Tun - Firesupport</Portuguese>
+        <Russian>Tun - Firesupport</Russian>
+        <German>Tun - Firesupport</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_briefing_convertRecord">
+        <Original>Convert TRP/SWT</Original>
+        <English>Convert TRP/SWT</English>
+        <Czech>Convert TRP/SWT</Czech>
+        <French>Convert TRP/SWT</French>
+        <Spanish>Convert TRP/SWT</Spanish>
+        <Italian>Convert TRP/SWT</Italian>
+        <Polish>Convert TRP/SWT</Polish>
+        <Portuguese>Convert TRP/SWT</Portuguese>
+        <Russian>Convert TRP/SWT</Russian>
+        <German>Convert TRP/SWT</German>
+      </Key>
+      <Key ID="STR_tun_firesupport_briefing_convertRecord_text">
+        <Original>&lt;font size=20&gt;&lt;execute expression=' [] call tun_firesupport_fnc_openConvertDialog'&gt;Open convert dialog&lt;/execute&gt;&lt;/font&gt;</Original>
+        <English>&lt;font size=20&gt;&lt;execute expression=' [] call tun_firesupport_fnc_openConvertDialog'&gt;Open convert dialog&lt;/execute&gt;&lt;/font&gt;</English>
+        <Czech>&lt;font size=20&gt;&lt;execute expression=' [] call tun_firesupport_fnc_openConvertDialog'&gt;Open convert dialog&lt;/execute&gt;&lt;/font&gt;</Czech>
+        <French>&lt;font size=20&gt;&lt;execute expression=' [] call tun_firesupport_fnc_openConvertDialog'&gt;Open convert dialog&lt;/execute&gt;&lt;/font&gt;</French>
+        <Spanish>&lt;font size=20&gt;&lt;execute expression=' [] call tun_firesupport_fnc_openConvertDialog'&gt;Open convert dialog&lt;/execute&gt;&lt;/font&gt;</Spanish>
+        <Italian>&lt;font size=20&gt;&lt;execute expression=' [] call tun_firesupport_fnc_openConvertDialog'&gt;Open convert dialog&lt;/execute&gt;&lt;/font&gt;</Italian>
+        <Polish>&lt;font size=20&gt;&lt;execute expression=' [] call tun_firesupport_fnc_openConvertDialog'&gt;Open convert dialog&lt;/execute&gt;&lt;/font&gt;</Polish>
+        <Portuguese>&lt;font size=20&gt;&lt;execute expression=' [] call tun_firesupport_fnc_openConvertDialog'&gt;Open convert dialog&lt;/execute&gt;&lt;/font&gt;</Portuguese>
+        <Russian>&lt;font size=20&gt;&lt;execute expression=' [] call tun_firesupport_fnc_openConvertDialog'&gt;Open convert dialog&lt;/execute&gt;&lt;/font&gt;</Russian>
+        <German>&lt;font size=20&gt;&lt;execute expression=' [] call tun_firesupport_fnc_openConvertDialog'&gt;Open convert dialog&lt;/execute&gt;&lt;/font&gt;</German>
       </Key>
     </Container>
   </Package>

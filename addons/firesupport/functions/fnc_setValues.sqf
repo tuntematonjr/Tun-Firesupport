@@ -27,7 +27,7 @@ if (_count > 0) then {
 	} forEach _firemissions;		
 };
 
-if (_count != 2) exitWith { };
+if (_count isNotEqualTo 2) exitWith { };
 
 private _ammoModule = (tvData [ARTY_LIST_IDC, _listArray]) call BIS_fnc_objectFromNetId;
 
@@ -49,3 +49,5 @@ sliderSetPosition [SLIDER_DELAY, _min_delay];
 ctrlSetText [DELAY_IDC, str _min_delay];
 
 ctrlSetText [REMAINIG_AMMO_IDC, str _countAmmo];
+
+[] call FUNC(firingPosMarker);

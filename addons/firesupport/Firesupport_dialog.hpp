@@ -107,7 +107,7 @@ class Firesupport_dialog
 			w = safeZoneW * 0.1421875;
 			h = safeZoneH * 0.21481482;
 			borderSize = 0.01;
-			colorBorder[] = GUI_USER_COLORBACKGROUND;
+			colorBorder[] = GUI_BCG_COLOR;
 			colorLines[] = {1,1,1,1};
 			colorBackground[] = {0.2,0.2,0.2,0.2};
 			onTreeSelChanged = "[] call tun_firesupport_fnc_setValues";
@@ -129,6 +129,7 @@ class Firesupport_dialog
 			x = safeZoneX + safeZoneW * 0.378125;
 			y = safeZoneY + safeZoneH * 0.27870371;
 			tooltip = "$STR_tun_firesupport_coordinates_tooltip_easting";
+			onKeyUp = "[] call tun_firesupport_fnc_firingPosMarker";
 			
 		};
 		class tun_firesupport_easting_text : tun_default_text 
@@ -171,6 +172,7 @@ class Firesupport_dialog
 			x = safeZoneX + safeZoneW * 0.378125;
 			y = safeZoneY + safeZoneH * 0.34351852;
 			tooltip = "$STR_tun_firesupport_coordinates_tooltip_easting";
+			onKeyUp = "[] call tun_firesupport_fnc_firingPosMarker; [false] call tun_firesupport_fnc_check_values;";
 			
 		};
 		class tun_firesupport_northing_end_point_value : tun_firesupport_easting_end_point_value 
@@ -188,7 +190,7 @@ class Firesupport_dialog
 			y = safeZoneY + safeZoneH * 0.31574075;
 			text = "$STR_tun_firesupport_northing_end_point";
 		};
-		
+
 		class tun_firesupport_ammo_count : tun_default_editBox 
 		{
 			idc = COUNT_IDC;
@@ -282,17 +284,13 @@ class Firesupport_dialog
 			text = "Value";
 			tooltip = "$STR_tun_firesupport_eta_tooltip";
 		};
-		class tun_firesupport_header : RscText 
+		class tun_firesupport_header : tun_firesupport_header_base 
 		{
-			type = 0;
-			idc = -1;
 			x = safeZoneX + safeZoneW * 0.22447917;
 			y = safeZoneY + safeZoneH * 0.18518519;
 			w = safeZoneW * 0.55104167;
 			h = safeZoneH * 0.05;
-			style = 32+2;
 			text = "$STR_tun_firesupport_Header";
-			shadow = 2;
 			
 		};
 		class tun_firesupport_status : tun_default_text 
@@ -423,7 +421,7 @@ class Firesupport_dialog
 			y = safeZoneY + safeZoneH * 0.27870371;
 			w = safeZoneW * 0.1375;
 			h = safeZoneH * 0.02962963;
-			//onLBSelChanged = "";
+			onLBSelChanged = "[] call tun_firesupport_fnc_firingPosMarker";
 		};
 		class tun_firesupport_trp2_list : tun_firesupport_trp1_list 
 		{
@@ -475,8 +473,14 @@ class Firesupport_dialog
 			idc = TOGGLEVOLLEY;
 			x = safeZoneX + safeZoneW * 0.69010417;
 			y = safeZoneY + safeZoneH * 0.34351852;
-			tooltip = "$STR_tun_firesupport_toggleVolleyFire_tooltip";
-			
+			tooltip = "$STR_tun_firesupport_toggleVolleyFire_tooltip";			
+		};
+		
+		class tun_firesupport_toggleMoveMap: tun_firesupport_togglevolleyfire
+		{
+			idc = TOGGLEMAPMOVE;
+			x = safeZoneX + safeZoneW * 0.69010417 + (safeZoneW * 0.015)*2;
+			tooltip = "$STR_tun_firesupport_toggleMoveMap_tooltip";			
 		};
 		
 		class tun_firesupport_time_text : tun_default_text 
@@ -487,16 +491,15 @@ class Firesupport_dialog
 			w = safeZoneW * 0.09739584;
 			h = safeZoneH * 0.025;
 			text = "$STR_tun_firesupport_toggletimetext";
-			tooltip = "$STR_tun_firesupport_toggletimetext_tooltip";
-			
+			tooltip = "$STR_tun_firesupport_toggletimetext_tooltip";			
 		};
+
 		class tun_firesupport_queue_list : tun_firesupport_bookmark_list 
 		{
 			idc = QUEUELIST;
-			onLBSelChanged = "";
-			
-			
+			onLBSelChanged = "";		
 		};
+
 		class tun_firesupport_queue_remove_button : RscButton 
 		{
 			type = 1;
@@ -507,10 +510,7 @@ class Firesupport_dialog
 			h = safeZoneH * 0.05;
 			text = "$STR_tun_firesupport_queue_remove";
 			onMouseButtonClick = "[] call tun_firesupport_fnc_removeQueue";
-			tooltip = "$STR_tun_firesupport_queue_remove_tooltip";
-			
+			tooltip = "$STR_tun_firesupport_queue_remove_tooltip";			
 		};
 	};
-	
 };
-

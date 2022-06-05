@@ -23,7 +23,7 @@ waitUntil {!isnull (findDisplay MAIN_IDD)};
 
 [true, true] call FUNC(trpCheckbox);
 
-private _oldCoordinates = player getVariable [QGVAR(oldCoordinates),["00000","00000","00000","00000"]];
+private _oldCoordinates = player getVariable [QGVAR(oldCoordinates),["00000","00000","0","0"]];
 
 ctrlSetText [EASTING_IDC, (_oldCoordinates select 0) ];
 ctrlSetText [NORTHING_IDC, (_oldCoordinates select 1) ];
@@ -97,10 +97,13 @@ sliderSetSpeed [SLIDER_AMMO, 1, 1];
 sliderSetSpeed [SLIDER_RADIUS, 1, 1];
 sliderSetSpeed [SLIDER_DELAY, 0.1, 0.1];
 
-(findDisplay MAIN_IDD displayCtrl TOGGLEVOLLEY) cbSetChecked true;
+
+(findDisplay MAIN_IDD displayCtrl TOGGLEVOLLEY) cbSetChecked (player getVariable [QGVAR(saveToggleVolley), true]);
+(findDisplay MAIN_IDD displayCtrl TOGGLEMAPMOVE) cbSetChecked (player getVariable [QGVAR(saveToggleMapMove), true]);
 
 [] call FUNC(update_firemode);
 [] call FUNC(timeCheckbox);
+[] call FUNC(createTRPmarkers);
 
 //Start layout
 ctrlShow [BOOKMARK_LIST_IDC, false];

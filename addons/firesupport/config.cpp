@@ -7,12 +7,13 @@ class CfgPatches
         units[] = { QGVAR(gun_classname) };
         weapons[] = {};
         requiredVersion = 1.94;
-        requiredAddons[] = {"A3_Modules_F","3DEN","cba_main","cba_xeh","cba_settings","ace_common","ace_interaction","ace_interact_menu"};
+        requiredAddons[] = {"A3_Modules_F","3DEN","cba_main","cba_xeh","cba_settings","ace_common","ace_interaction","ace_interact_menu","ace_modules"};
         author = "Tuntematon";
         authorUrl = "https://armafinland.fi/";
     };
 };
 
+#include "Convert_dialog.hpp"
 #include "Firesupport_dialog.hpp"
 #include "CfgSounds.hpp"
 

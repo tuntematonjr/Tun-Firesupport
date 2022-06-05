@@ -48,7 +48,6 @@ private _radius = parseNumber ctrlText RANGE_IDC;
 private _delay = parseNumber ctrlText DELAY_IDC;
 private _firing_style = lbText [FIRING_TYPE_IDC,lbCurSel FIRING_TYPE_IDC];
 
-
 //Due to shit desing, no timed strikes to queue.
 if (_gunModule getVariable [QGVAR(is_firing), false] && _timeToggle) exitWith {
 	playSound "3DEN_notificationWarning";
@@ -59,26 +58,21 @@ private _trp1Index = lbCurSel TRP1_LIST;
 private _trp2Index = lbCurSel TRP2_LIST;
 
 //No trp selected
-if (((_trp1Index == -1) && _trp1Toggle) || ((_trp2Index == -1) && _trp2Toggle))exitWith {
+if (((_trp1Index isEqualTo -1) && _trp1Toggle) || ((_trp2Index isEqualTo -1) && _trp2Toggle))exitWith {
 	playSound "3DEN_notificationWarning";
 	hintSilent localize "STR_tun_firesupport_NoTrpSelected";
 };
 
-//TRP & positions
-if (_trp1Toggle) then {
-	private _trp1Values = GVAR(trpValues) select _trp1Index;
-	_easting = _trp1Values select 1;
-	_northing = _trp1Values select 2;
+//Get positions
+private _positions = [] call FUNC(getTargetPositon);
+
+if (_positions isEqualTo "fail") exitWith {
+	playSound "3DEN_notificationWarning";
+	hintSilent "Failed to get firing positions!";
 };
 
-if (_trp2Toggle) then {
-	private _trp2Values = GVAR(trpValues) select _trp2Index;
-	_easting_end = _trp2Values select 1;
-	_northing_end = _trp2Values select 2;
-};
-
-private _position = [[_easting, _northing], true] call CBA_fnc_mapGridToPos;
-private _positionEnd = [[_easting_end, _northing_end], true] call CBA_fnc_mapGridToPos;
+_position = _positions select 0;
+_positionEnd = _positions select 1;
 
 //Out of range
 private _distanceRange = _gunModule distance _position;

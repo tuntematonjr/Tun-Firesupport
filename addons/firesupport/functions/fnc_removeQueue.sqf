@@ -37,7 +37,7 @@ if (_textQueue isEqualTo _firemissionText) then {
 	_reservedCount = _reservedCount - _ammoCount;
 	private _firemission = _firemissions select _curSelected;
 
-	if (_curSelected == 0) then {
+	if (_curSelected isEqualTo 0) then {
 		if (_status isEqualTo ("STR_tun_firesupport_status_calculating" call BIS_fnc_localize)) then {
 			_firemissions deleteAt _curSelected;
 			_ammoModule setVariable ["reservedCount", _reservedCount, true];
@@ -53,7 +53,7 @@ if (_textQueue isEqualTo _firemissionText) then {
 				_this params ["_gunModule", "_firemission"];
 				private _firemissions = _gunModule getVariable [QGVAR(firemissions), []];
 				private _value = _firemissions find _firemission;
-				if (_value != -1) then {
+				if (_value isNotEqualTo -1) then {
 					_firemissions deleteAt _value;
 					_gunModule setVariable [QGVAR(firemissions), _firemissions, true];
 				};

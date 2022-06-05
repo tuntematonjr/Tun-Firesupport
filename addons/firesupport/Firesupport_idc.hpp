@@ -7,7 +7,7 @@
 #define EASTING_END_IDC					22206
 #define NORTHING_END_IDC				22207
 #define REMAINIG_AMMO_IDC				22208
-#define TRP LIST						22209
+//#define TRP LIST						22209
 #define ETA_IDC							22210
 #define STATUS_IDC						22211
 #define FIRE_IDC						22212
@@ -43,6 +43,9 @@
 #define QUEUELIST						22242
 #define QUEUEREMOVE						22243
 #define TOGGLEVOLLEY					22244
+#define TOGGLEMAPMOVE					22245
 
-
+#define MAINCONVERT_IDD					22250
+#define SWTDATA							22251
+#define TUNDATA							22252
 

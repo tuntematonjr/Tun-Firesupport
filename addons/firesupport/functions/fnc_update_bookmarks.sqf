@@ -38,3 +38,5 @@ lbClear TRP2_LIST;
 	lbAdd [TRP1_LIST, _name];
 	lbAdd [TRP2_LIST, _name];
 } forEach GVAR(trpValues);
+
+[] call FUNC(createTRPmarkers);

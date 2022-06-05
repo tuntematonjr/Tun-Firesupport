@@ -2,9 +2,9 @@
 #define PREFIX Tun
 
 #define MAJOR 2
-#define MINOR 0
-#define PATCHLVL 1
-#define BUILD 21082021
+#define MINOR 1
+#define PATCHLVL 0
+#define BUILD 05062022
 
 #define VERSION MAJOR.MINOR.PATCHLVL.BUILD
 #define VERSION_AR MAJOR,MINOR,PATCHLVL,BUILD

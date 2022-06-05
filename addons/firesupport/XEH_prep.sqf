@@ -28,4 +28,11 @@ PREP(removeQueue);
 PREP(firemission_creepingBarrage);
 PREP(firemission_wall);
 PREP(playSound);
+PREP(firingPosMarker);
+PREP(getTargetPositon);
+PREP(createTRPmarkers);
+PREP(deleteTRPmarkers);
+PREP(convertData);
+PREP(createConvertDiaryEntry);
+PREP(openConvertDialog);
 

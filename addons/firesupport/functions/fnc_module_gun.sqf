@@ -16,7 +16,6 @@ if (!isServer) exitWith { };
 
 private _gunModule = param [0,objNull,[objNull]];
 
-//TODO lisää conffiin että voi muuttaa
 private _classname = _gunModule getVariable ["className", "Missing classname"];
 private _name = _gunModule getVariable ["displayName", "Missing name"];
 private _side = _gunModule getVariable ["side", sideLogic];
@@ -32,11 +31,9 @@ private _color = "colorCivilian";
 // private _minRange= _gunModule getVariable ["minRange", 0];
 // private _maxRange = _gunModule getVariable ["maxRange", 10000];
 
-
 if (_gunCount < 1) then {
 	_gunModule setVariable [QGVAR(gunCount), 1, true];
 };
-
 
 //Ammo module stuff
 {

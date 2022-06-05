@@ -19,7 +19,7 @@ if ((count _listArray > 0)) then {
 	_gunModule = (tvData [ARTY_LIST_IDC, [(_listArray select 0)]]) call BIS_fnc_objectFromNetId;
 	private _firemissions = _gunModule getVariable [QGVAR(firemissions), []];
 	private _selected = lbCurSel CHANGE_MODE;
-	if (count _firemissions != lbSize QUEUELIST && _selected == 2) then {
+	if (count _firemissions isNotEqualTo lbSize QUEUELIST && _selected isEqualTo 2) then {
 
 		lbClear QUEUELIST;
 		{
@@ -28,7 +28,6 @@ if ((count _listArray > 0)) then {
 		} forEach _firemissions;
 	};
 };
-
 
 if (count _listArray < 2) exitWith { 
 	ctrlSetText [STATUS_IDC, "STR_tun_firesupport_status_none" call BIS_fnc_localize]; 
@@ -50,4 +49,3 @@ private _currentAmmoCount = _ammoModule getVariable ["currentCount", -1];
 private _reservedCount = _ammoModule getVariable ["reservedCount", -1];
 private _text = format ["%1 (%2)",_currentAmmoCount, (_currentAmmoCount - _reservedCount)];
 ctrlSetText [REMAINIG_AMMO_IDC, _text];
-
