@@ -1,12 +1,12 @@
 ﻿/*
  * Author: [Tuntematon]
  * [Description]
- *
+ * Update status
  * Arguments:
  * 0: None
  *
  * Return Value:
- * The return value <BOOL>
+ * None
  *
  * Example:
  * [] call tun_firesupport_fnc_updateStatus
