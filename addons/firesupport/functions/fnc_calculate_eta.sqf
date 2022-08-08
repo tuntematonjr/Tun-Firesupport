@@ -30,7 +30,11 @@ if ( count _listArray isEqualTo  2) then {
 
 	private _initSpeed = getNumber (configfile >> "CfgMagazines" >> _magazineClass >> "initSpeed");
 
-	private _pos = ([] call FUNC(getTargetPositon)) select 0;
+	private _pos = [] call FUNC(getTargetPositon);
+	
+	if (_pos isEqualTo "fail") exitWith { };
+	_pos = _pos select 0;
+
 	private _countdown = _gunModule getVariable ["countDown", 60];
 	private _distance = _gunModule distance _pos;
 	private _minRange= _gunModule getVariable ["minRange", 0];
@@ -86,8 +90,8 @@ if ( count _listArray isEqualTo  2) then {
 };
 
 if (GVAR(debug)) then {
-	_etaText = "5";
-	_etaNumber = 5;
+	_etaText = "Debug 1";
+	_etaNumber = 1;
 };
 
 [_etaNumber,_etaText, _minEta]
