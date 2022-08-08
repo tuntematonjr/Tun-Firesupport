@@ -47,9 +47,9 @@ private _variables = switch (playerSide) do {
 };
 
 //Add batteries
+GVAR(dialogPaths) = [];
 {
 	private _gunModule = _x;
-
 	private _gunName = _gunModule getVariable ["displayName", "Missing name"];;
 	private _gunClassname = _gunModule getVariable ["className", "Missing classname"];
 	private _gunCount = _gunModule  getVariable ["gunCount", 1];
@@ -62,8 +62,10 @@ private _variables = switch (playerSide) do {
 	private _netID = _gunModule call BIS_fnc_netId;
 	tvSetData [ARTY_LIST_IDC, [_index], _netID];
 
+	private _ammoIndex = [];
 	{
 		private _obj = _x;
+		private _ammoforEachIndex = _ammoIndex pushBack _forEachIndex;
 		private _ammo = _obj getVariable "Ammo";
 		private _count = _obj getVariable "currentCount";
 		private _name = getText (configFile >> "CfgMagazines" >> _ammo >> "displayName");
@@ -71,6 +73,8 @@ private _variables = switch (playerSide) do {
 		private _netID = _obj call BIS_fnc_netId;
 		tvSetData [ARTY_LIST_IDC, [_index,_indexAmmo], _netID];
 	} forEach synchronizedObjects _gunModule;
+	
+	GVAR(dialogPaths) pushBack [_forEachIndex, _ammoforEachIndex];
 } forEach _variables;
 
 //Fire types
