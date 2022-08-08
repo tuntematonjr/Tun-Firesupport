@@ -26,44 +26,47 @@ params [
 	["_skipFiremode", false]
 ];
 
-
 private _trp1Toggle = cbChecked (findDisplay MAIN_IDD displayCtrl TRP1);
 private _trp2Toggle  = cbChecked (findDisplay MAIN_IDD displayCtrl TRP2);
-private _firing_style = lbText [FIRING_TYPE_IDC,lbCurSel FIRING_TYPE_IDC];
+private _firingStyleIsStandard = lbText [FIRING_TYPE_IDC,lbCurSel FIRING_TYPE_IDC] isEqualTo (localize "STR_tun_firesupport_firemode_standard");
 
 private _trp1Index = lbCurSel TRP1_LIST;
+private _trp1IsSelected = _trp1Index isNotEqualTo -1;
 private _trp2Index = lbCurSel TRP2_LIST;
-private _return = "fail";
+private _trp2IsSelected = _trp2Index isNotEqualTo -1;
 
-//No trp selected
-if !(((_trp1Index isEqualTo -1) && _trp1Toggle) || ((_trp2Index isEqualTo -1) && _trp2Toggle)) then {
-	//TRP & positions
-	if (_trp1Toggle) then {
-		private _trp1Values = GVAR(trpValues) select _trp1Index;
-		_easting = _trp1Values select 1;
-		_northing = _trp1Values select 2;
-	};
+private _positionStart = [-1,-1,-1];
+private _positionEnd = [-1,-1,-1];
 
-	if (_trp2Toggle) then {
-		private _trp2Values = GVAR(trpValues) select _trp2Index;
-		_eastingEnd = _trp2Values select 1;
-		_northingEnd = _trp2Values select 2;
-	};
-
-	private _positionStart = [[_easting, _northing], false] call CBA_fnc_mapGridToPos;
-	private _positionEnd = [0,0,0];
-
-	if !(_skipFiremode) then {
-		if (_firing_style isEqualTo (localize "STR_tun_firesupport_firemode_standard")) then {
-			_positionStart = _positionStart getPos [parseNumber _eastingEnd, parseNumber _northingEnd];
-		} else {
-
-			_positionEnd = [[_eastingEnd, _northingEnd], false] call CBA_fnc_mapGridToPos;
-		};
-	};
-	MAP(_positionStart,_x + 1);
-	MAP(_positionEnd,_x + 1);
-	_return = [_positionStart, _positionEnd];
+if ((_trp1Toggle && !_trp1IsSelected) || (_trp2Toggle && !_trp2IsSelected && !_firingStyleIsStandard)) exitWith {
+	"fail"
 };
 
-_return
+//TRP & positions
+if (_trp1Toggle) then {
+	private _trp1Values = GVAR(trpValues) select _trp1Index;
+	_positionStart = _trp1Values select 3;
+};
+
+if (_trp2Toggle && _trp2IsSelected) then {
+	private _trp2Values = GVAR(trpValues) select _trp2Index;
+	_positionEnd = _trp2Values select 3;
+};
+
+if (_positionStart isEqualTo [-1,-1,-1]) then {
+	_positionStart = [[_easting, _northing], false] call CBA_fnc_mapGridToPos;
+	MAP(_positionStart,_x + 1);
+};
+
+if !(_skipFiremode) then {
+	if (_firingStyleIsStandard) then {
+		_positionStart = _positionStart getPos [parseNumber _eastingEnd, parseNumber _northingEnd]; // this is for tweaking start coordinates with distance and direction. So varnames are missleading in this.
+	} else {
+		if (_positionEnd isEqualTo [-1,-1,-1]) then {
+			_positionStart = [[_eastingEnd, _northingEnd], false] call CBA_fnc_mapGridToPos;
+			MAP(_positionEnd,_x + 1);
+		};
+	};
+};
+
+[_positionStart, _positionEnd];
