@@ -1,14 +1,9 @@
 ﻿/*
  * Author: [Tuntematon]
  * [Description]
- *
+ * Convert data between swt and this
  * Arguments:
- * 0: The first argument <STRING>
- * 1: The second argument <OBJECT>
- * 2: Multiple input types <STRING|ARRAY|CODE>
- * 3: Optional input <BOOL> (default: true)
- * 4: Optional input with multiple types <CODE|STRING> (default: {true})
- * 5: Not mandatory input <STRING> (default: nil)
+ * 0: True = convert from tun to swt <BOOL>
  *
  * Return Value:
  * The return value <BOOL>
@@ -33,8 +28,8 @@ if (_dataType) then {
 		{
 			private _params = _x;
 			if (count _params > 2 && IS_ARRAY(_params)) then {
-				_params params ["_name", "_easting", "_northing"];
-				private _pos = ([_easting, _northing, nil, nil, true] call FUNC(getTargetPositon)) select 0;
+				private _name = _params select 0;
+				private _pos =  _params select 3;
 				_finalValues pushBack [_name, _pos, _Type, _Color, 0, 1];
 			};
 		} forEach _tunData;
@@ -49,11 +44,12 @@ if (_dataType) then {
 			private _params = _x;
 			if (count _params > 1 && IS_ARRAY(_params)) then {
 				_params params ["_name", "_pos"];
-				private _pos = mapGridPosition _pos;
-				private _lenght = (count _pos)/2;
-				private _easting = _pos select [0,_lenght];
-				private _northing = _pos select [_lenght];
-				_finalValues pushBack [_name, _easting, _northing];
+				private _fakePos = mapGridPosition _pos;
+				private _lenght = (count _fakePos)/2;
+				private _easting = _fakePos select [0,_lenght];
+				private _northing = _fakePos select [_lenght];
+				_name = format ["TRP-%1 [%2:%3]",_name, _easting, _northing];
+				_finalValues pushBack [_name, _easting, _northing, _pos];
 			};
 		} forEach _swtData;
 		((uiNamespace getVariable "tun_firesupport_convertDialog") displayCtrl TUNDATA) ctrlSetText (str [[],_finalValues]);
