@@ -26,6 +26,6 @@ if (_value) then {
 
 	UNIQUE(GVAR(bookmarkValues));
 	UNIQUE(GVAR(trpValues));
-
+	GVAR(trpValues) sort true;
 	[] call FUNC(update_bookmarks);
 };
