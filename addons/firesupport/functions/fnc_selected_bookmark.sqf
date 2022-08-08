@@ -37,26 +37,25 @@ ctrlSetText [NORTHING_END_IDC, _northing2];
 
 private _errorText = "";
 
-if (_gunText isNotEqualTo tvText [ARTY_LIST_IDC, [_gun select 0]]) then {
-	_errorText = "Bookmark gun is missing!\n";
+if (_ammoText isEqualTo tvText [ARTY_LIST_IDC, _gun]) then {
+	tvSetCurSel [ARTY_LIST_IDC, _gun];
+} else {
+	if (_gunText isNotEqualTo tvText [ARTY_LIST_IDC, [_gun select 0]]) then {
+		_errorText = _errorText + "Bookmark gun is missing!\n";
+	};
+	_errorText = _errorText + "Bookmark ammo type is missing!\n";
 };
 
 if (_trpList1TextConfirm isEqualTo  _trpList1Text) then {
 	lbSetCurSel [TRP1_LIST,_trpList1];
 } else {
-	_errorText = "Bookmark TRP1 is missing!\n";
+	_errorText = _errorText + "Bookmark TRP1 is missing!\n";
 };
 
 if (_trpList2TextConfirm isEqualTo  _trpList2Text) then {
 	lbSetCurSel [TRP2_LIST,_trpList2];
 } else {
-	_errorText = "Bookmark TRP2 is missing!\n";
-};
-
-if (_ammoText isEqualTo  tvText [ARTY_LIST_IDC, _gun]) then {
-	tvSetCurSel [ARTY_LIST_IDC, _gun];
-} else {
-	_errorText = _errorText + "Bookmark ammo type is missing!\n";
+	_errorText = _errorText + "Bookmark TRP2 is missing!\n";
 };
 
 if (_modeText isEqualTo  lbText [FIRING_TYPE_IDC, _mode]) then {
