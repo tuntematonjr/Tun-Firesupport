@@ -62,9 +62,10 @@ switch (toLower _value) do {
 		private _name = ctrlText BOOKMARK_NAME_VALUE_IDC;
 		private _easting = ctrlText EASTING_IDC;
 		private _northing = ctrlText NORTHING_IDC;
-		//private _position = ([] call FUNC(getTargetPositon)) select 0;
+		private _position = ([] call FUNC(getTargetPositon)) select 0;
 		_name = format["TRP-%1 [%2:%3]",_name, _easting, _northing];
-		GVAR(trpValues) pushBackUnique [_name, _easting, _northing];
+		GVAR(trpValues) pushBackUnique [_name, _easting, _northing, _position];
+		GVAR(trpValues) sort true;
 	};
 
 	case "remove": { 
