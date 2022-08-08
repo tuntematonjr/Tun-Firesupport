@@ -1,17 +1,12 @@
 ﻿/*
  * Author: [Tuntematon]
  * [Description]
- *
+ * Create marker where you are targeting
  * Arguments:
- * 0: The first argument <STRING>
- * 1: The second argument <OBJECT>
- * 2: Multiple input types <STRING|ARRAY|CODE>
- * 3: Optional input <BOOL> (default: true)
- * 4: Optional input with multiple types <CODE|STRING> (default: {true})
- * 5: Not mandatory input <STRING> (default: nil)
+ * None
  *
  * Return Value:
- * The return value <BOOL>
+ * None
  *
  * Example:
  * [] call tun_firesupport_fnc_firingPosMarker
@@ -58,7 +53,7 @@ if (_markerStartPoint isEqualTo "") then {
 	_markerStartPointArea1 = createMarkerLocal ["tun_firesupport_startPointMarkerArea1", _positionStart];
 	_markerStartPointArea1 setMarkerShapeLocal "Ellipse";
 	_markerStartPointArea1 setMarkerSizeLocal  [_radius, _radius];
-	_markerStartPointArea1 setMarkerBrush _brush;
+	_markerStartPointArea1 setMarkerBrushLocal _brush;
 	_markerStartPointArea1 setMarkerAlphaLocal _alpha;
 	_markerStartPointArea1 setMarkerColorLocal _color;
 	GVAR(firingPosMarkerStart) = [_markerStartPoint, _markerStartPointArea1];
@@ -87,7 +82,7 @@ if (_firingStyle isNotEqualTo (localize "STR_tun_firesupport_firemode_standard")
 	if (_markerStartPointArea2 isEqualTo "") then {
 		_markerStartPointArea2 = createMarkerLocal ["tun_firesupport_startPointMarkerArea2", _newPos];
 		_markerStartPointArea2 setMarkerShapeLocal "Rectangle";
-		_markerStartPointArea2 setMarkerDir _dir;
+		_markerStartPointArea2 setMarkerDirLocal _dir;
 		_markerStartPointArea2 setMarkerSizeLocal  [_radius, _distance];
 
 		_markerStartPointArea3 = createMarkerLocal ["tun_firesupport_startPointMarkerArea3", _positionEnd];
@@ -96,14 +91,14 @@ if (_firingStyle isNotEqualTo (localize "STR_tun_firesupport_firemode_standard")
 
 		{
 			private _marker = _x;
-			_marker setMarkerBrush _brush;
+			_marker setMarkerBrushLocal _brush;
 			_marker setMarkerAlphaLocal _alpha;
 			_marker setMarkerColorLocal _color;
 		} forEach [_markerStartPointArea2, _markerStartPointArea3];
 		GVAR(firingPosMarkerArea) = [_markerStartPointArea2, _markerStartPointArea3];
 	} else {
 		_markerStartPointArea2 setMarkerPosLocal _newPos;
-		_markerStartPointArea2 setMarkerDir _dir;
+		_markerStartPointArea2 setMarkerDirLocal _dir;
 		_markerStartPointArea2 setMarkerSizeLocal  [_radius, _distance];
 		
 		_markerStartPointArea3 setMarkerPosLocal _positionEnd;
