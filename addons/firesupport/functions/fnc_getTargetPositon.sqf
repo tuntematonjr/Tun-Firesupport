@@ -63,7 +63,7 @@ if !(_skipFiremode) then {
 		_positionStart = _positionStart getPos [parseNumber _eastingEnd, parseNumber _northingEnd]; // this is for tweaking start coordinates with distance and direction. So varnames are missleading in this.
 	} else {
 		if (_positionEnd isEqualTo [-1,-1,-1]) then {
-			_positionStart = [[_eastingEnd, _northingEnd], false] call CBA_fnc_mapGridToPos;
+			_positionEnd = [[_eastingEnd, _northingEnd], false] call CBA_fnc_mapGridToPos;
 			MAP(_positionEnd,_x + 1);
 		};
 	};
