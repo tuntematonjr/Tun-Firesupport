@@ -45,14 +45,19 @@ if (_textQueue isEqualTo _firemissionText) then {
 		if (_status isEqualTo ("STR_tun_firesupport_status_firing" call BIS_fnc_localize)) then {
 			hintSilent ("STR_tun_firesupport_cancelMissions" call BIS_fnc_localize);
 			[{
-				_this params ["_gunModule", "_firemission"];
+				_this params ["_gunModule", "_firemission", "_ammoModule"];
 				private _firemissions = _gunModule getVariable [QGVAR(firemissions), []];
 				private _value = _firemissions find _firemission;
 				if (_value isNotEqualTo -1) then {
 					_firemissions deleteAt _value;
 					_gunModule setVariable [QGVAR(firemissions), _firemissions, true];
+					if (count _firemissions isEqualTo 0) then {
+						_ammoModule setVariable ["reservedCount", 0, true];
+						_gunModule setVariable [QGVAR(is_firing), false, true];
+						_gunModule setVariable [QGVAR(status), "STR_tun_firesupport_status_free" call BIS_fnc_localize, true];
+					};
 				};
-			}, [_gunModule, _firemission], 20] call CBA_fnc_waitAndExecute;
+			}, [_gunModule, _firemission, _ammoModule], 20] call CBA_fnc_waitAndExecute;
 		};		
 	} else {
 		_firemissions deleteAt _curSelected;

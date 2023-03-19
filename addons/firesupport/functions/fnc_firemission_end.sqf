@@ -21,7 +21,6 @@ if (_nameList isEqualTo _name) then {
 	_firemissions deleteAt 0;
 };
 
-
 _gunModule setVariable [QGVAR(firemissions), _firemissions, true];
 _gunModule setVariable [QGVAR(is_firing), false, true];
 _gunModule setVariable [QGVAR(status), "STR_tun_firesupport_status_free" call BIS_fnc_localize, true];
