@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Author: [Tuntematon]
  * [Description]
  *
@@ -24,9 +24,9 @@ if (_new) then {
 if (isNull GVAR(soundOBJ) && !GVAR(playingSounds)) then {
 	GVAR(playingSounds) = true;
 	private _sound = GVAR(soundQueue) select 0;
-	GVAR(soundOBJ) = playsound _sound;
+	GVAR(soundOBJ) = playSound _sound;
 	GVAR(soundQueue) deleteAt 0;
-	[{ isnull GVAR(soundOBJ) }, {
+	[{ isNull GVAR(soundOBJ) }, {
 		if (count GVAR(soundQueue) > 0) then {
 		
 			GVAR(playingSounds) = false;

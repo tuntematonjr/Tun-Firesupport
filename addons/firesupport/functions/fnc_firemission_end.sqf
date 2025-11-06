@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Author: [Tuntematon]
  * [Description]
  *
@@ -23,7 +23,7 @@ if (_nameList isEqualTo _name) then {
 
 _gunModule setVariable [QGVAR(firemissions), _firemissions, true];
 _gunModule setVariable [QGVAR(is_firing), false, true];
-_gunModule setVariable [QGVAR(status), "STR_tun_firesupport_status_free" call BIS_fnc_localize, true];
+_gunModule setVariable [QGVAR(status), "STR_tunfire_firesupport_status_free" call BIS_fnc_localize, true];
 
 "tun_firemissionDone" remoteExec [QFUNC(playSound), _player];
 private _ammoCount = _ammoModule getVariable ["currentCount", 0];

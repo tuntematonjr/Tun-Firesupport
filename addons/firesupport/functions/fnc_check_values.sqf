@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Author: [Tuntematon]
  * [Description]
  * Check values so they are not out of bounds
@@ -17,7 +17,7 @@ params [["_updateSlider",false]];
 
 private _firingStyle = lbText [FIRING_TYPE_IDC,lbCurSel FIRING_TYPE_IDC];
 
-if (_firingStyle isEqualTo (localize "STR_tun_firesupport_firemode_standard")) then {
+if (_firingStyle isEqualTo (localize "STR_tunfire_firesupport_firemode_standard")) then {
 	//private _distance = ctrlText EASTING_END_IDC;
 	private _direction = ctrlText NORTHING_END_IDC;
 	private _directionParset = parseNumber _direction;

@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Author: [Tuntematon]
  * [Description]
  *
@@ -46,7 +46,7 @@ if (_gunCount < 1) then {
 
 
 _gunModule setVariable [QGVAR(is_firing), false, true];
-_gunModule setVariable [QGVAR(status), "STR_tun_firesupport_status_free" call BIS_fnc_localize, true];
+_gunModule setVariable [QGVAR(status), "STR_tunfire_firesupport_status_free" call BIS_fnc_localize, true];
 _gunModule setVariable [QGVAR(firemissions), [], true];
 _gunModule setVariable [QGVAR(firemissionCount), 0, true];
 
@@ -89,6 +89,6 @@ switch ( toLower _side) do {
 };
 
 if (_markerConditio) then {
-	private _pos = getpos _gunModule;
+	private _pos = getPos _gunModule;
 	[_name, _pos, "ICON", [1, 1], "TYPE:", _icon, "COLOR:", _color, "TEXT:", _name] remoteExecCall ["CBA_fnc_createMarker", _side, true];
 };

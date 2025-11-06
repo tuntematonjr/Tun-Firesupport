@@ -2,1451 +2,503 @@
 <Project name="Fire Support">
   <Package name="Firesupport">
     <Container name="UI">
-      <Key ID="STR_tun_firesupport_easting">
+      <Key ID="STR_tunfire_firesupport_easting">
         <Original>EASTING</Original>
         <English>EASTING</English>
-        <Czech>EASTING</Czech>
-        <French>EASTING</French>
-        <Spanish>EASTING</Spanish>
-        <Italian>EASTING</Italian>
-        <Polish>EASTING</Polish>
-        <Portuguese>EASTING</Portuguese>
-        <Russian>EASTING</Russian>
-        <German>EASTING</German>
       </Key>
-      <Key ID="STR_tun_firesupport_northing">
+      <Key ID="STR_tunfire_firesupport_northing">
         <Original>NORTHING</Original>
         <English>NORTHING</English>
-        <Czech>NORTHING</Czech>
-        <French>NORTHING</French>
-        <Spanish>NORTHING</Spanish>
-        <Italian>NORTHING</Italian>
-        <Polish>NORTHING</Polish>
-        <Portuguese>NORTHING</Portuguese>
-        <Russian>NORTHING</Russian>
-        <German>NORTHING</German>
       </Key>
-      <Key ID="STR_tun_firesupport_ammocount">
+      <Key ID="STR_tunfire_firesupport_ammocount">
         <Original>Rounds to Fire</Original>
         <English>Rounds to Fire</English>
-        <Czech>Rounds to Fire</Czech>
-        <French>Rounds to Fire</French>
-        <Spanish>Rounds to Fire</Spanish>
-        <Italian>Rounds to Fire</Italian>
-        <Polish>Rounds to Fire</Polish>
-        <Portuguese>Rounds to Fire</Portuguese>
-        <Russian>Rounds to Fire</Russian>
-        <German>Rounds to Fire</German>
       </Key>
-      <Key ID="STR_tun_firesupport_radius">
+      <Key ID="STR_tunfire_firesupport_radius">
         <Original>Radius</Original>
         <English>Radius</English>
-        <Czech>Radius</Czech>
-        <French>Radius</French>
-        <Spanish>Radius</Spanish>
-        <Italian>Radius</Italian>
-        <Polish>Radius</Polish>
-        <Portuguese>Radius</Portuguese>
-        <Russian>Radius</Russian>
-        <German>Radius</German>
       </Key>
-      <Key ID="STR_tun_firesupport_delay">
+      <Key ID="STR_tunfire_firesupport_delay">
         <Original>Firerate</Original>
         <English>Firerate</English>
-        <Czech>Firerate</Czech>
-        <French>Firerate</French>
-        <Spanish>Firerate</Spanish>
-        <Italian>Firerate</Italian>
-        <Polish>Firerate</Polish>
-        <Portuguese>Firerate</Portuguese>
-        <Russian>Firerate</Russian>
-        <German>Firerate</German>
       </Key>
-      <Key ID="STR_tun_firesupport_easting_end_point">
+      <Key ID="STR_tunfire_firesupport_easting_end_point">
         <Original>2nd EASTING</Original>
         <English>2nd EASTING</English>
-        <Czech>2nd EASTING</Czech>
-        <French>2nd EASTING</French>
-        <Spanish>2nd EASTING</Spanish>
-        <Italian>2nd EASTING</Italian>
-        <Polish>2nd EASTING</Polish>
-        <Portuguese>2nd EASTING</Portuguese>
-        <Russian>2nd EASTING</Russian>
-        <German>2nd EASTING</German>
       </Key>
-      <Key ID="STR_tun_firesupport_northing_end_point">
+      <Key ID="STR_tunfire_firesupport_northing_end_point">
         <Original>2nd NORTHING</Original>
         <English>2nd NORTHING</English>
-        <Czech>2nd NORTHING</Czech>
-        <French>2nd NORTHING</French>
-        <Spanish>2nd NORTHING</Spanish>
-        <Italian>2nd NORTHING</Italian>
-        <Polish>2nd NORTHING</Polish>
-        <Portuguese>2nd NORTHING</Portuguese>
-        <Russian>2nd NORTHING</Russian>
-        <German>2nd NORTHING</German>
       </Key>
-      <Key ID="STR_tun_firesupport_remainign_ammo">
+      <Key ID="STR_tunfire_firesupport_remainign_ammo">
         <Original>Remaining Ammo</Original>
         <English>Remaining Ammo</English>
-        <Czech>Remaining Ammo</Czech>
-        <French>Remaining Ammo</French>
-        <Spanish>Remaining Ammo</Spanish>
-        <Italian>Remaining Ammo</Italian>
-        <Polish>Remaining Ammo</Polish>
-        <Portuguese>Remaining Ammo</Portuguese>
-        <Russian>Remaining Ammo</Russian>
-        <German>Remaining Ammo</German>
       </Key>
-      <Key ID="STR_tun_firesupport_eta">
+      <Key ID="STR_tunfire_firesupport_eta">
         <Original>ETA</Original>
         <English>ETA</English>
-        <Czech>ETA</Czech>
-        <French>ETA</French>
-        <Spanish>ETA</Spanish>
-        <Italian>ETA</Italian>
-        <Polish>ETA</Polish>
-        <Portuguese>ETA</Portuguese>
-        <Russian>ETA</Russian>
-        <German>ETA</German>
       </Key>
-      <Key ID="STR_tun_firesupport_Header">
+      <Key ID="STR_tunfire_firesupport_Header">
         <Original>A.F.I: Advanced Firesupport Interface</Original>
         <English>A.F.I: Advanced Firesupport Interface</English>
-        <Czech>A.F.I: Advanced Firesupport Interface</Czech>
-        <French>A.F.I: Advanced Firesupport Interface</French>
-        <Spanish>A.F.I: Advanced Firesupport Interface</Spanish>
-        <Italian>A.F.I: Advanced Firesupport Interface</Italian>
-        <Polish>A.F.I: Advanced Firesupport Interface</Polish>
-        <Portuguese>A.F.I: Advanced Firesupport Interface</Portuguese>
-        <Russian>A.F.I: Advanced Firesupport Interface</Russian>
-        <German>A.F.I: Advanced Firesupport Interface</German>
       </Key>
-      <Key ID="STR_tun_firesupport_bookmark">
+      <Key ID="STR_tunfire_firesupport_bookmark">
         <Original>Bookmarks</Original>
         <English>Bookmarks</English>
-        <Czech>Bookmarks</Czech>
-        <French>Bookmarks</French>
-        <Spanish>Bookmarks</Spanish>
-        <Italian>Bookmarks</Italian>
-        <Polish>Bookmarks</Polish>
-        <Portuguese>Bookmarks</Portuguese>
-        <Russian>Bookmarks</Russian>
-        <German>Bookmarks</German>
       </Key>
-      <Key ID="STR_tun_firesupport_name_bookmark_text">
+      <Key ID="STR_tunfire_firesupport_name_bookmark_text">
         <Original>Name</Original>
         <English>Name</English>
-        <Czech>Name</Czech>
-        <French>Name</French>
-        <Spanish>Name</Spanish>
-        <Italian>Name</Italian>
-        <Polish>Name</Polish>
-        <Portuguese>Name</Portuguese>
-        <Russian>Name</Russian>
-        <German>Name</German>
       </Key>
-      <Key ID="STR_tun_firesupport_remove_bookmark">
+      <Key ID="STR_tunfire_firesupport_remove_bookmark">
         <Original>Remove</Original>
         <English>Remove</English>
-        <Czech>Remove</Czech>
-        <French>Remove</French>
-        <Spanish>Remove</Spanish>
-        <Italian>Remove</Italian>
-        <Polish>Remove</Polish>
-        <Portuguese>Remove</Portuguese>
-        <Russian>Remove</Russian>
-        <German>Remove</German>
       </Key>
-      <Key ID="STR_tun_firesupport_bookmark_add">
+      <Key ID="STR_tunfire_firesupport_bookmark_add">
         <Original>Add Bookmark</Original>
         <English>Add Bookmark</English>
-        <Czech>Add Bookmark</Czech>
-        <French>Add Bookmark</French>
-        <Spanish>Add Bookmark</Spanish>
-        <Italian>Add Bookmark</Italian>
-        <Polish>Add Bookmark</Polish>
-        <Portuguese>Add Bookmark</Portuguese>
-        <Russian>Add Bookmark</Russian>
-        <German>Add Bookmark</German>
       </Key>
-      <Key ID="STR_tun_firesupport_trp_add">
+      <Key ID="STR_tunfire_firesupport_trp_add">
         <Original>Add TRP</Original>
         <English>Add TRP</English>
-        <Czech>Add TRP</Czech>
-        <French>Add TRP</French>
-        <Spanish>Add TRP</Spanish>
-        <Italian>Add TRP</Italian>
-        <Polish>Add TRP</Polish>
-        <Portuguese>Add TRP</Portuguese>
-        <Russian>Add TRP</Russian>
-        <German>Add TRP</German>
       </Key>
-      <Key ID="STR_tun_firesupport_bookmark_import">
+      <Key ID="STR_tunfire_firesupport_bookmark_import">
         <Original>Import</Original>
         <English>Import</English>
-        <Czech>Import</Czech>
-        <French>Import</French>
-        <Spanish>Import</Spanish>
-        <Italian>Import</Italian>
-        <Polish>Import</Polish>
-        <Portuguese>Import</Portuguese>
-        <Russian>Import</Russian>
-        <German>Import</German>
       </Key>
-      <Key ID="STR_tun_firesupport_bookmark_export">
+      <Key ID="STR_tunfire_firesupport_bookmark_export">
         <Original>Export</Original>
         <English>Export</English>
-        <Czech>Export</Czech>
-        <French>Export</French>
-        <Spanish>Export</Spanish>
-        <Italian>Export</Italian>
-        <Polish>Export</Polish>
-        <Portuguese>Export</Portuguese>
-        <Russian>Export</Russian>
-        <German>Export</German>
       </Key>
-      <Key ID="STR_tun_firesupport_minimap">
+      <Key ID="STR_tunfire_firesupport_minimap">
         <Original>Minimap</Original>
         <English>Minimap</English>
-        <Czech>Minimap</Czech>
-        <French>Minimap</French>
-        <Spanish>Minimap</Spanish>
-        <Italian>Minimap</Italian>
-        <Polish>Minimap</Polish>
-        <Portuguese>Minimap</Portuguese>
-        <Russian>Minimap</Russian>
-        <German>Minimap</German>
       </Key>
-      <Key ID="STR_tun_firesupport_selectTRP">
+      <Key ID="STR_tunfire_firesupport_selectTRP">
         <Original>Select TRP</Original>
         <English>Select TRP</English>
-        <Czech>Select TRP</Czech>
-        <French>Select TRP</French>
-        <Spanish>Select TRP</Spanish>
-        <Italian>Select TRP</Italian>
-        <Polish>Select TRP</Polish>
-        <Portuguese>Select TRP</Portuguese>
-        <Russian>Select TRP</Russian>
-        <German>Select TRP</German>
       </Key>
-      <Key ID="STR_tun_firesupport_selectTRP_END">
+      <Key ID="STR_tunfire_firesupport_selectTRP_END">
         <Original>Select 2nd TRP </Original>
         <English>Select 2nd TRP </English>
-        <Czech>Select 2nd TRP </Czech>
-        <French>Select 2nd TRP </French>
-        <Spanish>Select 2nd TRP </Spanish>
-        <Italian>Select 2nd TRP </Italian>
-        <Polish>Select 2nd TRP </Polish>
-        <Portuguese>Select 2nd TRP </Portuguese>
-        <Russian>Select 2nd TRP </Russian>
-        <German>Select 2nd TRP </German>
       </Key>
-      <Key ID="STR_tun_firesupport_toggletimetext">
+      <Key ID="STR_tunfire_firesupport_toggletimetext">
         <Original>Splash time</Original>
         <English>Splash time</English>
-        <Czech>Splash time</Czech>
-        <French>Splash time</French>
-        <Spanish>Splash time</Spanish>
-        <Italian>Splash time</Italian>
-        <Polish>Splash time</Polish>
-        <Portuguese>Splash time</Portuguese>
-        <Russian>Splash time</Russian>
-        <German>Splash time</German>
       </Key>
-      <Key ID="STR_tun_firesupport_queue_remove">
+      <Key ID="STR_tunfire_firesupport_queue_remove">
         <Original>Remove</Original>
         <English>Remove</English>
-        <Czech>Remove</Czech>
-        <French>Remove</French>
-        <Spanish>Remove</Spanish>
-        <Italian>Remove</Italian>
-        <Polish>Remove</Polish>
-        <Portuguese>Remove</Portuguese>
-        <Russian>Remove</Russian>
-        <German>Remove</German>
       </Key>
-      <Key ID="STR_tun_firesupport_correctionDistance">
+      <Key ID="STR_tunfire_firesupport_correctionDistance">
         <Original>Distance</Original>
         <English>Distance</English>
-        <Czech>Distance</Czech>
-        <French>Distance</French>
-        <Spanish>Distance</Spanish>
-        <Italian>Distance</Italian>
-        <Polish>Distance</Polish>
-        <Portuguese>Distance</Portuguese>
-        <Russian>Distance</Russian>
-        <German>Distance</German>
       </Key>
-      <Key ID="STR_tun_firesupport_correctionDirection">
+      <Key ID="STR_tunfire_firesupport_correctionDirection">
         <Original>Direction</Original>
         <English>Direction</English>
-        <Czech>Direction</Czech>
-        <French>Direction</French>
-        <Spanish>Direction</Spanish>
-        <Italian>Direction</Italian>
-        <Polish>Direction</Polish>
-        <Portuguese>Direction</Portuguese>
-        <Russian>Direction</Russian>
-        <German>Direction</German>
       </Key>
     </Container>
     <Container name="tooltips">
-      <Key ID="STR_tun_firesupport_ammocount_tooltip">
+      <Key ID="STR_tunfire_firesupport_ammocount_tooltip">
         <Original>Only Numbers. How many rounds will be shot.</Original>
         <English>Only Numbers. How many rounds will be shot.</English>
-        <Czech>Only Numbers. How many rounds will be shot.</Czech>
-        <French>Only Numbers. How many rounds will be shot.</French>
-        <Spanish>Only Numbers. How many rounds will be shot.</Spanish>
-        <Italian>Only Numbers. How many rounds will be shot.</Italian>
-        <Polish>Only Numbers. How many rounds will be shot.</Polish>
-        <Portuguese>Only Numbers. How many rounds will be shot.</Portuguese>
-        <Russian>Only Numbers. How many rounds will be shot.</Russian>
-        <German>Only Numbers. How many rounds will be shot.</German>
       </Key>
-      <Key ID="STR_tun_firesupport_radius_tooltip">
+      <Key ID="STR_tunfire_firesupport_radius_tooltip">
         <Original>Only numbers. Spread for fire mission (meters)</Original>
         <English>Only numbers. Spread for fire mission (meters)</English>
-        <Czech>Only numbers. Spread for fire mission (meters)</Czech>
-        <French>Only numbers. Spread for fire mission (meters)</French>
-        <Spanish>Only numbers. Spread for fire mission (meters)</Spanish>
-        <Italian>Only numbers. Spread for fire mission (meters)</Italian>
-        <Polish>Only numbers. Spread for fire mission (meters)</Polish>
-        <Portuguese>Only numbers. Spread for fire mission (meters)</Portuguese>
-        <Russian>Only numbers. Spread for fire mission (meters)</Russian>
-        <German>Only numbers. Spread for fire mission (meters)</German>
       </Key>
-      <Key ID="STR_tun_firesupport_delay_tooltip">
+      <Key ID="STR_tunfire_firesupport_delay_tooltip">
         <Original>Only numbers. Gun firerate.</Original>
         <English>Only numbers. Gun firerate.</English>
-        <Czech>Only numbers. Gun firerate.</Czech>
-        <French>Only numbers. Gun firerate.</French>
-        <Spanish>Only numbers. Gun firerate.</Spanish>
-        <Italian>Only numbers. Gun firerate.</Italian>
-        <Polish>Only numbers. Gun firerate.</Polish>
-        <Portuguese>Only numbers. Gun firerate.</Portuguese>
-        <Russian>Only numbers. Gun firerate.</Russian>
-        <German>Only numbers. Gun firerate.</German>
       </Key>
-      <Key ID="STR_tun_firesupport_coordinates_tooltip_northing">
+      <Key ID="STR_tunfire_firesupport_coordinates_tooltip_northing">
         <Original>Only numbers. Northing is y (vertical) axis (read from left or right side of map).</Original>
         <English>Only numbers. Northing is y (vertical) axis (read from left or right side of map).</English>
-        <Czech>Only numbers. Northing is y (vertical) axis (read from left or right side of map).</Czech>
-        <French>Only numbers. Northing is y (vertical) axis (read from left or right side of map).</French>
-        <Spanish>Only numbers. Northing is y (vertical) axis (read from left or right side of map).</Spanish>
-        <Italian>Only numbers. Northing is y (vertical) axis (read from left or right side of map).</Italian>
-        <Polish>Only numbers. Northing is y (vertical) axis (read from left or right side of map).</Polish>
-        <Portuguese>Only numbers. Northing is y (vertical) axis (read from left or right side of map).</Portuguese>
-        <Russian>Only numbers. Northing is y (vertical) axis (read from left or right side of map).</Russian>
-        <German>Only numbers. Northing is y (vertical) axis (read from left or right side of map).</German>
       </Key>
-      <Key ID="STR_tun_firesupport_coordinates_tooltip_easting">
+      <Key ID="STR_tunfire_firesupport_coordinates_tooltip_easting">
         <Original>Only numbers. Easting is x (horizontal) axis (read from top or bottom side of map).</Original>
         <English>Only numbers. Easting is x (horizontal) axis (read from top or bottom side of map).</English>
-        <Czech>Only numbers. Easting is x (horizontal) axis (read from top or bottom side of map).</Czech>
-        <French>Only numbers. Easting is x (horizontal) axis (read from top or bottom side of map).</French>
-        <Spanish>Only numbers. Easting is x (horizontal) axis (read from top or bottom side of map).</Spanish>
-        <Italian>Only numbers. Easting is x (horizontal) axis (read from top or bottom side of map).</Italian>
-        <Polish>Only numbers. Easting is x (horizontal) axis (read from top or bottom side of map).</Polish>
-        <Portuguese>Only numbers. Easting is x (horizontal) axis (read from top or bottom side of map).</Portuguese>
-        <Russian>Only numbers. Easting is x (horizontal) axis (read from top or bottom side of map).</Russian>
-        <German>Only numbers. Easting is x (horizontal) axis (read from top or bottom side of map).</German>
       </Key>
-      <Key ID="STR_tun_firesupport_remaining_ammo_tooltip">
+      <Key ID="STR_tunfire_firesupport_remaining_ammo_tooltip">
         <Original>Remaining ammo. (Remaining ammo after all firemissions)</Original>
         <English>Remaining ammo. (Remaining ammo after all firemissions)</English>
-        <Czech>Remaining ammo. (Remaining ammo after all firemissions)</Czech>
-        <French>Remaining ammo. (Remaining ammo after all firemissions)</French>
-        <Spanish>Remaining ammo. (Remaining ammo after all firemissions)</Spanish>
-        <Italian>Remaining ammo. (Remaining ammo after all firemissions)</Italian>
-        <Polish>Remaining ammo. (Remaining ammo after all firemissions)</Polish>
-        <Portuguese>Remaining ammo. (Remaining ammo after all firemissions)</Portuguese>
-        <Russian>Remaining ammo. (Remaining ammo after all firemissions)</Russian>
-        <German>Remaining ammo. (Remaining ammo after all firemissions)</German>
       </Key>
-      <Key ID="STR_tun_firesupport_eta_tooltip">
+      <Key ID="STR_tunfire_firesupport_eta_tooltip">
         <Original>Estimated time to splash [MM:SS]</Original>
         <English>Estimated time to splash [MM:SS]</English>
-        <Czech>Estimated time to splash [MM:SS]</Czech>
-        <French>Estimated time to splash [MM:SS]</French>
-        <Spanish>Estimated time to splash [MM:SS]</Spanish>
-        <Italian>Estimated time to splash [MM:SS]</Italian>
-        <Polish>Estimated time to splash [MM:SS]</Polish>
-        <Portuguese>Estimated time to splash [MM:SS]</Portuguese>
-        <Russian>Estimated time to splash [MM:SS]</Russian>
-        <German>Estimated time to splash [MM:SS]</German>
       </Key>
-      <Key ID="STR_tun_firesupport_name_text_tooltip">
+      <Key ID="STR_tunfire_firesupport_name_text_tooltip">
         <Original>Give name for firemission to bookmark</Original>
         <English>Give name for firemission to bookmark</English>
-        <Czech>Give name for firemission to bookmark</Czech>
-        <French>Give name for firemission to bookmark</French>
-        <Spanish>Give name for firemission to bookmark</Spanish>
-        <Italian>Give name for firemission to bookmark</Italian>
-        <Polish>Give name for firemission to bookmark</Polish>
-        <Portuguese>Give name for firemission to bookmark</Portuguese>
-        <Russian>Give name for firemission to bookmark</Russian>
-        <German>Give name for firemission to bookmark</German>
       </Key>
-      <Key ID="STR_tun_firesupport_editbox_tooltip">
+      <Key ID="STR_tunfire_firesupport_editbox_tooltip">
         <Original>To export, copy and save this array somwhere, like desktop text file.    To import bookmarks, copy your array of values here.</Original>
         <English>To export, copy and save this array somwhere, like desktop text file.    To import bookmarks, copy your array of values here.</English>
-        <Czech>To export, copy and save this array somwhere, like desktop text file.    To import bookmarks, copy your array of values here.</Czech>
-        <French>To export, copy and save this array somwhere, like desktop text file.    To import bookmarks, copy your array of values here.</French>
-        <Spanish>To export, copy and save this array somwhere, like desktop text file.    To import bookmarks, copy your array of values here.</Spanish>
-        <Italian>To export, copy and save this array somwhere, like desktop text file.    To import bookmarks, copy your array of values here.</Italian>
-        <Polish>To export, copy and save this array somwhere, like desktop text file.    To import bookmarks, copy your array of values here.</Polish>
-        <Portuguese>To export, copy and save this array somwhere, like desktop text file.    To import bookmarks, copy your array of values here.</Portuguese>
-        <Russian>To export, copy and save this array somwhere, like desktop text file.    To import bookmarks, copy your array of values here.</Russian>
-        <German>To export, copy and save this array somwhere, like desktop text file.    To import bookmarks, copy your array of values here.</German>
       </Key>
-      <Key ID="STR_tun_firesupport_bookmark_import_tooltip">
+      <Key ID="STR_tunfire_firesupport_bookmark_import_tooltip">
         <Original>Copy paste array of values to editbox at left and press this</Original>
         <English>Copy paste array of values to editbox at left and press this</English>
-        <Czech>Copy paste array of values to editbox at left and press this</Czech>
-        <French>Copy paste array of values to editbox at left and press this</French>
-        <Spanish>Copy paste array of values to editbox at left and press this</Spanish>
-        <Italian>Copy paste array of values to editbox at left and press this</Italian>
-        <Polish>Copy paste array of values to editbox at left and press this</Polish>
-        <Portuguese>Copy paste array of values to editbox at left and press this</Portuguese>
-        <Russian>Copy paste array of values to editbox at left and press this</Russian>
-        <German>Copy paste array of values to editbox at left and press this</German>
       </Key>
-      <Key ID="STR_tun_firesupport_bookmark_export_tooltip">
+      <Key ID="STR_tunfire_firesupport_bookmark_export_tooltip">
         <Original>After pressing this button. Copy paste array from editbox at left somewhere else, like text file at your desktop and save it.</Original>
         <English>After pressing this button. Copy paste array from editbox at left somewhere else, like text file at your desktop and save it.</English>
-        <Czech>After pressing this button. Copy paste array from editbox at left somewhere else, like text file at your desktop and save it.</Czech>
-        <French>After pressing this button. Copy paste array from editbox at left somewhere else, like text file at your desktop and save it.</French>
-        <Spanish>After pressing this button. Copy paste array from editbox at left somewhere else, like text file at your desktop and save it.</Spanish>
-        <Italian>After pressing this button. Copy paste array from editbox at left somewhere else, like text file at your desktop and save it.</Italian>
-        <Polish>After pressing this button. Copy paste array from editbox at left somewhere else, like text file at your desktop and save it.</Polish>
-        <Portuguese>After pressing this button. Copy paste array from editbox at left somewhere else, like text file at your desktop and save it.</Portuguese>
-        <Russian>After pressing this button. Copy paste array from editbox at left somewhere else, like text file at your desktop and save it.</Russian>
-        <German>After pressing this button. Copy paste array from editbox at left somewhere else, like text file at your desktop and save it.</German>
       </Key>
-      <Key ID="STR_tun_firesupport_bookmark_remove_tooltip">
+      <Key ID="STR_tunfire_firesupport_bookmark_remove_tooltip">
         <Original>Remove currently selected bookmark</Original>
         <English>Remove currently selected bookmark</English>
-        <Czech>Remove currently selected bookmark</Czech>
-        <French>Remove currently selected bookmark</French>
-        <Spanish>Remove currently selected bookmark</Spanish>
-        <Italian>Remove currently selected bookmark</Italian>
-        <Polish>Remove currently selected bookmark</Polish>
-        <Portuguese>Remove currently selected bookmark</Portuguese>
-        <Russian>Remove currently selected bookmark</Russian>
-        <German>Remove currently selected bookmark</German>
       </Key>
-      <Key ID="STR_tun_firesupport_bookmark_add_tooltip">
+      <Key ID="STR_tunfire_firesupport_bookmark_add_tooltip">
         <Original>Save currently added settings as bookmakr</Original>
         <English>Save currently added settings as bookmakr</English>
-        <Czech>Save currently added settings as bookmakr</Czech>
-        <French>Save currently added settings as bookmakr</French>
-        <Spanish>Save currently added settings as bookmakr</Spanish>
-        <Italian>Save currently added settings as bookmakr</Italian>
-        <Polish>Save currently added settings as bookmakr</Polish>
-        <Portuguese>Save currently added settings as bookmakr</Portuguese>
-        <Russian>Save currently added settings as bookmakr</Russian>
-        <German>Save currently added settings as bookmakr</German>
       </Key>
-      <Key ID="STR_tun_firesupport_bookmark_trp_tooltip">
+      <Key ID="STR_tunfire_firesupport_bookmark_trp_tooltip">
         <Original>Save currently set first coordinates as target reference point</Original>
         <English>Save currently set first coordinates as target reference point</English>
-        <Czech>Save currently set first coordinates as target reference point</Czech>
-        <French>Save currently set first coordinates as target reference point</French>
-        <Spanish>Save currently set first coordinates as target reference point</Spanish>
-        <Italian>Save currently set first coordinates as target reference point</Italian>
-        <Polish>Save currently set first coordinates as target reference point</Polish>
-        <Portuguese>Save currently set first coordinates as target reference point</Portuguese>
-        <Russian>Save currently set first coordinates as target reference point</Russian>
-        <German>Save currently set first coordinates as target reference point</German>
       </Key>
-      <Key ID="STR_tun_firesupport_toggletimetext_tooltip">
+      <Key ID="STR_tunfire_firesupport_toggletimetext_tooltip">
         <Original>Time when shells hit ground</Original>
         <English>Time when shells hit ground</English>
-        <Czech>Time when shells hit ground</Czech>
-        <French>Time when shells hit ground</French>
-        <Spanish>Time when shells hit ground</Spanish>
-        <Italian>Time when shells hit ground</Italian>
-        <Polish>Time when shells hit ground</Polish>
-        <Portuguese>Time when shells hit ground</Portuguese>
-        <Russian>Time when shells hit ground</Russian>
-        <German>Time when shells hit ground</German>
       </Key>
-      <Key ID="STR_tun_firesupport_toggletimetext_button_tooltip">
+      <Key ID="STR_tunfire_firesupport_toggletimetext_button_tooltip">
         <Original>Toggle timed firemission. Set HH:MM:SS ingame clock when firemission should start</Original>
         <English>Toggle timed firemission. Set HH:MM:SS ingame clock when firemission should start</English>
-        <Czech>Toggle timed firemission. Set HH:MM:SS ingame clock when firemission should start</Czech>
-        <French>Toggle timed firemission. Set HH:MM:SS ingame clock when firemission should start</French>
-        <Spanish>Toggle timed firemission. Set HH:MM:SS ingame clock when firemission should start</Spanish>
-        <Italian>Toggle timed firemission. Set HH:MM:SS ingame clock when firemission should start</Italian>
-        <Polish>Toggle timed firemission. Set HH:MM:SS ingame clock when firemission should start</Polish>
-        <Portuguese>Toggle timed firemission. Set HH:MM:SS ingame clock when firemission should start</Portuguese>
-        <Russian>Toggle timed firemission. Set HH:MM:SS ingame clock when firemission should start</Russian>
-        <German>Toggle timed firemission. Set HH:MM:SS ingame clock when firemission should start</German>
       </Key>
-      <Key ID="STR_tun_firesupport_time_tooltip">
+      <Key ID="STR_tunfire_firesupport_time_tooltip">
         <Original>Set HH:MM:SS ingame clock when firemission should start</Original>
         <English>Set HH:MM:SS ingame clock when firemission should start</English>
-        <Czech>Set HH:MM:SS ingame clock when firemission should start</Czech>
-        <French>Set HH:MM:SS ingame clock when firemission should start</French>
-        <Spanish>Set HH:MM:SS ingame clock when firemission should start</Spanish>
-        <Italian>Set HH:MM:SS ingame clock when firemission should start</Italian>
-        <Polish>Set HH:MM:SS ingame clock when firemission should start</Polish>
-        <Portuguese>Set HH:MM:SS ingame clock when firemission should start</Portuguese>
-        <Russian>Set HH:MM:SS ingame clock when firemission should start</Russian>
-        <German>Set HH:MM:SS ingame clock when firemission should start</German>
       </Key>
-      <Key ID="STR_tun_firesupport_trpToggle_tooltip">
+      <Key ID="STR_tunfire_firesupport_trpToggle_tooltip">
         <Original>Toggle using TRP</Original>
         <English>Toggle using TRP</English>
-        <Czech>Toggle using TRP</Czech>
-        <French>Toggle using TRP</French>
-        <Spanish>Toggle using TRP</Spanish>
-        <Italian>Toggle using TRP</Italian>
-        <Polish>Toggle using TRP</Polish>
-        <Portuguese>Toggle using TRP</Portuguese>
-        <Russian>Toggle using TRP</Russian>
-        <German>Toggle using TRP</German>
       </Key>
-      <Key ID="STR_tun_firesupport_queue_remove_tooltip">
+      <Key ID="STR_tunfire_firesupport_queue_remove_tooltip">
         <Original>Remove currently selected from queue</Original>
         <English>Remove currently selected from queue</English>
-        <Czech>Remove currently selected from queue</Czech>
-        <French>Remove currently selected from queue</French>
-        <Spanish>Remove currently selected from queue</Spanish>
-        <Italian>Remove currently selected from queue</Italian>
-        <Polish>Remove currently selected from queue</Polish>
-        <Portuguese>Remove currently selected from queue</Portuguese>
-        <Russian>Remove currently selected from queue</Russian>
-        <German>Remove currently selected from queue</German>
       </Key>
-      <Key ID="STR_tun_firesupport_toggleVolleyFire_tooltip">
+      <Key ID="STR_tunfire_firesupport_toggleVolleyFire_tooltip">
         <Original>Toggle volley fire. All guns will fire same time, othervise they will keep constant barrage going on.</Original>
         <English>Toggle volley fire. All guns will fire same time, othervise they will keep constant barrage going on.</English>
-        <Czech>Toggle volley fire. All guns will fire same time, othervise they will keep constant barrage going on.</Czech>
-        <French>Toggle volley fire. All guns will fire same time, othervise they will keep constant barrage going on.</French>
-        <Spanish>Toggle volley fire. All guns will fire same time, othervise they will keep constant barrage going on.</Spanish>
-        <Italian>Toggle volley fire. All guns will fire same time, othervise they will keep constant barrage going on.</Italian>
-        <Polish>Toggle volley fire. All guns will fire same time, othervise they will keep constant barrage going on.</Polish>
-        <Portuguese>Toggle volley fire. All guns will fire same time, othervise they will keep constant barrage going on.</Portuguese>
-        <Russian>Toggle volley fire. All guns will fire same time, othervise they will keep constant barrage going on.</Russian>
-        <German>Toggle volley fire. All guns will fire same time, othervise they will keep constant barrage going on.</German>
       </Key>
-      <Key ID="STR_tun_firesupport_correctionDistance_tooltip">
+      <Key ID="STR_tunfire_firesupport_correctionDistance_tooltip">
         <Original>Corrected distance from given coordinates. In meters.</Original>
         <English>Corrected distance from given coordinates. In meters.</English>
-        <Czech>Corrected distance from given coordinates. In meters.</Czech>
-        <French>Corrected distance from given coordinates. In meters.</French>
-        <Spanish>Corrected distance from given coordinates. In meters.</Spanish>
-        <Italian>Corrected distance from given coordinates. In meters.</Italian>
-        <Polish>Corrected distance from given coordinates. In meters.</Polish>
-        <Portuguese>Corrected distance from given coordinates. In meters.</Portuguese>
-        <Russian>Corrected distance from given coordinates. In meters.</Russian>
-        <German>Corrected distance from given coordinates. In meters.</German>
       </Key>
-      <Key ID="STR_tun_firesupport_correctionDirection_tooltip">
+      <Key ID="STR_tunfire_firesupport_correctionDirection_tooltip">
         <Original>Correction direction for given coordinates.</Original>
         <English>Correction direction for given coordinates.</English>
-        <Czech>Correction direction for given coordinates.</Czech>
-        <French>Correction direction for given coordinates.</French>
-        <Spanish>Correction direction for given coordinates.</Spanish>
-        <Italian>Correction direction for given coordinates.</Italian>
-        <Polish>Correction direction for given coordinates.</Polish>
-        <Portuguese>Correction direction for given coordinates.</Portuguese>
-        <Russian>Correction direction for given coordinates.</Russian>
-        <German>Correction direction for given coordinates.</German>
       </Key>
-      <Key ID="STR_tun_firesupport_toggleMoveMap_tooltip">
+      <Key ID="STR_tunfire_firesupport_toggleMoveMap_tooltip">
         <Original>Toggle auto move map to target coordinates</Original>
         <English>Toggle auto move map to target coordinates</English>
-        <Czech>Toggle auto move map to target coordinates</Czech>
-        <French>Toggle auto move map to target coordinates</French>
-        <Spanish>Toggle auto move map to target coordinates</Spanish>
-        <Italian>Toggle auto move map to target coordinates</Italian>
-        <Polish>Toggle auto move map to target coordinates</Polish>
-        <Portuguese>Toggle auto move map to target coordinates</Portuguese>
-        <Russian>Toggle auto move map to target coordinates</Russian>
-        <German>Toggle auto move map to target coordinates</German>
       </Key>
     </Container>
     <Container name="cba">
-      <Key ID="STR_tun_firesupport_cba_is_required">
+      <Key ID="STR_tunfire_firesupport_cba_is_required">
         <Original>Is item required</Original>
         <English>Is item required</English>
-        <Czech>Is item required</Czech>
-        <French>Is item required</French>
-        <Spanish>Is item required</Spanish>
-        <Italian>Is item required</Italian>
-        <Polish>Is item required</Polish>
-        <Portuguese>Is item required</Portuguese>
-        <Russian>Is item required</Russian>
-        <German>Is item required</German>
       </Key>
-      <Key ID="STR_tun_firesupport_cba_is_required_tooltip">
+      <Key ID="STR_tunfire_firesupport_cba_is_required_tooltip">
         <Original>Is specifig item required</Original>
         <English>Is specifig item required</English>
-        <Czech>Is specifig item required</Czech>
-        <French>Is specifig item required</French>
-        <Spanish>Is specifig item required</Spanish>
-        <Italian>Is specifig item required</Italian>
-        <Polish>Is specifig item required</Polish>
-        <Portuguese>Is specifig item required</Portuguese>
-        <Russian>Is specifig item required</Russian>
-        <German>Is specifig item required</German>
       </Key>
-      <Key ID="STR_tun_firesupport_cba_Category_main">
+      <Key ID="STR_tunfire_firesupport_cba_Category_main">
         <Original>TUN Firesupport</Original>
         <English>TUN Firesupport</English>
-        <Czech>TUN Firesupport</Czech>
-        <French>TUN Firesupport</French>
-        <Spanish>TUN Firesupport</Spanish>
-        <Italian>TUN Firesupport</Italian>
-        <Polish>TUN Firesupport</Polish>
-        <Portuguese>TUN Firesupport</Portuguese>
-        <Russian>TUN Firesupport</Russian>
-        <German>TUN Firesupport</German>
       </Key>
-      <Key ID="STR_tun_firesupport_cba_required_items_classnames">
+      <Key ID="STR_tunfire_firesupport_cba_required_items_classnames">
         <Original>Required items</Original>
         <English>Required items</English>
-        <Czech>Required items</Czech>
-        <French>Required items</French>
-        <Spanish>Required items</Spanish>
-        <Italian>Required items</Italian>
-        <Polish>Required items</Polish>
-        <Portuguese>Required items</Portuguese>
-        <Russian>Required items</Russian>
-        <German>Required items</German>
       </Key>
-      <Key ID="STR_tun_firesupport_cba_required_items_classnames_tooltip">
+      <Key ID="STR_tunfire_firesupport_cba_required_items_classnames_tooltip">
         <Original>Required items classnames. Must be strings, seperated by comas</Original>
         <English>Required items classnames. Must be strings, seperated by comas</English>
-        <Czech>Required items classnames. Must be strings, seperated by comas</Czech>
-        <French>Required items classnames. Must be strings, seperated by comas</French>
-        <Spanish>Required items classnames. Must be strings, seperated by comas</Spanish>
-        <Italian>Required items classnames. Must be strings, seperated by comas</Italian>
-        <Polish>Required items classnames. Must be strings, seperated by comas</Polish>
-        <Portuguese>Required items classnames. Must be strings, seperated by comas</Portuguese>
-        <Russian>Required items classnames. Must be strings, seperated by comas</Russian>
-        <German>Required items classnames. Must be strings, seperated by comas</German>
       </Key>
-      <Key ID="STR_tun_firesupport_cba_debug">
+      <Key ID="STR_tunfire_firesupport_cba_debug">
         <Original>Debug mode</Original>
         <English>Debug mode</English>
-        <Czech>Debug mode</Czech>
-        <French>Debug mode</French>
-        <Spanish>Debug mode</Spanish>
-        <Italian>Debug mode</Italian>
-        <Polish>Debug mode</Polish>
-        <Portuguese>Debug mode</Portuguese>
-        <Russian>Debug mode</Russian>
-        <German>Debug mode</German>
       </Key>
-      <Key ID="STR_tun_firesupport_cba_firePosMarker">
+      <Key ID="STR_tunfire_firesupport_cba_firePosMarker">
         <Original>Show marker on firing pos</Original>
         <English>Show marker on firing pos</English>
-        <Czech>Show marker on firing pos</Czech>
-        <French>Show marker on firing pos</French>
-        <Spanish>Show marker on firing pos</Spanish>
-        <Italian>Show marker on firing pos</Italian>
-        <Polish>Show marker on firing pos</Polish>
-        <Portuguese>Show marker on firing pos</Portuguese>
-        <Russian>Show marker on firing pos</Russian>
-        <German>Show marker on firing pos</German>
       </Key>
-      <Key ID="STR_tun_firesupport_cba_firePosMarker_tooltip">
+      <Key ID="STR_tunfire_firesupport_cba_firePosMarker_tooltip">
         <Original>If enabled, there will be marker where you are calling firesupport in firesupport interface.</Original>
         <English>If enabled, there will be marker where you are calling firesupport in firesupport interface.</English>
-        <Czech>If enabled, there will be marker where you are calling firesupport in firesupport interface.</Czech>
-        <French>If enabled, there will be marker where you are calling firesupport in firesupport interface.</French>
-        <Spanish>If enabled, there will be marker where you are calling firesupport in firesupport interface.</Spanish>
-        <Italian>If enabled, there will be marker where you are calling firesupport in firesupport interface.</Italian>
-        <Polish>If enabled, there will be marker where you are calling firesupport in firesupport interface.</Polish>
-        <Portuguese>If enabled, there will be marker where you are calling firesupport in firesupport interface.</Portuguese>
-        <Russian>If enabled, there will be marker where you are calling firesupport in firesupport interface.</Russian>
-        <German>If enabled, there will be marker where you are calling firesupport in firesupport interface.</German>
       </Key>
-      <Key ID="STR_tun_firesupport_cba_alwaysShowTRPmarkers">
+      <Key ID="STR_tunfire_firesupport_cba_alwaysShowTRPmarkers">
         <Original>Always show TRP markers</Original>
         <English>Always show TRP markers</English>
-        <Czech>Always show TRP markers</Czech>
-        <French>Always show TRP markers</French>
-        <Spanish>Always show TRP markers</Spanish>
-        <Italian>Always show TRP markers</Italian>
-        <Polish>Always show TRP markers</Polish>
-        <Portuguese>Always show TRP markers</Portuguese>
-        <Russian>Always show TRP markers</Russian>
-        <German>Always show TRP markers</German>
       </Key>
-      <Key ID="STR_tun_firesupport_cba_enableShowTRPmarkers">
+      <Key ID="STR_tunfire_firesupport_cba_enableShowTRPmarkers">
         <Original>Enable TRP markers</Original>
         <English>Enable TRP markers</English>
-        <Czech>Enable TRP markers</Czech>
-        <French>Enable TRP markers</French>
-        <Spanish>Enable TRP markers</Spanish>
-        <Italian>Enable TRP markers</Italian>
-        <Polish>Enable TRP markers</Polish>
-        <Portuguese>Enable TRP markers</Portuguese>
-        <Russian>Enable TRP markers</Russian>
-        <German>Enable TRP markers</German>
       </Key>
-      <Key ID="STR_tun_firesupport_cba_alwaysShowTRPmarkers_tooltip">
+      <Key ID="str_tunfire_firesupport_cba_enableshowtrpmarkers_tooltip">
+        <Original>Enable TRP markers</Original>
+        <English>Enable TRP markers</English>
+      </Key>
+      <Key ID="STR_tunfire_firesupport_cba_alwaysShowTRPmarkers_tooltip">
         <Original>If enabled, TRP markers are always shown in map, not only when interface is opened.</Original>
         <English>If enabled, TRP markers are always shown in map, not only when interface is opened.</English>
-        <Czech>If enabled, TRP markers are always shown in map, not only when interface is opened.</Czech>
-        <French>If enabled, TRP markers are always shown in map, not only when interface is opened.</French>
-        <Spanish>If enabled, TRP markers are always shown in map, not only when interface is opened.</Spanish>
-        <Italian>If enabled, TRP markers are always shown in map, not only when interface is opened.</Italian>
-        <Polish>If enabled, TRP markers are always shown in map, not only when interface is opened.</Polish>
-        <Portuguese>If enabled, TRP markers are always shown in map, not only when interface is opened.</Portuguese>
-        <Russian>If enabled, TRP markers are always shown in map, not only when interface is opened.</Russian>
-        <German>If enabled, TRP markers are always shown in map, not only when interface is opened.</German>
       </Key>
-      <Key ID="STR_tun_firesupport_cba_enableShowTRPmarkerss_tooltip">
+      <Key ID="STR_tunfire_firesupport_cba_enableShowTRPmarkerss_tooltip">
         <Original>If enabled, TRP markers will be created</Original>
         <English>If enabled, TRP markers will be created</English>
-        <Czech>If enabled, TRP markers will be created</Czech>
-        <French>If enabled, TRP markers will be created</French>
-        <Spanish>If enabled, TRP markers will be created</Spanish>
-        <Italian>If enabled, TRP markers will be created</Italian>
-        <Polish>If enabled, TRP markers will be created</Polish>
-        <Portuguese>If enabled, TRP markers will be created</Portuguese>
-        <Russian>If enabled, TRP markers will be created</Russian>
-        <German>If enabled, TRP markers will be created</German>
       </Key>
-      <Key ID="STR_tun_firesupport_cba_trpMarkerType">
+      <Key ID="STR_tunfire_firesupport_cba_trpMarkerType">
         <Original>TRP marker type</Original>
         <English>TRP marker type</English>
-        <Czech>TRP marker type</Czech>
-        <French>TRP marker type</French>
-        <Spanish>TRP marker type</Spanish>
-        <Italian>TRP marker type</Italian>
-        <Polish>TRP marker type</Polish>
-        <Portuguese>TRP marker type</Portuguese>
-        <Russian>TRP marker type</Russian>
-        <German>TRP marker type</German>
       </Key>
-      <Key ID="STR_tun_firesupport_cba_trpMarkerType_value">
+      <Key ID="STR_tunfire_firesupport_cba_trpMarkerType_value">
         <Original>mil_destroy_noShadow</Original>
         <English>mil_destroy_noShadow</English>
-        <Czech>mil_destroy_noShadow</Czech>
-        <French>mil_destroy_noShadow</French>
-        <Spanish>mil_destroy_noShadow</Spanish>
-        <Italian>mil_destroy_noShadow</Italian>
-        <Polish>mil_destroy_noShadow</Polish>
-        <Portuguese>mil_destroy_noShadow</Portuguese>
-        <Russian>mil_destroy_noShadow</Russian>
-        <German>mil_destroy_noShadow</German>
       </Key>
-      <Key ID="STR_tun_firesupport_cba_trpMarkerType_tooltip">
+      <Key ID="STR_tunfire_firesupport_cba_trpMarkerType_tooltip">
         <Original>classname for marker used in TRPs</Original>
         <English>classname for marker used in TRPs</English>
-        <Czech>classname for marker used in TRPs</Czech>
-        <French>classname for marker used in TRPs</French>
-        <Spanish>classname for marker used in TRPs</Spanish>
-        <Italian>classname for marker used in TRPs</Italian>
-        <Polish>classname for marker used in TRPs</Polish>
-        <Portuguese>classname for marker used in TRPs</Portuguese>
-        <Russian>classname for marker used in TRPs</Russian>
-        <German>classname for marker used in TRPs</German>
       </Key>
     </Container>
     <Container name="Firemodes">
-      <Key ID="STR_tun_firesupport_firemode_standard">
+      <Key ID="STR_tunfire_firesupport_firemode_standard">
         <Original>Standard</Original>
         <English>Standard</English>
-        <Czech>Standard</Czech>
-        <French>Standard</French>
-        <Spanish>Standard</Spanish>
-        <Italian>Standard</Italian>
-        <Polish>Standard</Polish>
-        <Portuguese>Standard</Portuguese>
-        <Russian>Standard</Russian>
-        <German>Standard</German>
       </Key>
-      <Key ID="STR_tun_firesupport_firemode_creeping_barrage">
+      <Key ID="STR_tunfire_firesupport_firemode_creeping_barrage">
         <Original>Creeping barrage</Original>
         <English>Creeping barrage</English>
-        <Czech>Creeping barrage</Czech>
-        <French>Creeping barrage</French>
-        <Spanish>Creeping barrage</Spanish>
-        <Italian>Creeping barrage</Italian>
-        <Polish>Creeping barrage</Polish>
-        <Portuguese>Creeping barrage</Portuguese>
-        <Russian>Creeping barrage</Russian>
-        <German>Creeping barrage</German>
       </Key>
-      <Key ID="STR_tun_firesupport_firemode_wall">
+      <Key ID="STR_tunfire_firesupport_firemode_wall">
         <Original>The Wall</Original>
         <English>The Wall</English>
-        <Czech>The Wall</Czech>
-        <French>The Wall</French>
-        <Spanish>The Wall</Spanish>
-        <Italian>The Wall</Italian>
-        <Polish>The Wall</Polish>
-        <Portuguese>The Wall</Portuguese>
-        <Russian>The Wall</Russian>
-        <German>The Wall</German>
       </Key>
     </Container>
     <Container name="module">
-      <Key ID="STR_tun_firesupport_module_Ammo">
+      <Key ID="STR_tunfire_firesupport_module_Ammo">
         <Original>Tun firesupport ammo</Original>
         <English>Tun firesupport ammo</English>
-        <Czech>Tun firesupport ammo</Czech>
-        <French>Tun firesupport ammo</French>
-        <Spanish>Tun firesupport ammo</Spanish>
-        <Italian>Tun firesupport ammo</Italian>
-        <Polish>Tun firesupport ammo</Polish>
-        <Portuguese>Tun firesupport ammo</Portuguese>
-        <Russian>Tun firesupport ammo</Russian>
-        <German>Tun firesupport ammo</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_category">
+      <Key ID="STR_tunfire_firesupport_module_category">
         <Original>Tun Firesupport</Original>
         <English>Tun Firesupport</English>
-        <Czech>Tun Firesupport</Czech>
-        <French>Tun Firesupport</French>
-        <Spanish>Tun Firesupport</Spanish>
-        <Italian>Tun Firesupport</Italian>
-        <Polish>Tun Firesupport</Polish>
-        <Portuguese>Tun Firesupport</Portuguese>
-        <Russian>Tun Firesupport</Russian>
-        <German>Tun Firesupport</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_ammo_displayname">
+      <Key ID="STR_tunfire_firesupport_module_ammo_displayname">
         <Original>Ammo</Original>
         <English>Ammo</English>
-        <Czech>Ammo</Czech>
-        <French>Ammo</French>
-        <Spanish>Ammo</Spanish>
-        <Italian>Ammo</Italian>
-        <Polish>Ammo</Polish>
-        <Portuguese>Ammo</Portuguese>
-        <Russian>Ammo</Russian>
-        <German>Ammo</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_ammo_description">
+      <Key ID="STR_tunfire_firesupport_module_ammo_description">
         <Original>Put ammo classname here</Original>
         <English>Put ammo classname here</English>
-        <Czech>Put ammo classname here</Czech>
-        <French>Put ammo classname here</French>
-        <Spanish>Put ammo classname here</Spanish>
-        <Italian>Put ammo classname here</Italian>
-        <Polish>Put ammo classname here</Polish>
-        <Portuguese>Put ammo classname here</Portuguese>
-        <Russian>Put ammo classname here</Russian>
-        <German>Put ammo classname here</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_ammo_count_description">
+      <Key ID="STR_tunfire_firesupport_module_ammo_count_description">
         <Original>Amount</Original>
         <English>Amount</English>
-        <Czech>Amount</Czech>
-        <French>Amount</French>
-        <Spanish>Amount</Spanish>
-        <Italian>Amount</Italian>
-        <Polish>Amount</Polish>
-        <Portuguese>Amount</Portuguese>
-        <Russian>Amount</Russian>
-        <German>Amount</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_ammo_count_displayName">
+      <Key ID="STR_tunfire_firesupport_module_ammo_count_displayName">
         <Original>Amount</Original>
         <English>Count</English>
-        <Czech>Count</Czech>
-        <French>Count</French>
-        <Spanish>Count</Spanish>
-        <Italian>Count</Italian>
-        <Polish>Count</Polish>
-        <Portuguese>Count</Portuguese>
-        <Russian>Count</Russian>
-        <German>Count</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_descriptio_ammo">
+      <Key ID="STR_tunfire_firesupport_module_descriptio_ammo">
         <Original>WIP</Original>
         <English>WIP</English>
-        <Czech>WIP</Czech>
-        <French>WIP</French>
-        <Spanish>WIP</Spanish>
-        <Italian>WIP</Italian>
-        <Polish>WIP</Polish>
-        <Portuguese>WIP</Portuguese>
-        <Russian>WIP</Russian>
-        <German>WIP</German>
       </Key>
     </Container>
     <Container name="module gun">
-      <Key ID="STR_tun_firesupport_module_gun_class_description">
+      <Key ID="STR_tunfire_firesupport_module_gun_class_description">
         <Original>Gun Classname</Original>
         <English>Gun Classname</English>
-        <Czech>Gun Classname</Czech>
-        <French>Gun Classname</French>
-        <Spanish>Gun Classname</Spanish>
-        <Italian>Gun Classname</Italian>
-        <Polish>Gun Classname</Polish>
-        <Portuguese>Gun Classname</Portuguese>
-        <Russian>Gun Classname</Russian>
-        <German>Gun Classname</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_gun_class_displayname">
+      <Key ID="STR_tunfire_firesupport_module_gun_class_displayname">
         <Original>Gun Classname</Original>
         <English>Gun Classname</English>
-        <Czech>Gun Classname</Czech>
-        <French>Gun Classname</French>
-        <Spanish>Gun Classname</Spanish>
-        <Italian>Gun Classname</Italian>
-        <Polish>Gun Classname</Polish>
-        <Portuguese>Gun Classname</Portuguese>
-        <Russian>Gun Classname</Russian>
-        <German>Gun Classname</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_gun">
+      <Key ID="STR_tunfire_firesupport_module_gun">
         <Original>Tun Firesupport Gun</Original>
         <English>Tun Firesupport Gun</English>
-        <Czech>Tun Firesupport Gun</Czech>
-        <French>Tun Firesupport Gun</French>
-        <Spanish>Tun Firesupport Gun</Spanish>
-        <Italian>Tun Firesupport Gun</Italian>
-        <Polish>Tun Firesupport Gun</Polish>
-        <Portuguese>Tun Firesupport Gun</Portuguese>
-        <Russian>Tun Firesupport Gun</Russian>
-        <German>Tun Firesupport Gun</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_description_gun">
+      <Key ID="STR_tunfire_firesupport_module_description_gun">
         <Original>Give classname for gun which will be used.</Original>
         <English>Give classname for gun which will be used.</English>
-        <Czech>Give classname for gun which will be used.</Czech>
-        <French>Give classname for gun which will be used.</French>
-        <Spanish>Give classname for gun which will be used.</Spanish>
-        <Italian>Give classname for gun which will be used.</Italian>
-        <Polish>Give classname for gun which will be used.</Polish>
-        <Portuguese>Give classname for gun which will be used.</Portuguese>
-        <Russian>Give classname for gun which will be used.</Russian>
-        <German>Give classname for gun which will be used.</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_gun_name_displayname">
+      <Key ID="STR_tunfire_firesupport_module_gun_name_displayname">
         <Original>Displayname</Original>
         <English>Displayname</English>
-        <Czech>Displayname</Czech>
-        <French>Displayname</French>
-        <Spanish>Displayname</Spanish>
-        <Italian>Displayname</Italian>
-        <Polish>Displayname</Polish>
-        <Portuguese>Displayname</Portuguese>
-        <Russian>Displayname</Russian>
-        <German>Displayname</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_gun_name_description">
+      <Key ID="STR_tunfire_firesupport_module_gun_name_description">
         <Original>Unique name wich is shown in arty list. MUST BE UNIQUE</Original>
         <English>Unique name wich is shown in arty list. MUST BE UNIQUE</English>
-        <Czech>Unique name wich is shown in arty list. MUST BE UNIQUE</Czech>
-        <French>Unique name wich is shown in arty list. MUST BE UNIQUE</French>
-        <Spanish>Unique name wich is shown in arty list. MUST BE UNIQUE</Spanish>
-        <Italian>Unique name wich is shown in arty list. MUST BE UNIQUE</Italian>
-        <Polish>Unique name wich is shown in arty list. MUST BE UNIQUE</Polish>
-        <Portuguese>Unique name wich is shown in arty list. MUST BE UNIQUE</Portuguese>
-        <Russian>Unique name wich is shown in arty list. MUST BE UNIQUE</Russian>
-        <German>Unique name wich is shown in arty list. MUST BE UNIQUE</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_gun_countDown_displayname">
+      <Key ID="STR_tunfire_firesupport_module_gun_countDown_displayname">
         <Original>Countdown (Seconds)</Original>
         <English>Countdown (Seconds)</English>
-        <Czech>Countdown (Seconds)</Czech>
-        <French>Countdown (Seconds)</French>
-        <Spanish>Countdown (Seconds)</Spanish>
-        <Italian>Countdown (Seconds)</Italian>
-        <Polish>Countdown (Seconds)</Polish>
-        <Portuguese>Countdown (Seconds)</Portuguese>
-        <Russian>Countdown (Seconds)</Russian>
-        <German>Countdown (Seconds)</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_gun_countDown_description">
+      <Key ID="STR_tunfire_firesupport_module_gun_countDown_description">
         <Original>Delay until rounds are fired (calculation delay. Seconds)</Original>
         <English>Delay until rounds are fired (calculation delay. Seconds)</English>
-        <Czech>Delay until rounds are fired (calculation delay. Seconds)</Czech>
-        <French>Delay until rounds are fired (calculation delay. Seconds)</French>
-        <Spanish>Delay until rounds are fired (calculation delay. Seconds)</Spanish>
-        <Italian>Delay until rounds are fired (calculation delay. Seconds)</Italian>
-        <Polish>Delay until rounds are fired (calculation delay. Seconds)</Polish>
-        <Portuguese>Delay until rounds are fired (calculation delay. Seconds)</Portuguese>
-        <Russian>Delay until rounds are fired (calculation delay. Seconds)</Russian>
-        <German>Delay until rounds are fired (calculation delay. Seconds)</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_gun_delayMin_displayname">
+      <Key ID="STR_tunfire_firesupport_module_gun_delayMin_displayname">
         <Original>Min Delay</Original>
         <English>Min Delay</English>
-        <Czech>Min Delay</Czech>
-        <French>Min Delay</French>
-        <Spanish>Min Delay</Spanish>
-        <Italian>Min Delay</Italian>
-        <Polish>Min Delay</Polish>
-        <Portuguese>Min Delay</Portuguese>
-        <Russian>Min Delay</Russian>
-        <German>Min Delay</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_gun_delayMax_displayname">
+      <Key ID="STR_tunfire_firesupport_module_gun_delayMax_displayname">
         <Original>Max Delay</Original>
         <English>Max Delay</English>
-        <Czech>Max Delay</Czech>
-        <French>Max Delay</French>
-        <Spanish>Max Delay</Spanish>
-        <Italian>Max Delay</Italian>
-        <Polish>Max Delay</Polish>
-        <Portuguese>Max Delay</Portuguese>
-        <Russian>Max Delay</Russian>
-        <German>Max Delay</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_gun_delayMin_description">
+      <Key ID="STR_tunfire_firesupport_module_gun_delayMin_description">
         <Original>Fastest firerate for gun (Seconds)</Original>
         <English>Fastest firerate for gun (Seconds)</English>
-        <Czech>Fastest firerate for gun (Seconds)</Czech>
-        <French>Fastest firerate for gun (Seconds)</French>
-        <Spanish>Fastest firerate for gun (Seconds)</Spanish>
-        <Italian>Fastest firerate for gun (Seconds)</Italian>
-        <Polish>Fastest firerate for gun (Seconds)</Polish>
-        <Portuguese>Fastest firerate for gun (Seconds)</Portuguese>
-        <Russian>Fastest firerate for gun (Seconds)</Russian>
-        <German>Fastest firerate for gun (Seconds)</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_gun_delayMax_description">
+      <Key ID="STR_tunfire_firesupport_module_gun_delayMax_description">
         <Original>Slowest firerate for gun (Seconds)</Original>
         <English>Slowest firerate for gun (Seconds)</English>
-        <Czech>Slowest firerate for gun (Seconds)</Czech>
-        <French>Slowest firerate for gun (Seconds)</French>
-        <Spanish>Slowest firerate for gun (Seconds)</Spanish>
-        <Italian>Slowest firerate for gun (Seconds)</Italian>
-        <Polish>Slowest firerate for gun (Seconds)</Polish>
-        <Portuguese>Slowest firerate for gun (Seconds)</Portuguese>
-        <Russian>Slowest firerate for gun (Seconds)</Russian>
-        <German>Slowest firerate for gun (Seconds)</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_gun_spreadMin_displayname">
+      <Key ID="STR_tunfire_firesupport_module_gun_spreadMin_displayname">
         <Original>Min Spread</Original>
         <English>Min Spread</English>
-        <Czech>Min Spread</Czech>
-        <French>Min Spread</French>
-        <Spanish>Min Spread</Spanish>
-        <Italian>Min Spread</Italian>
-        <Polish>Min Spread</Polish>
-        <Portuguese>Min Spread</Portuguese>
-        <Russian>Min Spread</Russian>
-        <German>Min Spread</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_gun_spreadMAX_displayname">
+      <Key ID="STR_tunfire_firesupport_module_gun_spreadMAX_displayname">
         <Original>Max Spread</Original>
         <English>Max Spread</English>
-        <Czech>Max Spread</Czech>
-        <French>Max Spread</French>
-        <Spanish>Max Spread</Spanish>
-        <Italian>Max Spread</Italian>
-        <Polish>Max Spread</Polish>
-        <Portuguese>Max Spread</Portuguese>
-        <Russian>Max Spread</Russian>
-        <German>Max Spread</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_gun_spreadMin_description">
+      <Key ID="STR_tunfire_firesupport_module_gun_spreadMin_description">
         <Original>Min spread for rounds. default:50m</Original>
         <English>Min spread for rounds. default:50m</English>
-        <Czech>Min spread for rounds. default:50m</Czech>
-        <French>Min spread for rounds. default:50m</French>
-        <Spanish>Min spread for rounds. default:50m</Spanish>
-        <Italian>Min spread for rounds. default:50m</Italian>
-        <Polish>Min spread for rounds. default:50m</Polish>
-        <Portuguese>Min spread for rounds. default:50m</Portuguese>
-        <Russian>Min spread for rounds. default:50m</Russian>
-        <German>Min spread for rounds. default:50m</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_gun_spreadMax_description">
+      <Key ID="STR_tunfire_firesupport_module_gun_spreadMax_description">
         <Original>Max spread for rounds. default:500m</Original>
         <English>Max spread for rounds. default:500m</English>
-        <Czech>Max spread for rounds. default:500m</Czech>
-        <French>Max spread for rounds. default:500m</French>
-        <Spanish>Max spread for rounds. default:500m</Spanish>
-        <Italian>Max spread for rounds. default:500m</Italian>
-        <Polish>Max spread for rounds. default:500m</Polish>
-        <Portuguese>Max spread for rounds. default:500m</Portuguese>
-        <Russian>Max spread for rounds. default:500m</Russian>
-        <German>Max spread for rounds. default:500m</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_gun_side_displayname">
+      <Key ID="STR_tunfire_firesupport_module_gun_side_displayname">
         <Original>Side</Original>
         <English>Side</English>
-        <Czech>Side</Czech>
-        <French>Side</French>
-        <Spanish>Side</Spanish>
-        <Italian>Side</Italian>
-        <Polish>Side</Polish>
-        <Portuguese>Side</Portuguese>
-        <Russian>Side</Russian>
-        <German>Side</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_gun_side_description">
+      <Key ID="STR_tunfire_firesupport_module_gun_side_description">
         <Original>Which sides gun is this: west, east, resistance, civilian</Original>
         <English>Which sides gun is this: west, east, resistance, civilian</English>
-        <Czech>Which sides gun is this: west, east, resistance, civilian</Czech>
-        <French>Which sides gun is this: west, east, resistance, civilian</French>
-        <Spanish>Which sides gun is this: west, east, resistance, civilian</Spanish>
-        <Italian>Which sides gun is this: west, east, resistance, civilian</Italian>
-        <Polish>Which sides gun is this: west, east, resistance, civilian</Polish>
-        <Portuguese>Which sides gun is this: west, east, resistance, civilian</Portuguese>
-        <Russian>Which sides gun is this: west, east, resistance, civilian</Russian>
-        <German>Which sides gun is this: west, east, resistance, civilian</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_gun_minRange_displayname">
+      <Key ID="STR_tunfire_firesupport_module_gun_minRange_displayname">
         <Original>Min Range</Original>
         <English>Min Range</English>
-        <Czech>Min Range</Czech>
-        <French>Min Range</French>
-        <Spanish>Min Range</Spanish>
-        <Italian>Min Range</Italian>
-        <Polish>Min Range</Polish>
-        <Portuguese>Min Range</Portuguese>
-        <Russian>Min Range</Russian>
-        <German>Min Range</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_gun_minRange_description">
+      <Key ID="STR_tunfire_firesupport_module_gun_minRange_description">
         <Original>Minium range where this artillery unit can shoot</Original>
         <English>Minium range where this artillery unit can shoot</English>
-        <Czech>Minium range where this artillery unit can shoot</Czech>
-        <French>Minium range where this artillery unit can shoot</French>
-        <Spanish>Minium range where this artillery unit can shoot</Spanish>
-        <Italian>Minium range where this artillery unit can shoot</Italian>
-        <Polish>Minium range where this artillery unit can shoot</Polish>
-        <Portuguese>Minium range where this artillery unit can shoot</Portuguese>
-        <Russian>Minium range where this artillery unit can shoot</Russian>
-        <German>Minium range where this artillery unit can shoot</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_gun_maxRange_displayname">
+      <Key ID="STR_tunfire_firesupport_module_gun_maxRange_displayname">
         <Original>Max Range</Original>
         <English>Max Range</English>
-        <Czech>Max Range</Czech>
-        <French>Max Range</French>
-        <Spanish>Max Range</Spanish>
-        <Italian>Max Range</Italian>
-        <Polish>Max Range</Polish>
-        <Portuguese>Max Range</Portuguese>
-        <Russian>Max Range</Russian>
-        <German>Max Range</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_gun_maxRange_description">
+      <Key ID="STR_tunfire_firesupport_module_gun_maxRange_description">
         <Original>Max Range where this artillery can shoot.</Original>
         <English>Max Range where this artillery can shoot.</English>
-        <Czech>Max Range where this artillery can shoot.</Czech>
-        <French>Max Range where this artillery can shoot.</French>
-        <Spanish>Max Range where this artillery can shoot.</Spanish>
-        <Italian>Max Range where this artillery can shoot.</Italian>
-        <Polish>Max Range where this artillery can shoot.</Polish>
-        <Portuguese>Max Range where this artillery can shoot.</Portuguese>
-        <Russian>Max Range where this artillery can shoot.</Russian>
-        <German>Max Range where this artillery can shoot.</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_gun_markerToggle_displayname">
+      <Key ID="STR_tunfire_firesupport_module_gun_markerToggle_displayname">
         <Original>Create marker</Original>
         <English>Create marker</English>
-        <Czech>Create marker</Czech>
-        <French>Create marker</French>
-        <Spanish>Create marker</Spanish>
-        <Italian>Create marker</Italian>
-        <Polish>Create marker</Polish>
-        <Portuguese>Create marker</Portuguese>
-        <Russian>Create marker</Russian>
-        <German>Create marker</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_gun_gunCount_displayname">
+      <Key ID="STR_tunfire_firesupport_module_gun_gunCount_displayname">
         <Original>Gun count</Original>
         <English>Gun count</English>
-        <Czech>Gun count</Czech>
-        <French>Gun count</French>
-        <Spanish>Gun count</Spanish>
-        <Italian>Gun count</Italian>
-        <Polish>Gun count</Polish>
-        <Portuguese>Gun count</Portuguese>
-        <Russian>Gun count</Russian>
-        <German>Gun count</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_gun_markerToggle_description">
+      <Key ID="STR_tunfire_firesupport_module_gun_markerToggle_description">
         <Original>Create marker to map.</Original>
         <English>Create marker to map.</English>
-        <Czech>Create marker to map.</Czech>
-        <French>Create marker to map.</French>
-        <Spanish>Create marker to map.</Spanish>
-        <Italian>Create marker to map.</Italian>
-        <Polish>Create marker to map.</Polish>
-        <Portuguese>Create marker to map.</Portuguese>
-        <Russian>Create marker to map.</Russian>
-        <German>Create marker to map.</German>
       </Key>
-      <Key ID="STR_tun_firesupport_module_gun_gunCount_description">
+      <Key ID="STR_tunfire_firesupport_module_gun_gunCount_description">
         <Original>How many guns is there to shoot in volley</Original>
         <English>How many guns is there to shoot in volley</English>
-        <Czech>How many guns is there to shoot in volley</Czech>
-        <French>How many guns is there to shoot in volley</French>
-        <Spanish>How many guns is there to shoot in volley</Spanish>
-        <Italian>How many guns is there to shoot in volley</Italian>
-        <Polish>How many guns is there to shoot in volley</Polish>
-        <Portuguese>How many guns is there to shoot in volley</Portuguese>
-        <Russian>How many guns is there to shoot in volley</Russian>
-        <German>How many guns is there to shoot in volley</German>
       </Key>
     </Container>
     <Container name="notifications">
-      <Key ID="STR_tun_firesupport_NoGunSelected">
+      <Key ID="STR_tunfire_firesupport_NoGunSelected">
         <Original>No gun selected</Original>
         <English>No gun selected</English>
-        <Czech>No gun selected</Czech>
-        <French>No gun selected</French>
-        <Spanish>No gun selected</Spanish>
-        <Italian>No gun selected</Italian>
-        <Polish>No gun selected</Polish>
-        <Portuguese>No gun selected</Portuguese>
-        <Russian>No gun selected</Russian>
-        <German>No gun selected</German>
       </Key>
-      <Key ID="STR_tun_firesupport_cancelMissions">
+      <Key ID="STR_tunfire_firesupport_cancelMissions">
         <Original>Barrage will be canceled in 20s</Original>
         <English>Barrage will be canceled in 20s</English>
-        <Czech>Barrage will be canceled in 20s</Czech>
-        <French>Barrage will be canceled in 20s</French>
-        <Spanish>Barrage will be canceled in 20s</Spanish>
-        <Italian>Barrage will be canceled in 20s</Italian>
-        <Polish>Barrage will be canceled in 20s</Polish>
-        <Portuguese>Barrage will be canceled in 20s</Portuguese>
-        <Russian>Barrage will be canceled in 20s</Russian>
-        <German>Barrage will be canceled in 20s</German>
       </Key>
-      <Key ID="STR_tun_firesupport_NoAmmoSelected">
+      <Key ID="STR_tunfire_firesupport_NoAmmoSelected">
         <Original>No ammo selected</Original>
         <English>No ammo selected</English>
-        <Czech>No ammo selected</Czech>
-        <French>No ammo selected</French>
-        <Spanish>No ammo selected</Spanish>
-        <Italian>No ammo selected</Italian>
-        <Polish>No ammo selected</Polish>
-        <Portuguese>No ammo selected</Portuguese>
-        <Russian>No ammo selected</Russian>
-        <German>No ammo selected</German>
       </Key>
-      <Key ID="STR_tun_firesupport_AlreadyFiring">
+      <Key ID="STR_tunfire_firesupport_AlreadyFiring">
         <Original>Gun is bussy</Original>
         <English>Gun is bussy</English>
-        <Czech>Gun is bussy</Czech>
-        <French>Gun is bussy</French>
-        <Spanish>Gun is bussy</Spanish>
-        <Italian>Gun is bussy</Italian>
-        <Polish>Gun is bussy</Polish>
-        <Portuguese>Gun is bussy</Portuguese>
-        <Russian>Gun is bussy</Russian>
-        <German>Gun is bussy</German>
       </Key>
-      <Key ID="STR_tun_firesupport_NoShells">
+      <Key ID="STR_tunfire_firesupport_NoShells">
         <Original>Shell count is 0</Original>
         <English>Shell count is 0</English>
-        <Czech>Shell count is 0</Czech>
-        <French>Shell count is 0</French>
-        <Spanish>Shell count is 0</Spanish>
-        <Italian>Shell count is 0</Italian>
-        <Polish>Shell count is 0</Polish>
-        <Portuguese>Shell count is 0</Portuguese>
-        <Russian>Shell count is 0</Russian>
-        <German>Shell count is 0</German>
       </Key>
-      <Key ID="STR_tun_firesupport_OutOfRange">
+      <Key ID="STR_tunfire_firesupport_OutOfRange">
         <Original>Out of Range</Original>
         <English>Out of Range</English>
-        <Czech>Out of Range</Czech>
-        <French>Out of Range</French>
-        <Spanish>Out of Range</Spanish>
-        <Italian>Out of Range</Italian>
-        <Polish>Out of Range</Polish>
-        <Portuguese>Out of Range</Portuguese>
-        <Russian>Out of Range</Russian>
-        <German>Out of Range</German>
       </Key>
-      <Key ID="STR_tun_firesupport_NoTimedStrikesQueue">
+      <Key ID="STR_tunfire_firesupport_NoTimedStrikesQueue">
         <Original>Can't add timed barrage to queue.</Original>
         <English>Can't add timed barrage to queue.</English>
-        <Czech>Can't add timed barrage to queue.</Czech>
-        <French>Can't add timed barrage to queue.</French>
-        <Spanish>Can't add timed barrage to queue.</Spanish>
-        <Italian>Can't add timed barrage to queue.</Italian>
-        <Polish>Can't add timed barrage to queue.</Polish>
-        <Portuguese>Can't add timed barrage to queue.</Portuguese>
-        <Russian>Can't add timed barrage to queue.</Russian>
-        <German>Can't add timed barrage to queue.</German>
       </Key>
-      <Key ID="STR_tun_firesupport_NoTrpSelected">
+      <Key ID="STR_tunfire_firesupport_NoTrpSelected">
         <Original>No TRP selected.</Original>
         <English>No TRP selected.</English>
-        <Czech>No TRP selected.</Czech>
-        <French>No TRP selected.</French>
-        <Spanish>No TRP selected.</Spanish>
-        <Italian>No TRP selected.</Italian>
-        <Polish>No TRP selected.</Polish>
-        <Portuguese>No TRP selected.</Portuguese>
-        <Russian>No TRP selected.</Russian>
-        <German>No TRP selected.</German>
       </Key>
     </Container>
     <Container name="status">
-      <Key ID="STR_tun_firesupport_status_free">
+      <Key ID="STR_tunfire_firesupport_status_free">
         <Original>Available</Original>
         <English>Available</English>
-        <Czech>Available</Czech>
-        <French>Available</French>
-        <Spanish>Available</Spanish>
-        <Italian>Available</Italian>
-        <Polish>Available</Polish>
-        <Portuguese>Available</Portuguese>
-        <Russian>Available</Russian>
-        <German>Available</German>
       </Key>
-      <Key ID="STR_tun_firesupport_status_calculating">
+      <Key ID="STR_tunfire_firesupport_status_calculating">
         <Original>Calculating</Original>
         <English>Calculating</English>
-        <Czech>Calculating</Czech>
-        <French>Calculating</French>
-        <Spanish>Calculating</Spanish>
-        <Italian>Calculating</Italian>
-        <Polish>Calculating</Polish>
-        <Portuguese>Calculating</Portuguese>
-        <Russian>Calculating</Russian>
-        <German>Calculating</German>
       </Key>
-      <Key ID="STR_tun_firesupport_status_firing">
+      <Key ID="STR_tunfire_firesupport_status_firing">
         <Original>Firing</Original>
         <English>Firing</English>
-        <Czech>Firing</Czech>
-        <French>Firing</French>
-        <Spanish>Firing</Spanish>
-        <Italian>Firing</Italian>
-        <Polish>Firing</Polish>
-        <Portuguese>Firing</Portuguese>
-        <Russian>Firing</Russian>
-        <German>Firing</German>
       </Key>
-      <Key ID="STR_tun_firesupport_status_rip">
+      <Key ID="STR_tunfire_firesupport_status_rip">
         <Original>Destroyed</Original>
         <English>Destroyed</English>
-        <Czech>Destroyed</Czech>
-        <French>Destroyed</French>
-        <Spanish>Destroyed</Spanish>
-        <Italian>Destroyed</Italian>
-        <Polish>Destroyed</Polish>
-        <Portuguese>Destroyed</Portuguese>
-        <Russian>Destroyed</Russian>
-        <German>Destroyed</German>
       </Key>
-      <Key ID="STR_tun_firesupport_status_none">
+      <Key ID="STR_tunfire_firesupport_status_none">
         <Original>None</Original>
         <English>None</English>
-        <Czech>None</Czech>
-        <French>None</French>
-        <Spanish>None</Spanish>
-        <Italian>None</Italian>
-        <Polish>None</Polish>
-        <Portuguese>None</Portuguese>
-        <Russian>None</Russian>
-        <German>None</German>
       </Key>
-      <Key ID="STR_tun_firesupport_status_button_fire">
+      <Key ID="STR_tunfire_firesupport_status_button_fire">
         <Original>Fire!</Original>
         <English>Fire!</English>
-        <Czech>Fire!</Czech>
-        <French>Fire!</French>
-        <Spanish>Fire!</Spanish>
-        <Italian>Fire!</Italian>
-        <Polish>Fire!</Polish>
-        <Portuguese>Fire!</Portuguese>
-        <Russian>Fire!</Russian>
-        <German>Fire!</German>
       </Key>
-      <Key ID="STR_tun_firesupport_status_button_addQueue">
+      <Key ID="STR_tunfire_firesupport_status_button_addQueue">
         <Original>Add queue</Original>
         <English>Add queue</English>
-        <Czech>Add queue</Czech>
-        <French>Add queue</French>
-        <Spanish>Add queue</Spanish>
-        <Italian>Add queue</Italian>
-        <Polish>Add queue</Polish>
-        <Portuguese>Add queue</Portuguese>
-        <Russian>Add queue</Russian>
-        <German>Add queue</German>
       </Key>
     </Container>
     <Container name="converter">
-      <Key ID="STR_tun_firesupport_converter_header">
+      <Key ID="STR_tunfire_firesupport_converter_header">
         <Original>SWT and Firesupport array converter</Original>
         <English>SWT and Firesupport array converter</English>
-        <Czech>SWT and Firesupport array converter</Czech>
-        <French>SWT and Firesupport array converter</French>
-        <Spanish>SWT and Firesupport array converter</Spanish>
-        <Italian>SWT and Firesupport array converter</Italian>
-        <Polish>SWT and Firesupport array converter</Polish>
-        <Portuguese>SWT and Firesupport array converter</Portuguese>
-        <Russian>SWT and Firesupport array converter</Russian>
-        <German>SWT and Firesupport array converter</German>
       </Key>
-      <Key ID="STR_tun_firesupport_converter_swtEditBoxText">
+      <Key ID="STR_tunfire_firesupport_converter_swtEditBoxText">
         <Original>Put sweet marker array here</Original>
         <English>Put sweet marker array here</English>
-        <Czech>Put sweet marker array here</Czech>
-        <French>Put sweet marker array here</French>
-        <Spanish>Put sweet marker array here</Spanish>
-        <Italian>Put sweet marker array here</Italian>
-        <Polish>Put sweet marker array here</Polish>
-        <Portuguese>Put sweet marker array here</Portuguese>
-        <Russian>Put sweet marker array here</Russian>
-        <German>Put sweet marker array here</German>
       </Key>
-      <Key ID="STR_tun_firesupport_converter_firesupportEditBoxText">
+      <Key ID="STR_tunfire_firesupport_converter_firesupportEditBoxText">
         <Original>Put firesupport array here</Original>
         <English>Put firesupport array here</English>
-        <Czech>Put firesupport array here</Czech>
-        <French>Put firesupport array here</French>
-        <Spanish>Put firesupport array here</Spanish>
-        <Italian>Put firesupport array here</Italian>
-        <Polish>Put firesupport array here</Polish>
-        <Portuguese>Put firesupport array here</Portuguese>
-        <Russian>Put firesupport array here</Russian>
-        <German>Put firesupport array here</German>
       </Key>
     </Container>
     <Container name="briefing">
-      <Key ID="STR_tun_firesupport_briefing_subject">
+      <Key ID="STR_tunfire_firesupport_briefing_subject">
         <Original>Tun - Firesupport</Original>
         <English>Tun - Firesupport</English>
-        <Czech>Tun - Firesupport</Czech>
-        <French>Tun - Firesupport</French>
-        <Spanish>Tun - Firesupport</Spanish>
-        <Italian>Tun - Firesupport</Italian>
-        <Polish>Tun - Firesupport</Polish>
-        <Portuguese>Tun - Firesupport</Portuguese>
-        <Russian>Tun - Firesupport</Russian>
-        <German>Tun - Firesupport</German>
       </Key>
-      <Key ID="STR_tun_firesupport_briefing_convertRecord">
+      <Key ID="STR_tunfire_firesupport_briefing_convertRecord">
         <Original>Convert TRP/SWT</Original>
         <English>Convert TRP/SWT</English>
-        <Czech>Convert TRP/SWT</Czech>
-        <French>Convert TRP/SWT</French>
-        <Spanish>Convert TRP/SWT</Spanish>
-        <Italian>Convert TRP/SWT</Italian>
-        <Polish>Convert TRP/SWT</Polish>
-        <Portuguese>Convert TRP/SWT</Portuguese>
-        <Russian>Convert TRP/SWT</Russian>
-        <German>Convert TRP/SWT</German>
       </Key>
-      <Key ID="STR_tun_firesupport_briefing_convertRecord_text">
+      <Key ID="STR_tunfire_firesupport_briefing_convertRecord_text">
         <Original>&lt;font size=20&gt;&lt;execute expression=' [] call tun_firesupport_fnc_openConvertDialog'&gt;Open convert dialog&lt;/execute&gt;&lt;/font&gt;</Original>
         <English>&lt;font size=20&gt;&lt;execute expression=' [] call tun_firesupport_fnc_openConvertDialog'&gt;Open convert dialog&lt;/execute&gt;&lt;/font&gt;</English>
-        <Czech>&lt;font size=20&gt;&lt;execute expression=' [] call tun_firesupport_fnc_openConvertDialog'&gt;Open convert dialog&lt;/execute&gt;&lt;/font&gt;</Czech>
-        <French>&lt;font size=20&gt;&lt;execute expression=' [] call tun_firesupport_fnc_openConvertDialog'&gt;Open convert dialog&lt;/execute&gt;&lt;/font&gt;</French>
-        <Spanish>&lt;font size=20&gt;&lt;execute expression=' [] call tun_firesupport_fnc_openConvertDialog'&gt;Open convert dialog&lt;/execute&gt;&lt;/font&gt;</Spanish>
-        <Italian>&lt;font size=20&gt;&lt;execute expression=' [] call tun_firesupport_fnc_openConvertDialog'&gt;Open convert dialog&lt;/execute&gt;&lt;/font&gt;</Italian>
-        <Polish>&lt;font size=20&gt;&lt;execute expression=' [] call tun_firesupport_fnc_openConvertDialog'&gt;Open convert dialog&lt;/execute&gt;&lt;/font&gt;</Polish>
-        <Portuguese>&lt;font size=20&gt;&lt;execute expression=' [] call tun_firesupport_fnc_openConvertDialog'&gt;Open convert dialog&lt;/execute&gt;&lt;/font&gt;</Portuguese>
-        <Russian>&lt;font size=20&gt;&lt;execute expression=' [] call tun_firesupport_fnc_openConvertDialog'&gt;Open convert dialog&lt;/execute&gt;&lt;/font&gt;</Russian>
-        <German>&lt;font size=20&gt;&lt;execute expression=' [] call tun_firesupport_fnc_openConvertDialog'&gt;Open convert dialog&lt;/execute&gt;&lt;/font&gt;</German>
       </Key>
     </Container>
   </Package>

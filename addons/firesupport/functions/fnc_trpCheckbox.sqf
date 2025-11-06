@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Author: [Tuntematon]
  * [Description]
  * Enable TRP
@@ -21,7 +21,7 @@ private _trp2 = (findDisplay MAIN_IDD displayCtrl TRP2);
 
 if (_updateTRP1) then {
 	if (cbChecked _trp1) then {
-		ctrlSetText [EASTING_TEXT, "STR_tun_firesupport_selectTRP" call BIS_fnc_localize];
+		ctrlSetText [EASTING_TEXT, "STR_tunfire_firesupport_selectTRP" call BIS_fnc_localize];
 		ctrlShow [NORTHING_TEXT, false];
 		ctrlShow [EASTING_IDC, false];
 		ctrlShow [NORTHING_IDC, false];
@@ -33,7 +33,7 @@ if (_updateTRP1) then {
 			lbAdd [TRP1_LIST, _name];
 		} forEach GVAR(trpValues);
 	} else {
-		ctrlSetText [EASTING_TEXT, "STR_tun_firesupport_easting" call BIS_fnc_localize];
+		ctrlSetText [EASTING_TEXT, "STR_tunfire_firesupport_easting" call BIS_fnc_localize];
 		ctrlShow [NORTHING_TEXT, true];
 		ctrlShow [EASTING_IDC, true];
 		ctrlShow [NORTHING_IDC, true];
@@ -44,7 +44,7 @@ if (_updateTRP1) then {
 if (_updateTRP2) then {
 	if (ctrlShown _trp2) then {
 		if (cbChecked _trp2) then {
-			ctrlSetText [EASTING_END_TEXT_IDC, "STR_tun_firesupport_selectTRP_END" call BIS_fnc_localize];
+			ctrlSetText [EASTING_END_TEXT_IDC, "STR_tunfire_firesupport_selectTRP_END" call BIS_fnc_localize];
 			ctrlShow [NORTHING_END_TEXT_IDC, false];
 			ctrlShow [EASTING_END_IDC, false];
 			ctrlShow [NORTHING_END_IDC, false];
@@ -56,7 +56,7 @@ if (_updateTRP2) then {
 				lbAdd [TRP2_LIST, _name];
 			} forEach GVAR(trpValues);
 		} else {
-			ctrlSetText [EASTING_END_TEXT_IDC, "STR_tun_firesupport_easting_end_point" call BIS_fnc_localize];
+			ctrlSetText [EASTING_END_TEXT_IDC, "STR_tunfire_firesupport_easting_end_point" call BIS_fnc_localize];
 			ctrlShow [NORTHING_END_TEXT_IDC, true];
 			ctrlShow [EASTING_END_IDC, true];
 			ctrlShow [NORTHING_END_IDC, true];

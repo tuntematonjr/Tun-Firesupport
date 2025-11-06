@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Author: [Tuntematon]
  * [Description]
  * Remove selected firemission from queue
@@ -33,17 +33,17 @@ if (_textQueue isEqualTo _firemissionText) then {
 	private _firemission = _firemissions select _curSelected;
 
 	if (_curSelected isEqualTo 0) then {
-		if (_status isEqualTo ("STR_tun_firesupport_status_calculating" call BIS_fnc_localize)) then {
+		if (_status isEqualTo ("STR_tunfire_firesupport_status_calculating" call BIS_fnc_localize)) then {
 			_firemissions deleteAt _curSelected;
 			_ammoModule setVariable ["reservedCount", _reservedCount, true];
 			_gunModule setVariable [QGVAR(firemissions), _firemissions, true];
 			_gunModule setVariable [QGVAR(is_firing), false, true];
-			_gunModule setVariable [QGVAR(status), "STR_tun_firesupport_status_free" call BIS_fnc_localize, true];
+			_gunModule setVariable [QGVAR(status), "STR_tunfire_firesupport_status_free" call BIS_fnc_localize, true];
 			[false, _gunModule] call FUNC(firemission_queue);
 		};	
 
-		if (_status isEqualTo ("STR_tun_firesupport_status_firing" call BIS_fnc_localize)) then {
-			hintSilent ("STR_tun_firesupport_cancelMissions" call BIS_fnc_localize);
+		if (_status isEqualTo ("STR_tunfire_firesupport_status_firing" call BIS_fnc_localize)) then {
+			hintSilent ("STR_tunfire_firesupport_cancelMissions" call BIS_fnc_localize);
 			[{
 				_this params ["_gunModule", "_firemission", "_ammoModule"];
 				private _firemissions = _gunModule getVariable [QGVAR(firemissions), []];
@@ -54,7 +54,7 @@ if (_textQueue isEqualTo _firemissionText) then {
 					if (count _firemissions isEqualTo 0) then {
 						_ammoModule setVariable ["reservedCount", 0, true];
 						_gunModule setVariable [QGVAR(is_firing), false, true];
-						_gunModule setVariable [QGVAR(status), "STR_tun_firesupport_status_free" call BIS_fnc_localize, true];
+						_gunModule setVariable [QGVAR(status), "STR_tunfire_firesupport_status_free" call BIS_fnc_localize, true];
 					};
 				};
 			}, [_gunModule, _firemission, _ammoModule], 20] call CBA_fnc_waitAndExecute;

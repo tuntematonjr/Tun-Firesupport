@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Author: [Tuntematon]
  * [Description]
  *
@@ -46,7 +46,7 @@ if (_shellCount > 0 && _ammoCount > 0) then {
 				[{
 					_this call FUNC(createShell);
 				}, [_step_pos, _radius, _altitude, _ammoClass, _velocity], ( random 2 )] call CBA_fnc_waitAndExecute;
-				ADD(_distance_start, _distance_steps);
+				ADD(_distance_start,_distance_steps);
 				DEC(_ammoCount);
 				DEC(_shellCount);
 				DEC(_reservedCount);
@@ -57,7 +57,7 @@ if (_shellCount > 0 && _ammoCount > 0) then {
 		[{
 			_this call FUNC(createShell);
 		}, [_step_pos, _radius, _altitude, _ammoClass, _velocity], ( random 2 )] call CBA_fnc_waitAndExecute;
-		ADD(_distance_start, _distance_steps);
+		ADD(_distance_start,_distance_steps);
 		DEC(_ammoCount);
 		DEC(_shellCount);
 		DEC(_reservedCount);

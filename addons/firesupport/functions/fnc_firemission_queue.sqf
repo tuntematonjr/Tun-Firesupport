@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Author: [Tuntematon]
  * [Description]
  *
@@ -40,10 +40,10 @@ if (!_isFiring && count _firemissions > 0) then {
 	};
 
 	_gunModule setVariable [QGVAR(is_firing), true, true];
-	_gunModule setVariable [QGVAR(status), "STR_tun_firesupport_status_calculating" call BIS_fnc_localize, true];
+	_gunModule setVariable [QGVAR(status), "STR_tunfire_firesupport_status_calculating" call BIS_fnc_localize, true];
 	"tun_targetlocation" remoteExec [QFUNC(playSound), _player];
 	switch (_firing_style) do {
-		case (localize "STR_tun_firesupport_firemode_standard"): { 
+		case (localize "STR_tunfire_firesupport_firemode_standard"): { 
 			[{cba_missiontime >= _this select 0}, {
 				private _params = _this select 1;
 				private _gunModule = _params select 2;
@@ -54,12 +54,12 @@ if (!_isFiring && count _firemissions > 0) then {
 					private _player = _params select 0;
 					"tun_splash" remoteExec [QFUNC(playSound), _player];
 					_params call FUNC(firemission_standard);
-					_gunModule setVariable [QGVAR(status), "STR_tun_firesupport_status_firing" call BIS_fnc_localize, true];
+					_gunModule setVariable [QGVAR(status), "STR_tunfire_firesupport_status_firing" call BIS_fnc_localize, true];
 				};
 			}, [_eta, _params]] call CBA_fnc_waitUntilAndExecute;
 		};
 		
-		case (localize "STR_tun_firesupport_firemode_creeping_barrage"): { 
+		case (localize "STR_tunfire_firesupport_firemode_creeping_barrage"): { 
 			[{cba_missiontime >= _this select 0}, {
 				private _params = _this select 1;
 				private _gunModule = _params select 2;
@@ -70,12 +70,12 @@ if (!_isFiring && count _firemissions > 0) then {
 					private _player = _params select 0;
 					"tun_splash" remoteExec [QFUNC(playSound), _player];
 					_params call FUNC(firemission_creepingBarrage);
-					_gunModule setVariable [QGVAR(status), "STR_tun_firesupport_status_firing" call BIS_fnc_localize, true];
+					_gunModule setVariable [QGVAR(status), "STR_tunfire_firesupport_status_firing" call BIS_fnc_localize, true];
 				};
 			}, [_eta, _params]] call CBA_fnc_waitUntilAndExecute;
 		};
 
-		case (localize "STR_tun_firesupport_firemode_wall"): { 
+		case (localize "STR_tunfire_firesupport_firemode_wall"): { 
 			[{cba_missiontime >= _this select 0}, {
 				private _params = _this select 1;
 				private _gunModule = _params select 2;
@@ -86,7 +86,7 @@ if (!_isFiring && count _firemissions > 0) then {
 					private _player = _params select 0;
 					"tun_splash" remoteExec [QFUNC(playSound), _player];
 					_params call FUNC(firemission_wall);
-					_gunModule setVariable [QGVAR(status), "STR_tun_firesupport_status_firing" call BIS_fnc_localize, true];
+					_gunModule setVariable [QGVAR(status), "STR_tunfire_firesupport_status_firing" call BIS_fnc_localize, true];
 				};
 			}, [_eta, _params]] call CBA_fnc_waitUntilAndExecute;
 		};

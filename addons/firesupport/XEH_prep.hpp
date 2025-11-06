@@ -1,5 +1,3 @@
-#include "script_component.hpp"
-
 PREP(calculate_eta);
 PREP(check_values);
 PREP(dialog_close);

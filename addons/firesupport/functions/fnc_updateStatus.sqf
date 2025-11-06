@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Author: [Tuntematon]
  * [Description]
  * Update status
@@ -30,17 +30,17 @@ if ((count _listArray > 0)) then {
 };
 
 if (count _listArray < 2) exitWith { 
-	ctrlSetText [STATUS_IDC, "STR_tun_firesupport_status_none" call BIS_fnc_localize]; 
+	ctrlSetText [STATUS_IDC, "STR_tunfire_firesupport_status_none" call BIS_fnc_localize]; 
 };
 
-private _status = _gunModule getVariable [QGVAR(status), "STR_tun_firesupport_status_none" call BIS_fnc_localize];
+private _status = _gunModule getVariable [QGVAR(status), "STR_tunfire_firesupport_status_none" call BIS_fnc_localize];
 
 ctrlSetText [STATUS_IDC, _status];
 
 if (_gunModule getVariable [QGVAR(is_firing), false]) then {
-	ctrlSetText [FIRE_IDC, "STR_tun_firesupport_status_button_addQueue" call BIS_fnc_localize];
+	ctrlSetText [FIRE_IDC, "STR_tunfire_firesupport_status_button_addQueue" call BIS_fnc_localize];
 } else {
-	ctrlSetText [FIRE_IDC, "STR_tun_firesupport_status_button_fire" call BIS_fnc_localize];
+	ctrlSetText [FIRE_IDC, "STR_tunfire_firesupport_status_button_fire" call BIS_fnc_localize];
 };
 
 private _ammoModuleID = (tvData [ARTY_LIST_IDC, _listArray]);

@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Author: [Tuntematon]
  * [Description]
  * Create diary record for converter
@@ -14,7 +14,7 @@
 #include "script_component.hpp"
 
 if (isClass(configFile >> "CfgPatches" >> "swt_markers")) then {
-	player createDiarySubject ["STR_tun_firesupport_briefing_subject" call BIS_fnc_localize, "STR_tun_firesupport_briefing_subject" call BIS_fnc_localize];
-	player createDiaryRecord ["STR_tun_firesupport_briefing_subject" call BIS_fnc_localize, ["STR_tun_firesupport_briefing_convertRecord" call BIS_fnc_localize,"STR_tun_firesupport_briefing_convertRecord_text" call BIS_fnc_localize
+	player createDiarySubject ["STR_tunfire_firesupport_briefing_subject" call BIS_fnc_localize, "STR_tunfire_firesupport_briefing_subject" call BIS_fnc_localize];
+	player createDiaryRecord ["STR_tunfire_firesupport_briefing_subject" call BIS_fnc_localize, ["STR_tunfire_firesupport_briefing_convertRecord" call BIS_fnc_localize,"STR_tunfire_firesupport_briefing_convertRecord_text" call BIS_fnc_localize
 	]];
 };

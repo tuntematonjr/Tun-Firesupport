@@ -3,7 +3,7 @@
 #define HG_CustomControlClasseshpp 1
 //Create a header guard to prevent duplicate include.
 
-#include "Firesupport_idc.hpp"
+
 class RscListBox;
 class RscButtonMenu;
 class RscButton;
@@ -28,7 +28,7 @@ class tun_default_editBox : RscEdit
 	colorDisabled[] = {0,0,0,0};
 	colorSelection[] = GUI_BCG_COLOR;
 	colorText[] = {1,1,1,1};
-	canModify = true;
+	canModify = 1;
 	shadow = 0;
 };
 
@@ -36,8 +36,8 @@ class tun_firesupport_coordinate_preset : tun_default_editBox
 {
 	text = "000";
 	maxChars = 5;
-	w = safeZoneW * 0.0625;
-	h = safeZoneH * 0.025;
+	w = QUOTE(safeZoneW * 0.0625);
+	h = QUOTE(safeZoneH * 0.025);
 };
 
 class tun_default_text : RscText
@@ -48,8 +48,8 @@ class tun_default_text : RscText
 
 class tun_default_CheckBox : RscCheckBox
 {
-	w = safeZoneW * 0.015;
-	h = safeZoneH * 0.025;	
+	w = QUOTE(safeZoneW * 0.015);
+	h = QUOTE(safeZoneH * 0.025);	
 };
 
 class tun_firesupport_header_base : RscText 

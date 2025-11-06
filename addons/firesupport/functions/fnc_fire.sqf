@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Author: [Tuntematon]
  * [Description]
  * Firing thing
@@ -18,13 +18,13 @@ private _listArray = tvCurSel ARTY_LIST_IDC;
 //No gun selected
 if (count _listArray < 1) exitWith {
 	playSound "3DEN_notificationWarning";
-	hintSilent localize "STR_tun_firesupport_NoGunSelected";
+	hintSilent localize "STR_tunfire_firesupport_NoGunSelected";
 };
 
 //No ammo selected
 if (count _listArray < 2) exitWith {
 	playSound "3DEN_notificationWarning";
-	hintSilent localize "STR_tun_firesupport_NoAmmoSelected";
+	hintSilent localize "STR_tunfire_firesupport_NoAmmoSelected";
 };
 
 private _gunModuleID = (tvData [ARTY_LIST_IDC, [(_listArray select 0)]]);
@@ -51,7 +51,7 @@ private _firing_style = lbText [FIRING_TYPE_IDC,lbCurSel FIRING_TYPE_IDC];
 //Due to shit desing, no timed strikes to queue.
 if (_gunModule getVariable [QGVAR(is_firing), false] && _timeToggle) exitWith {
 	playSound "3DEN_notificationWarning";
-	hintSilent localize "STR_tun_firesupport_NoTimedStrikesQueue";
+	hintSilent localize "STR_tunfire_firesupport_NoTimedStrikesQueue";
 };
 
 private _trp1Index = lbCurSel TRP1_LIST;
@@ -60,7 +60,7 @@ private _trp2Index = lbCurSel TRP2_LIST;
 //No trp selected
 if (((_trp1Index isEqualTo -1) && _trp1Toggle) || ((_trp2Index isEqualTo -1) && _trp2Toggle))exitWith {
 	playSound "3DEN_notificationWarning";
-	hintSilent localize "STR_tun_firesupport_NoTrpSelected";
+	hintSilent localize "STR_tunfire_firesupport_NoTrpSelected";
 };
 
 //Get positions
@@ -81,13 +81,13 @@ private _minRange = _gunModule getVariable ["minRange", 0];
 private _maxRange = _gunModule getVariable ["maxRange", 10000];
 if (_distanceRange < _minRange || _distanceRange > _maxRange ) exitWith {
 	playSound "3DEN_notificationWarning";
-	hintSilent localize "STR_tun_firesupport_OutOfRange";
+	hintSilent localize "STR_tunfire_firesupport_OutOfRange";
 };
 
 //out of ammo
 if ( _shellCount <= 0 || _remainingAmmo <= 0) exitWith {
 	playSound "3DEN_notificationWarning";
-	hintSilent localize "STR_tun_firesupport_NoShells";
+	hintSilent localize "STR_tunfire_firesupport_NoShells";
 };
 
 if (_delay < 0.1) then {
@@ -123,11 +123,11 @@ _ammoModule setVariable ["reservedCount", _reservedCount, true];
 
 switch (_firing_style) do {
 
-	case (localize "STR_tun_firesupport_firemode_standard"): {
+	case (localize "STR_tunfire_firesupport_firemode_standard"): {
 		[true, _gunModule, [_name, _firing_style, [_eta, _etaMin], player, _timeToggle, [player, _name, _gunModule, _ammoModule, _position, _radius, _shellCount, [_delay_min, _delay_max], _volleyToggle]]] remoteExec [QFUNC(firemission_queue), 2];
 	};
 
-	case (localize "STR_tun_firesupport_firemode_creeping_barrage"): {
+	case (localize "STR_tunfire_firesupport_firemode_creeping_barrage"): {
 
 		private _dir = _position getDir _positionEnd;
 		private _distance = _position distance2D _positionEnd;
@@ -138,7 +138,7 @@ switch (_firing_style) do {
 
 	};
 
-	case (localize "STR_tun_firesupport_firemode_wall"): {
+	case (localize "STR_tunfire_firesupport_firemode_wall"): {
 
 		private _dir = _position getDir _positionEnd;
 		private _distance = _position distance2D _positionEnd;

@@ -1,34 +1,14 @@
 #define COMPONENT firesupport
-#define PREFIX Tun
+#define COMPONENT_BEAUTIFIED firesupport
+#include "\x\tunfire\addons\main\script_mod.hpp"
 
-#define MAJOR 2
-#define MINOR 1
-#define PATCHLVL 3
-#define BUILD 19032023
-
-#define VERSION MAJOR.MINOR.PATCHLVL.BUILD
-#define VERSION_AR MAJOR,MINOR,PATCHLVL,BUILD
-
-// MINIMAL required version for the Mod. Components can specify others..
-#define REQUIRED_VERSION 1.94
-
-/*
-	#define DEBUG_ENABLED_SYS_MAIN
-*/
-
-#define DEBUG_MODE_FULL
+// #define DEBUG_MODE_FULL
+// #define DISABLE_COMPILE_CACHE
 
 #ifdef DEBUG_ENABLED_MAIN
 	#define DEBUG_MODE_FULL
 #endif
 
-#include "\z\ace\addons\main\script_macros.hpp"
+#include "\x\tunfire\addons\main\script_macros.hpp"
+
 #include "Firesupport_idc.hpp"
-
-
-// Default versioning level
-#define DEFAULT_VERSIONING_LEVEL 2
-
-//AAR update macro
-#define AAR_UPDATE(OBJ,VARNAME,VALUE) if ( !isnil "afi_aar2" ) then { [OBJ, VARNAME, VALUE] call afi_aar2_fnc_addcustomdata; };
-#define AAR_FOLLOWPROJECTILE(PROJECTILECLASSNAME,PROJECTILEOBJ)	if ( !isnil "afi_aar2" ) then { [objNull, "", PROJECTILECLASSNAME, PROJECTILEOBJ, objNull] call afi_aar2_fnc_add_projectile; };

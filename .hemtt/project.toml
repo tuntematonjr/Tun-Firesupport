@@ -1,0 +1,81 @@
+name = "Tun Firesupport"
+prefix = "tunfire"
+author = "Tuntematon"
+mainprefix = "x"
+
+[files]
+include = [
+	"mod.cpp",
+	"data/**",
+]
+
+[version]
+git_hash = 0 
+
+[binarize]
+enabled = false 
+
+[lint.sqf]
+enabled = false
+
+[hemtt.launch.default]
+workshop = [
+    "450814997", # CBA_A3
+    "463939057", # ACE
+    "2369477168", # Advanced tool thing
+	# "1776575634",
+	# "623475643",
+	# "1420348567",
+]
+parameters = [
+	"-debug",
+	"-filePatching",
+	#"C:\\Users\\mikal\\Documents\\Arma 3 - Other Profiles\\Tuntematon\\missions\\startmarkers.Enoch\\mission.sqm", # Launch into existing Editor Mission - \\ needed
+	#"#-mod=C:\\Users\\mikal\\Documents\\GitHub\\Tun-Respawn-System\\.hemttout\\build",
+]
+
+[hemtt.release]
+folder = "tun_firesupport"
+
+
+[hemtt.launch.server]
+workshop = [
+	"450814997", # CBA
+	"463939057", # ACE
+	"894678801", # TFAR
+	"1776575634",
+	"623475643",
+	"1420348567",
+]
+parameters = [
+	"-server",
+	"-port=2302",
+	"-filePatching",
+]
+
+[hemtt.launch.player]
+workshop = [
+	"450814997", # CBA
+	"463939057", # ACE
+	"894678801", # TFAR
+	"1776575634",
+	"623475643",
+	"1420348567",
+]
+parameters = [
+	"-debug",
+	"-filePatching",
+	"-world=empty",
+	"-noPause",
+	"-noPauseAudio",
+	"-connect=localHost",
+	"-port=2302",
+	"-window",
+]
+
+[hemtt.launch.uncon]
+extends = "default"
+
+parameters = [
+	#"C:\\Users\\mikal\\Documents\\Arma 3 - Other Profiles\\Tuntematon\\missions\\unconTest.enoch\\mission.sqm",
+]

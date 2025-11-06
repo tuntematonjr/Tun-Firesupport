@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Author: [Tuntematon]
  * [Description]
  *
@@ -28,7 +28,7 @@ params [
 
 private _trp1Toggle = cbChecked (findDisplay MAIN_IDD displayCtrl TRP1);
 private _trp2Toggle  = cbChecked (findDisplay MAIN_IDD displayCtrl TRP2);
-private _firingStyleIsStandard = lbText [FIRING_TYPE_IDC,lbCurSel FIRING_TYPE_IDC] isEqualTo (localize "STR_tun_firesupport_firemode_standard");
+private _firingStyleIsStandard = lbText [FIRING_TYPE_IDC,lbCurSel FIRING_TYPE_IDC] isEqualTo (localize "STR_tunfire_firesupport_firemode_standard");
 
 private _trp1Index = lbCurSel TRP1_LIST;
 private _trp1IsSelected = _trp1Index isNotEqualTo -1;

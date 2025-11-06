@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Author: [Tuntematon]
  * [Description]
  * Open firesupport dialog
@@ -19,7 +19,7 @@ if (GVAR(debug)) then {
 };
 
 createDialog "Firesupport_dialog";
-waitUntil {!isnull (findDisplay MAIN_IDD)};
+waitUntil {!isNull (findDisplay MAIN_IDD)};
 
 [true, true] call FUNC(trpCheckbox);
 
@@ -78,9 +78,9 @@ GVAR(dialogPaths) = [];
 } forEach _variables;
 
 //Fire types
-lbAdd [FIRING_TYPE_IDC, localize "STR_tun_firesupport_firemode_standard"];
-lbAdd [FIRING_TYPE_IDC, localize "STR_tun_firesupport_firemode_creeping_barrage"];
-lbAdd [FIRING_TYPE_IDC, localize "STR_tun_firesupport_firemode_wall"];
+lbAdd [FIRING_TYPE_IDC, localize "STR_tunfire_firesupport_firemode_standard"];
+lbAdd [FIRING_TYPE_IDC, localize "STR_tunfire_firesupport_firemode_creeping_barrage"];
+lbAdd [FIRING_TYPE_IDC, localize "STR_tunfire_firesupport_firemode_wall"];
 
 lbSetCurSel [FIRING_TYPE_IDC, 0];
 

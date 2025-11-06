@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Author: [Tuntematon]
  * [Description]
  * Create marker where you are targeting
@@ -64,7 +64,7 @@ if (_markerStartPoint isEqualTo "") then {
 	_markerStartPointArea1 setMarkerSizeLocal  [_radius, _radius];
 };
 
-if (_firingStyle isNotEqualTo (localize "STR_tun_firesupport_firemode_standard")) then {
+if (_firingStyle isNotEqualTo (localize "STR_tunfire_firesupport_firemode_standard")) then {
 
 	if ( _markerEndPoint isEqualTo "") then {
 		private _markerEndPoint = createMarkerLocal ["tun_firesupport_endPointMarker", _positionEnd];

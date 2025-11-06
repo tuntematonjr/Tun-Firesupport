@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Author: [Tuntematon]
  * [Description]
  * Update eta values
@@ -28,7 +28,7 @@ if ( count _listArray isEqualTo  2) then {
 	private _ammoModule = (tvData [ARTY_LIST_IDC, _listArray]) call BIS_fnc_objectFromNetId;
 	private _magazineClass = _ammoModule getVariable "Ammo";
 
-	private _initSpeed = getNumber (configfile >> "CfgMagazines" >> _magazineClass >> "initSpeed");
+	private _initSpeed = getNumber (configFile >> "CfgMagazines" >> _magazineClass >> "initSpeed");
 
 	private _pos = [] call FUNC(getTargetPositon);
 	
@@ -46,10 +46,10 @@ if ( count _listArray isEqualTo  2) then {
 	_etaText = round (10 +  (_distance / _initSpeed)  * 2  + _countdown);
 	_minEta = _etaText;
 	if (_timeToggle) then {
-		private _daytime = daytime;
-		private _hoursIngame = floor _daytime;
-		private _minutesIngame = floor ((_daytime - _hoursIngame) * 60);
-		private _secondsIngame = floor ((((_daytime - _hoursIngame) * 60) - _minutesIngame) * 60);
+		private _dayTime = dayTime;
+		private _hoursIngame = floor _dayTime;
+		private _minutesIngame = floor ((_dayTime - _hoursIngame) * 60);
+		private _secondsIngame = floor ((((_dayTime - _hoursIngame) * 60) - _minutesIngame) * 60);
 		private _totalSecondsIngame = (_hoursIngame * 60 * 60) + (_minutesIngame * 60) + _secondsIngame;
 
 		private _hours = parseNumber ctrlText TIMEHOURS;
